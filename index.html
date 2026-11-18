@@ -490,15 +490,14 @@ aside.spk{display:none}
   <div class="pad">
     <div class="kicker">01 工程概要｜施工進度</div>
     <h1 class="t">現場縮時攝影</h1>
-    <div class="grid" style="grid-template-columns:1fr 1fr;gap:28px;margin-top:36px">
-      <div><video id="tl1" src="assets/timelapse1.mp4" poster="assets/poster1.jpg" class="img" style="aspect-ratio:16/9;height:auto" preload="auto" muted playsinline></video><div class="cap">角度一　進頁自動播放，播完接角度二（點畫面可暫停）</div></div>
-      <div><video id="tl2" src="assets/timelapse2.mp4" poster="assets/poster2.jpg" class="img" style="aspect-ratio:16/9;height:auto" preload="auto" muted playsinline></video><div class="cap">角度二</div></div>
-    </div>
-    <div class="grid" style="grid-template-columns:200px 1fr 1fr 1fr;gap:22px;margin-top:30px;align-items:stretch">
-      <div style="display:flex;align-items:center;font-size:26px;font-weight:900;color:var(--teal)">截至 11/27</div>
-      <div class="card ink"><p class="muted" style="color:#9FB3B8;font-size:20px">累積天數</p><div class="num" style="font-size:72px;color:#fff"><span class="odo" data-v="436">436</span><span style="font-size:28px;font-family:var(--zh);font-weight:700"> 日曆天</span></div></div>
-      <div class="card"><p class="muted" style="font-size:20px">預定進度</p><div class="num" style="font-size:72px;color:var(--ink)"><span class="odo" data-v="4.54">4.54</span><span style="font-size:36px">%</span></div></div>
-      <div class="card" style="border:2px solid var(--orange)"><p class="muted" style="font-size:20px">實際進度（估）</p><div class="num" style="font-size:72px;color:var(--orange)"><span class="odo" data-v="5.15">5.15</span><span style="font-size:36px">%</span></div></div>
+    <div style="display:grid;grid-template-columns:1210px 1fr;gap:30px;margin-top:30px;align-items:start">
+      <div><video id="tl1" src="assets/timelapse_long.mp4" poster="assets/poster_long.jpg" class="img" style="width:1210px;height:681px" preload="auto" muted playsinline></video><div class="cap">2025/09/19 拆除前 → 2026/11/18 開挖中｜進頁自動播放約 30 秒（點畫面可暫停）</div></div>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:26px;font-weight:900;color:var(--teal)">截至 11/27</div>
+      <div class="card ink" style="padding:24px 30px"><p class="muted" style="color:#9FB3B8;font-size:20px">累積天數</p><div class="num" style="font-size:72px;color:#fff"><span class="odo" data-v="436">436</span><span style="font-size:28px;font-family:var(--zh);font-weight:700"> 日曆天</span></div></div>
+      <div class="card" style="padding:24px 30px"><p class="muted" style="font-size:20px">預定進度</p><div class="num" style="font-size:72px;color:var(--ink)"><span class="odo" data-v="4.54">4.54</span><span style="font-size:36px">%</span></div></div>
+      <div class="card" style="border:2px solid var(--orange);padding:24px 30px"><p class="muted" style="font-size:20px">實際進度（估）</p><div class="num" style="font-size:72px;color:var(--orange)"><span class="odo" data-v="5.15">5.15</span><span style="font-size:36px">%</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1164,6 +1163,7 @@ PVC 地磚：送潔安環保造粒。
   });});
   // P6 sequential videos
   var t1=document.getElementById('tl1'),t2=document.getElementById('tl2');
+  if(t1&&!t2){t1.addEventListener('click',function(){t1.paused?t1.play():t1.pause();});}
   if(t1&&t2){
     t1.addEventListener('click',function(){ if(t1.paused){t2.pause();t2.currentTime=0;t1.play();} else t1.pause(); });
     t2.addEventListener('click',function(){ t2.paused?t2.play():t2.pause(); });
@@ -1256,7 +1256,7 @@ PVC 地磚：送潔安環保造粒。
       if(!go){s.style.transition='none';s.style.transform='translateY(0)';void s.offsetWidth;s.style.transition='';}
       else s.style.transform='translateY(-'+s.dataset.t+'em)';});});}
     sec._enter=function(){roll(false);setTimeout(function(){roll(true);},250);
-      try{t2.pause();t2.currentTime=0;t1.currentTime=0;var p=t1.play();if(p&&p.catch)p.catch(function(){});}catch(e){}};
+      try{if(t2){t2.pause();t2.currentTime=0;}t1.currentTime=0;var p=t1.play();if(p&&p.catch)p.catch(function(){});}catch(e){}};
   })();
 
   // P19 休息區：平面 → 立牆轉 3D → 放入設備 → 切換實景
