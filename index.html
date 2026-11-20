@@ -146,6 +146,14 @@ video{display:block}
 .seg button{border:none;background:transparent;font:700 19px var(--zh);color:var(--muted);padding:7px 16px;border-radius:9px;cursor:pointer}
 .seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.12)}
 .src22{margin-left:auto;font-size:17px;color:var(--muted)}
+#p22 .ts30{display:grid;grid-template-columns:1fr 1fr;gap:10px;height:250px}
+#p22 .ts30 figure{position:relative;margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+#p22 .ts30 img{width:100%;height:100%;object-fit:cover;display:block}
+#p22 .ts30 figcaption{position:absolute;left:8px;bottom:8px;background:rgba(14,28,34,.86);color:#fff;font-size:16px;font-weight:700;border-radius:999px;padding:3px 12px;white-space:nowrap}
+#p22 .kv30{display:flex;flex-direction:column;gap:8px}
+#p22 .kv30 div{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:18px;line-height:1.45}
+#p22 .kv30 b{color:var(--teal);font-weight:900}
+#p22 .kv30 .hl{background:var(--blk);border-color:transparent}#p22 .kv30 em{font-style:normal;color:var(--orange);font-weight:900}
 #c22{display:block;width:100%;height:400px}
 #b22 b{white-space:nowrap}
 #c22 .gl{stroke:#ECE8DF;stroke-width:1}
@@ -320,7 +328,307 @@ video.vid{cursor:pointer;object-fit:cover}
 #p19.s3 .w19{transform:none}#p19.s3 .cub19{transform:none;opacity:1}#p19.s3 .fw19{transform:translateZ(146px);opacity:1}
 #p19.s3 .rl19{opacity:1;transform:none;pointer-events:auto}
 @keyframes spin19{to{transform:rotate(360deg)}}
+/* P10 無人機飛入 */
+#p8{perspective:1600px}
+.dr10{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform;transition:opacity .6s}
+.dr10 img{position:absolute;inset:0;width:1920px;height:1080px;object-fit:cover;display:block}
+.ui10{position:absolute;inset:0;transition:opacity .5s}
+.dt10{position:absolute;inset:0;opacity:0;pointer-events:none;background:#0E1C22;transition:opacity .6s}
+.dt10.on{opacity:1;pointer-events:auto}
+.ph10x{position:absolute;left:0;top:180px;width:1180px;height:880px;display:flex;align-items:center;justify-content:center;transform:perspective(1400px) rotateY(18deg) scale(1.3);filter:blur(5px);transition:transform 1.1s cubic-bezier(.2,.7,.2,1),filter .9s}
+.dt10[data-k="1"] .ph10x{transform:perspective(1400px) rotateY(-18deg) scale(1.3)}
+.dt10[data-k="2"] .ph10x{transform:perspective(1400px) scale(1.35)}
+.dt10.on .ph10x{transform:none!important;filter:none}
+.ph10x img{display:block;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain}
+.dt10[data-k="0"] .ph10x img{width:1140px;max-height:840px}
+.dt10[data-k="1"] .ph10x img{height:840px}
+.dk2 .ph10x img{width:1140px;height:840px;object-fit:cover}
+.cp10{position:absolute;left:40px;bottom:-10px;background:rgba(238,106,31,.95);color:#fff;font-size:20px;font-weight:700;border-radius:999px;padding:6px 18px}
+.hd10{position:absolute;left:40px;top:34px;max-width:1100px;background:rgba(14,28,34,.85);border-radius:16px;padding:16px 26px 18px;opacity:0;transform:translateY(-16px);transition:opacity .5s .2s,transform .5s .2s}
+.hd10 .kicker{color:#8FC7CC}.hd10 h2{font-size:54px;font-weight:900;color:#fff;line-height:1.15;margin-top:6px}.hd10 p{font-size:22px;color:#B9CACD;margin-top:4px}
+.pn10{position:absolute;left:1210px;right:40px;top:40px;bottom:40px;display:flex;flex-direction:column;gap:18px;color:var(--body);opacity:0;transform:translateX(60px);transition:opacity .6s .35s,transform .6s .35s cubic-bezier(.2,.7,.2,1)}
+.dt10.in .hd10,.dt10.in .pn10{opacity:1;transform:none}
+.pn10 .card{background:#fff}.pn10 .card.ink{background:var(--blk)}
+.ph10{position:relative;margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-height:0}
+.ph10 .img{border-radius:0;background:#fff}
+.ph10 figcaption{position:absolute;left:14px;top:14px;background:rgba(14,28,34,.82);color:#fff;font-size:18px;font-weight:700;border-radius:999px;padding:5px 16px}
+.st10{padding:22px 30px;border:3px solid var(--orange)}
+.n10{font-size:76px;color:var(--orange);line-height:1}.n10 small{font-size:28px;font-family:var(--zh);font-weight:700}
+.t10{width:100%;border-collapse:collapse;margin-top:12px;font-size:22px}
+.t10 td{padding:9px 0;border-top:1px solid var(--line);color:var(--muted)}
+.t10 td:last-child{text-align:right;color:var(--ink);font-weight:700}
+.tw10{flex:1;display:grid;grid-template-rows:1fr 1.25fr;gap:16px;min-height:0}
+.dk2 .pn10{gap:14px}
+.dk2 .lyr{height:250px;flex:none}.dk2 .hb9{left:20px;top:22px;width:190px;height:200px}
+.dk2 .ly9{top:22px;height:200px}.dk2 .ly9.l1{left:222px}.dk2 .ly9.l2{left:258px}.dk2 .ly9.l3{left:294px}
+.dk2 .dz9{left:334px;top:22px;height:200px;font-size:26px}
+.dk2.in .ly9{transform:none;transition-delay:calc(.3s + var(--dl,0) * 380ms)}
+#p8 .f10{opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s cubic-bezier(.22,.61,.36,1)}
+#p8 .dt10.in .f10{opacity:1;transform:none;transition-delay:calc(.45s + var(--dl,0) * 380ms)}
+/* P22 斷面 ⇄ 現場照片翻轉 */
+.fp22{position:relative;perspective:2200px;min-height:0;cursor:pointer}
+.fpi22{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.45,0,.2,1)}
+.fp22.on .fpi22{transform:rotateY(180deg)}
+.ff22{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.bk22{transform:rotateY(180deg);display:grid;grid-template-columns:1fr 1fr 1.9fr;gap:12px;background:var(--ink);border-radius:18px;padding:12px}
+.bk22 figure{position:relative;margin:0;border-radius:10px;overflow:hidden;min-height:0}
+.bk22 img{width:100%;height:100%;object-fit:cover;display:block}
+.bk22 figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,28,34,.85);color:#fff;font-size:17px;font-weight:700;border-radius:999px;padding:4px 14px}
+.tg22{position:absolute;right:22px;top:22px;background:var(--orange);color:#fff;font-size:17px;font-weight:700;border-radius:999px;padding:4px 14px}
+.hint22{position:absolute;right:16px;bottom:10px;font-size:16px;color:var(--muted)}
+/* P31 壓梁混凝土兩廠比較 */
+#p30c .g30{grid-template-columns:1fr}
+#p30c .cg31{display:grid;grid-template-columns:1fr 420px;gap:18px;min-height:0}
+#p30c .cw31{padding:12px 16px;display:flex;flex-direction:column;gap:6px;min-height:0}
+#p30c .cw31 svg{width:100%;flex:1;min-height:0;display:block}
+#p30c [data-cmpchart] text{font-size:22px;fill:#5E6A70}#p30c [data-cmpchart] text.lb{font-size:21px}
+#p30c .lgd31{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:17px;font-weight:700;color:var(--ink);padding-left:60px}
+#p30c .lgd31 span{display:inline-flex;align-items:center;gap:8px}#p30c .lgd31 i{display:inline-block;width:16px;height:16px}
+#p30c .md31{display:flex;gap:10px;justify-content:center}
+#p30c .md31 button{font:700 19px var(--zh);color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;padding:7px 20px;cursor:pointer}
+#p30c .md31 button.on{background:var(--teal);border-color:var(--teal);color:#fff}
+#p30c .ro31{display:flex;flex-direction:column;gap:10px;min-height:0}
+#p30c .hd31{font-size:22px;font-weight:900;line-height:1.35;color:var(--ink)}
+#p30c .rc31{padding:14px 20px;display:flex;flex-direction:column;gap:2px;border-left:8px solid #2B6A47}#p30c .rc31.a{border-left-color:#5D7287}
+#p30c .rc31 .k{font-size:17px;font-weight:700;color:var(--muted)}
+#p30c .rc31 b{font:900 46px/1.15 var(--num,inherit);color:#2B6A47}#p30c .rc31.a b{color:#5D7287}#p30c .rc31 b small{font-size:18px;margin-left:6px;color:var(--muted)}
+#p30c .rc31 .s{font-size:16px;color:var(--body);line-height:1.45}
+#p30c .dt31{font-size:18px;line-height:1.5;color:var(--ink);background:#fff;border:1px dashed var(--line);border-radius:12px;padding:10px 14px;flex:1;min-height:0;overflow:hidden}
+#p30c .dt31 span{font-size:16px}
+/* P28–P30 共用：預壘樁小圖 */
+.q28b{font-size:18px;font-weight:700;letter-spacing:.1em;color:var(--orange)}
+.ld30{font-size:26px;font-weight:700;color:var(--muted);margin-top:6px}
+.g30{display:grid;grid-template-columns:250px 1fr;gap:22px;margin-top:16px;height:600px}
+.pc30{padding:8px;display:flex;align-items:center;justify-content:center}
+.pd30{width:100%;height:100%;display:block}
+.pd30 g{transition:opacity .4s}.pd30.hp .c,.pd30.hc .p,.pd30.h0 .c,.pd30.h0 .p{opacity:.28;filter:grayscale(1)}
+#p28s .g30,#p28r .g30{transition:grid-template-columns .7s cubic-bezier(.6,0,.3,1),column-gap .7s}
+#p28s .pc30,#p28r .pc30{min-width:0;overflow:hidden;transition:transform .7s cubic-bezier(.34,1.45,.64,1),opacity .5s}
+#p28s.col .g30,#p28r.col .g30{grid-template-columns:0px 1fr;column-gap:0}
+#p28s.col .pc30,#p28r.col .pc30{transform:translateX(-130%);opacity:0;transition:transform .6s cubic-bezier(.6,0,.3,1),opacity .5s}
+#p28s.noanim *{transition:none!important}
+#p28r .q30{opacity:0;transition:opacity .5s}#p28r.q .q30{opacity:1}
+#p28r .cx30{position:absolute;left:300px;top:0;bottom:0;display:flex;align-items:center;opacity:0;transform:translateX(-20px);transition:opacity .5s,transform .5s;pointer-events:none;z-index:3}
+#p28r .cx30 figure{position:relative;margin:0;height:100%;aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:4px solid var(--orange);box-shadow:0 18px 50px rgba(0,0,0,.25);background:#000}
+#p28r .cx30 img{width:100%;height:100%;object-fit:cover;display:block}
+#p28r .cx30 figcaption{font-size:24px!important;background:var(--orange)!important;padding:8px 20px!important;left:16px!important;bottom:16px!important}
+#p28r.x.q .cx30{opacity:1;transform:none;pointer-events:auto}
+#p28r .st30{transition:opacity .45s,transform .45s,filter .45s}
+#p28r.x .st30{opacity:.18;filter:grayscale(1)}
+
+/* P28 */
+#p28q .g30{height:620px}
+#p28q .r28{display:grid;grid-template-columns:1fr 330px;gap:18px;min-height:0}
+#p28q .sd28{display:flex;flex-direction:column;gap:14px}
+#p28q .bx28{padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+#p28q .h28{font-size:21px;font-weight:900;color:var(--ink);padding-bottom:8px;border-bottom:2px solid var(--line)}
+#p28q .rw28{display:flex;align-items:center;gap:12px;font-size:20px;color:var(--body)}
+#p28q .rw28 span{flex:none;font-size:17px;font-weight:900;color:#fff;border-radius:999px;padding:3px 12px}
+#p28q .rw28 .c{background:#5E6A70}#p28q .rw28 .q{background:var(--teal)}
+#p28q .rs28{font-size:20px;font-weight:700;color:var(--ink);background:var(--orange2);border-radius:10px;padding:8px 12px}
+#p28q .rs28::before{content:"→ ";color:var(--orange);font-weight:900}#p28q .rs28 em{font-style:normal;font-weight:900;color:var(--orange)}
+#p28q .sd28 .bx28:last-child{flex:1}
+#p28q .ol28{list-style:none;margin:0;padding:0;counter-reset:q;display:flex;flex-direction:column;flex:1;justify-content:space-around}
+#p28q .ol28 li{counter-increment:q;display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:var(--ink);padding:7px 0;border-bottom:1px dashed #E3DED3}
+#p28q .ol28 li:last-child{border-bottom:0}
+#p28q .ol28 li::before{content:counter(q);flex:none;width:28px;height:28px;border-radius:50%;background:var(--tealSoft);color:var(--teal);font:900 16px/28px var(--num);text-align:center}
+.lk30v{display:flex;flex-direction:column;gap:4px}
+.lk30v div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:19px;line-height:1.45;color:var(--body)}
+.lk30v b{display:block;font-size:22px;color:var(--ink)}.lk30v .q{background:var(--tealSoft);border-color:transparent}.lk30v .q b{color:var(--teal)}.lk30v em{font-style:normal;font-weight:900;color:var(--orange)}
+.lk30v i{font-style:normal;text-align:center;font-size:26px;font-weight:900;color:var(--orange);line-height:1}
+.pl30v{display:flex;flex-direction:column;gap:7px;flex:1}
+.pl30v p{font-size:19px;font-weight:900;color:var(--ink)}
+.pl30v span{font-size:19px;font-weight:700;color:var(--teal);background:var(--tealSoft);border-radius:12px;padding:8px 14px}
+#p28q .im28{flex:1;min-height:0;padding:8px;position:relative;overflow:hidden}
+#p28q .im28 img{width:100%;height:100%;object-fit:contain;display:block}
+#p28q .im28 .tg{position:absolute;right:14px;top:12px;background:var(--teal);color:#fff;font-size:16px;font-weight:700;border-radius:999px;padding:4px 14px}
+.lk30{display:grid;grid-template-columns:1fr 44px 1fr;gap:6px;align-items:stretch}
+.lk30 div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 18px;font-size:20px;line-height:1.45;color:var(--body)}
+.lk30 b{display:block;font-size:23px;color:var(--ink)}.lk30 .q{background:var(--tealSoft);border-color:transparent}.lk30 .q b{color:var(--teal)}.lk30 em{font-style:normal;font-weight:900;color:var(--orange)}
+.lk30 i{font-style:normal;align-self:center;text-align:center;font-size:32px;font-weight:900;color:var(--orange)}
+.pl30{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.pl30 span{text-align:center;font-size:19px;font-weight:700;color:var(--teal);background:var(--tealSoft);border-radius:999px;padding:8px 6px;white-space:nowrap}
+/* P29 */
+#p28s .r29{display:grid;grid-template-columns:1fr 400px;gap:40px;min-height:0}
+#p28s .r29{transition:grid-template-columns .7s cubic-bezier(.6,0,.3,1)}#p28s .ch29 svg{flex:none;height:270px}
+#p28s .g30{height:730px}
+#p28s .ph29{flex:none!important}#p28s .ph29 figure{aspect-ratio:4/3}
+#p28s .sd29{display:flex;flex-direction:column;justify-content:center}
+#p28s .st29{padding:18px 0;border-bottom:2px solid var(--line)}#p28s .st29:last-child{border-bottom:0}
+#p28s .st29 .n{color:var(--ink);line-height:1}#p28s .st29 .n b{font:900 84px/1 var(--num)}#p28s .st29 .n small{font-size:28px;font-weight:700;margin-left:8px}
+#p28s .st29>p{font-size:24px;color:var(--muted);margin-top:8px}
+#p28s .st29 .q{font-size:30px;font-weight:900;color:var(--orange);margin:0 0 12px}
+#p28s .st29 ol{list-style:none;counter-reset:f;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+#p28s .st29 li{counter-increment:f;display:flex;align-items:center;gap:14px;font-size:28px;font-weight:900;color:var(--ink)}
+#p28s .st29 li::before{content:counter(f);flex:none;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;font:900 20px/38px var(--num);text-align:center}
+#p28s .st29 .nt{font-size:21px;color:var(--muted);margin-top:14px}
+#p28s .ch29{padding:14px 20px;display:flex;flex-direction:column;gap:8px;min-height:0}
+#p28s .ch29 svg{width:100%;height:auto;display:block;flex:none}
+#p28s .ct29{font-size:17px;color:var(--muted)}#p28s .ct29 b{font-size:20px;color:var(--ink);margin-right:10px}
+#p28s .ph29{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#p28s .ph29 figure{position:relative;margin:0;border-radius:10px;overflow:hidden;min-height:0}
+#p28s .ph29 img{width:100%;height:100%;object-fit:cover;display:block}
+#p28s .ph29 figcaption{position:absolute;left:8px;bottom:8px;background:rgba(14,28,34,.86);color:#fff;font-size:16px;font-weight:700;border-radius:999px;padding:3px 12px;white-space:nowrap}
+#p28s .sd29{display:flex;flex-direction:column;gap:16px}
+#p28s .k29{padding:16px;display:flex;flex-direction:column;gap:12px;border-left:8px solid var(--teal)}
+#p28s .bn29{background:var(--tealSoft);border-radius:12px;padding:12px 10px;text-align:center;display:flex;flex-direction:column}
+#p28s .bn29 b{font:900 48px/1.1 var(--num,inherit);color:var(--teal)}#p28s .bn29 small{font-size:22px;margin-left:2px}
+#p28s .bn29 span{font-size:17px;color:var(--muted)}
+#p28s .f29{flex:1;padding:16px 18px;border-left:8px solid var(--orange);display:flex;flex-direction:column;gap:10px}
+#p28s .f29 ol{list-style:none;counter-reset:f;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+#p28s .f29 li{counter-increment:f;position:relative;background:#FDF1E8;border-radius:12px;padding:10px 12px 10px 48px;font-size:20px;font-weight:700;color:#B4531A}
+#p28s .f29 li::before{content:counter(f);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900;display:grid;place-items:center;font-size:15px}
+#p28s .nt29{font-size:17px;color:var(--muted);margin-top:auto}
+/* P30 */
+#p28r .st30{position:relative;min-height:0}
+#p28r .pn30{position:absolute;inset:0;opacity:0;transform:translateX(24px);transition:opacity .45s,transform .45s;pointer-events:none;display:flex;flex-direction:column;gap:16px}
+#p28r.s0 .k0,#p28r.s1 .k1,#p28r.s2 .k2{opacity:1;transform:none;pointer-events:auto}
+#p28r .cp30{position:relative;margin:0;flex:1;min-height:0;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+#p28r .cp30 img{width:100%;height:100%;object-fit:cover;display:block}
+#p28r figcaption{position:absolute;left:12px;bottom:12px;background:rgba(14,28,34,.86);color:#fff;font-size:18px;font-weight:700;border-radius:999px;padding:5px 16px;white-space:nowrap}
+#p28r .cd30{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 18px;background:#fff;border:1px solid var(--line);border-left:8px solid var(--teal);border-radius:16px;padding:16px 24px}
+#p28r .cd30 b{font-size:30px;font-weight:900;color:var(--teal)}#p28r .cd30 span{font-size:22px;color:var(--body)}#p28r .cd30 em{font-style:normal;font-size:24px;font-weight:900;color:var(--orange)}
+#p28r .vs30{display:grid;grid-template-columns:1fr 44px 1.5fr;gap:8px;align-items:stretch}
+#p28r .vs30>i{font-style:normal;align-self:center;text-align:center;font-size:36px;font-weight:900;color:var(--orange)}
+#p28r .vs30 .card{padding:16px 22px;display:flex;flex-direction:column;gap:8px}
+#p28r .vs30 .q{font-size:17px;font-weight:700;letter-spacing:.1em;color:#5E6A70}#p28r .vs30 .new .q{color:var(--teal)}#p28r .vs30 .new{border:2px solid var(--teal)}
+#p28r .vs30 h3{font-size:25px}
+#p28r .vs30 ul{list-style:none;margin:0;padding:0;font-size:19px;color:#B03A2E;display:flex;flex-direction:column;gap:4px}#p28r .vs30 li::before{content:"✗ ";font-weight:900}
+#p28r .sc30{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#p28r .sc30 span{position:relative;background:var(--tealSoft);border-radius:10px;padding:10px 4px;text-align:center;font-size:18px;font-weight:900;color:var(--ink);white-space:nowrap;counter-increment:sc}
+#p28r .sc30{counter-reset:sc}#p28r .sc30 span::before{content:counter(sc);display:block;margin:0 auto 4px;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-size:15px;line-height:26px}
+#p28r .ps30{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#p28r .ps30 figure{position:relative;margin:0;border-radius:12px;overflow:hidden;min-height:0}
+#p28r .ps30 img{width:100%;height:100%;object-fit:cover;display:block}
+#p28r .tr30{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+#p28r .tr30 div{background:#fff;border:1px solid var(--line);border-left:8px solid var(--orange);border-radius:16px;padding:20px 24px;font-size:21px;color:var(--body);display:flex;flex-direction:column;justify-content:center;gap:6px}
+#p28r .tr30 b{font-size:27px;color:#B4531A}
+#p28r .wbtn30{align-self:flex-start;font:900 22px var(--zh);color:#fff;background:var(--teal);border:0;border-radius:999px;padding:12px 28px;cursor:pointer;box-shadow:0 6px 18px rgba(15,110,121,.25)}
+#p28r .wb29{position:absolute;inset:0;background:#fff;border:2px solid var(--teal);border-radius:18px;padding:16px 22px;opacity:0;transform:translateY(20px) scale(.98);transition:opacity .5s,transform .5s;pointer-events:none;z-index:4;display:flex;flex-direction:column;gap:10px;box-shadow:0 18px 50px rgba(14,28,34,.18);overflow:hidden}
+#p28r.web .wb29{opacity:1;transform:none;pointer-events:auto}
+#p28r .wh29{display:flex;align-items:center;gap:16px}#p28r .wh29 b{font-size:24px;color:var(--ink)}#p28r .wh29 span{font-size:16px;color:var(--muted)}
+#p28r .wh29 a{margin-left:auto;font-size:17px;font-weight:700;color:#fff;background:var(--teal);border-radius:999px;padding:6px 16px;text-decoration:none}
+#p28r .wh29 .x30{font:700 22px var(--zh);border:0;background:#EEE;border-radius:8px;width:36px;height:36px;cursor:pointer}
+#p28r .tb29{width:100%;border-collapse:collapse;font-size:16px}
+#p28r .tb29 th{text-align:left;font-size:14px;color:var(--muted);font-weight:700;padding:5px 8px;border-bottom:2px solid var(--line)}
+#p28r .tb29 td{padding:7px 8px;border-bottom:1px solid #EFEBE3;vertical-align:middle;color:var(--body)}
+#p28r .tb29 td.f{font:700 16px/1.2 ui-monospace,Consolas,monospace;color:var(--ink);white-space:nowrap}
+#p28r .tb29 td em{display:inline-block;font-style:normal;font-size:12px;color:var(--muted);background:#F4F1EA;border-radius:6px;padding:1px 6px;margin-left:6px}
+#p28r .tb29 td.d{font-weight:700;color:#0F6E79;white-space:nowrap;background:#EAF6EF}
+#p28r .ids{display:grid;grid-template-columns:1fr 1fr;gap:2px 12px;font:13px/1.35 ui-monospace,Consolas,monospace;color:#5E6A70}
+#p28r .ids i{font-style:normal;color:#D97706;font-weight:700;margin-right:5px}#p28r .ids b{color:#B45309}
+#p28r.noanim *{transition:none!important}
+#p28r .st30{display:flex;flex-direction:column;gap:14px}
+#p28r .ps30{grid-template-columns:repeat(3,1fr)}
+#p28r .st30{transition:opacity .45s,transform .45s}
+#p28r.s1 .st30{opacity:0;transform:translateX(-24px);pointer-events:none}
+#p28r.s1 .fu30{transition-delay:.5s}
+#p28r .fu30{position:absolute;inset:0;display:grid;grid-template-columns:1fr 380px;gap:40px;opacity:0;transform:translateX(24px);transition:opacity .45s,transform .45s;pointer-events:none}
+#p28r.s1 .fu30{opacity:1;transform:none;pointer-events:auto}
+#p28r .fu30 .tb29 td{padding:12px 8px}
+#p28r .fu30 .wb29{position:static;opacity:1;transform:none;pointer-events:auto;min-height:0;overflow:hidden}
+#p28r .sd30{display:flex;flex-direction:column;justify-content:center}
+#p28r .sd30 .q{font-size:22px;font-weight:900;letter-spacing:.15em;color:#B4531A;margin-bottom:6px}
+#p28r .it30{padding:24px 0;border-bottom:2px solid var(--line)}#p28r .it30:last-child{border-bottom:0}
+#p28r .it30 b{display:block;font-size:46px;font-weight:900;color:var(--ink);line-height:1.15}
+#p28r .it30 span{display:block;font-size:24px;color:var(--muted);margin-top:8px}
+
+/* P19 臨時地坪高程檢討：三次檢討＋立體示意 */
+#p17h .sb19{margin-top:14px}
+#p17h .mn19{position:relative;height:566px;margin-top:16px}
+#p17h .mp19,#p17h .ex19{position:absolute;top:0;bottom:0;transition:opacity .45s,transform .45s}
+#p17h .mp19{left:0;width:1040px;padding:12px 18px 12px;display:flex;flex-direction:column;gap:8px}
+#p17h .ex19{left:1066px;right:0}
+#p17h .mp19 svg{width:100%;flex:1;min-height:0;display:block;border-radius:10px}
+#p17h .sg19 path{stroke:#A9B2B5;transition:stroke .6s,opacity .6s}
+#p17h.s1 .sg19 .l,#p17h.s2 .sg19 .l,#p17h.s3 .sg19 .l{stroke:#1F7FA6}
+#p17h.s2 .sg19 .c,#p17h.s3 .sg19 .c{stroke:#EE6A1F}
+#p17h.s1 .sg19 .g,#p17h.s1 .sg19 .c{opacity:.55}
+#p17h .pf19{opacity:0;transition:opacity .6s}#p17h.s2 .pf19{opacity:1}
+#p17h .tg19{opacity:0;transition:opacity .5s}
+#p17h.s0 .t0,#p17h.s1 .t1,#p17h.s2 .t1,#p17h.s2 .t2{opacity:1}
+#p17h .lg19{display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;font-size:18px;font-weight:700;color:var(--ink)}
+#p17h .lg19 span{display:inline-flex;align-items:center;gap:8px;transition:opacity .5s}
+#p17h .lg19 i{width:30px;height:9px;border-radius:5px;display:inline-block}
+#p17h .lg19 em{font-style:normal;font-weight:700;color:var(--muted);font-size:17px;margin-left:auto}
+#p17h .lg19 button{font:700 16px var(--zh);color:var(--teal);background:var(--tealSoft);border:0;border-radius:999px;padding:5px 14px;cursor:zoom-in}
+#p17h .lg19 .k1,#p17h .lg19 .k2{opacity:.25}
+#p17h.s1 .lg19 .k1,#p17h.s2 .lg19 .k1,#p17h.s2 .lg19 .k2{opacity:1}
+#p17h .pn19{position:absolute;inset:0;padding:22px 28px;display:flex;flex-direction:column;gap:8px;opacity:0;transform:translateX(30px);transition:opacity .45s,transform .45s;pointer-events:none;border-left:8px solid var(--orange)}
+#p17h .pn19[data-k="1"]{border-left-color:#1F7FA6}#p17h .pn19[data-k="0"]{border-left-color:#A9B2B5}
+#p17h.s0 .pn19[data-k="0"],#p17h.s1 .pn19[data-k="1"],#p17h.s2 .pn19[data-k="2"]{opacity:1;transform:none;pointer-events:auto}
+#p17h .q19{font-size:18px;font-weight:700;letter-spacing:.08em;color:var(--orange)}
+#p17h .pn19[data-k="1"] .q19{color:#1F7FA6}#p17h .pn19[data-k="0"] .q19{color:#5E6A70}
+#p17h .pn19 h3{font-size:28px;line-height:1.3}
+#p17h .pn19 svg{width:100%;height:auto;display:block;margin:6px auto;border-radius:10px;background:#FBF8F1}
+#p17h .a19{font-size:21px;line-height:1.6;color:var(--body)}
+#p17h .a19 b{color:var(--ink)}
+#p17h .b19{margin:0;padding-left:22px;font-size:20px;line-height:1.55;color:var(--body);display:flex;flex-direction:column;gap:6px}#p17h .b19 b{color:var(--ink)}
+#p17h .c19{font-size:23px;font-weight:900;color:#0F6E79;background:var(--tealSoft);border-radius:12px;padding:10px 16px;text-align:center}
+#p17h .ph19{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:14px;background:#E3E1DC;border:1px solid #D2CFC8;border-radius:18px;padding:14px;opacity:0;transform:scale(.97);transition:opacity .5s,transform .5s;pointer-events:none}
+#p17h .ph19 figure{position:relative;margin:0;border-radius:10px;overflow:hidden;min-height:0}
+#p17h .ph19 img{width:100%;height:100%;object-fit:cover;display:block}
+#p17h .ph19 figcaption{position:absolute;left:12px;bottom:12px;background:rgba(14,28,34,.86);color:#fff;font-size:19px;font-weight:700;border-radius:999px;padding:6px 16px;white-space:nowrap;max-width:calc(100% - 24px)}
+#p17h.s3 .ph19{opacity:1;transform:none;pointer-events:auto}
+#p17h.s3 .mp19,#p17h.s3 .ex19{opacity:0;pointer-events:none}
+#p17h .bd19{margin-top:16px;font-size:24px;padding:14px 30px}
+#p17h.noanim *{transition:none!important}
+.tg23{position:absolute;right:14px;top:14px;background:var(--orange);color:#fff;font-size:17px;font-weight:700;border-radius:999px;padding:4px 14px}
+/* P24 休息區：可旋轉縮放的立體模型 */
+.vw24{position:relative;height:690px;background:linear-gradient(#FBFAF7,#EEEAE1);border:1px solid var(--line);border-radius:18px;overflow:hidden;perspective:800px;perspective-origin:50% 45%;cursor:grab;touch-action:none;user-select:none}
+.vw24.drag{cursor:grabbing}
+.cam24{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
+.sc24{position:absolute;left:0;top:0;width:740px;height:1170px;transform-origin:0 0;transform-style:preserve-3d}
+.sc24.mv{transition:transform 1.4s cubic-bezier(.45,0,.2,1)}
+.sc24 *{transform-style:preserve-3d}
+.fl24{position:absolute;left:0;top:0;width:740px;height:1250px;background:url(assets/p24_cad.jpg) 0 0/740px 1170px no-repeat #fff;box-shadow:0 0 0 2px #D6D0C4}
+.o24{position:absolute;transition:opacity .6s}
+#p24r.s0 .o24{opacity:0;pointer-events:none}
+#p24r.s0 .fl24{height:1170px}
+.bx24{position:absolute}
+.bx24>i{position:absolute;display:block;border:1px solid rgba(18,52,59,.55);backface-visibility:visible}
+.pl24{position:absolute;transform-origin:0 0}
+.pl24>i{position:absolute;inset:0;display:block;transform:scaleY(-1)}
+.wl24>i{background:repeating-linear-gradient(90deg,#B33A2E 0 5px,#F4F2EE 5px 70px);border:2px solid #8E2E25}
+.lt24{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#FFE08A;box-shadow:0 0 14px 6px rgba(255,214,110,.75)}
+.ct24>i{background:repeating-linear-gradient(90deg,rgba(150,165,170,.55) 0 3px,rgba(235,240,240,.35) 3px 46px),repeating-linear-gradient(0deg,rgba(255,255,255,.18) 0 6px,rgba(200,210,215,.12) 6px 12px);border:2px solid rgba(90,110,115,.6)}
+.rl24>i{background:#B33A2E}
+.gd24>i{background:#7E8487;border:2px solid #5E6467}
+.dr24>i{background:linear-gradient(90deg,#C8A06A 0 49%,#8C6A3E 49% 51%,#C8A06A 51%);border:1px solid #8C6A3E}
+.fe24>i{background:repeating-linear-gradient(45deg,rgba(255,122,47,.85) 0 3px,transparent 3px 9px),repeating-linear-gradient(-45deg,rgba(255,122,47,.85) 0 3px,transparent 3px 9px);border-top:3px solid #E8E8E8}
+.tx24>i{transform:scale(-1,-1);background:center/100% 100% no-repeat;border:1px solid rgba(0,0,0,.25);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.rf24{position:absolute;left:0;top:0;width:740px;height:1170px;background:repeating-linear-gradient(90deg,rgba(170,180,182,.75) 0 10px,rgba(205,212,214,.75) 10px 20px);clip-path:polygon(415px 28px,690px 28px,690px 590px,405px 590px,405px 1070px,250px 1070px,282px 745px,100px 700px);transform:translateZ(140px);opacity:0;transition:opacity .5s;pointer-events:none}
+.vw24.roof .rf24{opacity:.85}
+.an24{position:absolute;width:0;height:0}
+.lb24w{position:absolute;inset:0;pointer-events:none}
+.lb24w span{position:absolute;transform:translate(-50%,-100%);white-space:nowrap;background:rgba(14,28,34,.86);color:#fff;font-size:15px;font-weight:700;border-radius:999px;padding:3px 11px;transition:opacity .3s}
+.lb24w span.n{background:var(--orange);font-size:18px;width:32px;height:32px;padding:0;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.lb24w span.hide{opacity:0}
+.lb24{position:absolute;left:18px;top:16px;background:var(--orange);color:#fff;font-size:19px;font-weight:700;border-radius:999px;padding:6px 18px}
+.tb24{position:absolute;right:14px;top:14px;display:flex;gap:6px}
+.tb24 button{font:700 16px var(--zh);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;min-width:40px;height:36px;padding:0 10px;cursor:pointer}
+.tb24 button.on{background:var(--ink);color:#fff}
+.hint24{position:absolute;left:18px;bottom:12px;font-size:15px;color:var(--muted);background:rgba(255,255,255,.8);border-radius:8px;padding:3px 10px}
+#p24r.s0 .tb24,#p24r.s0 .hint24{display:none}
+.sp24{display:flex;gap:14px;align-items:flex-start;padding:10px 16px;border-radius:14px;border:2px solid var(--line);background:#fff;cursor:pointer;transition:border-color .3s,background .3s,opacity .3s;opacity:.55}
+.sp24 b{flex:none;width:38px;height:38px;border-radius:50%;background:#E3DED3;color:var(--ink);font-size:21px;display:flex;align-items:center;justify-content:center}
+.sp24 h3{font-size:22px;font-weight:900;color:var(--ink)}.sp24 p{font-size:16px;line-height:1.4;color:var(--muted)}
+.sp24.done{opacity:1}.sp24.on{opacity:1;border-color:var(--orange);background:var(--orange2)}.sp24.on b,.sp24.done b{background:var(--orange);color:#fff}
+.ch24{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.ch24 span{font-size:15px;font-weight:700;border:1.5px solid var(--line);border-radius:999px;padding:2px 10px;background:#fff;color:var(--muted)}
+.ch24 span.on{background:var(--orange);border-color:var(--orange);color:#fff}
+.pv24{position:relative;flex:1;min-height:0}
+.pc24{position:absolute;inset:0;margin:0;border-radius:16px;overflow:hidden;opacity:0;transform:translateX(30px);transition:opacity .5s,transform .6s cubic-bezier(.3,.7,.3,1);pointer-events:none;background:#fff;border:1px solid var(--line)}
+.pc24.on{opacity:1;transform:none;pointer-events:auto}
+.pc24 img{width:100%;height:100%;object-fit:cover;display:block}
+.pc24 figcaption{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(14,28,34,.86);color:#fff;font-size:17px;font-weight:700;border-radius:12px;padding:6px 12px;line-height:1.4}
+.mk24{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--orange);color:#fff;font:900 18px var(--num);font-style:normal;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.lg24{padding:16px 20px;height:100%;background:var(--blk)}
+.lg24 h3{font-size:22px;font-weight:900;color:var(--ink);margin-bottom:8px}
+.lg24 ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;font-size:15px;color:var(--body)}
+.lg24 li{display:flex;align-items:center;gap:8px}.lg24 li i{flex:none;width:18px;height:14px;border-radius:3px}
 /* P20 剖面動畫 */
+
 .sb20{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
 .sb20 span{display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:700;color:var(--muted);background:#fff;border:2px solid var(--line);border-radius:999px;padding:5px 16px 5px 6px;transition:all .3s;cursor:pointer}
 .sb20 b{width:30px;height:30px;border-radius:50%;background:#E3DED3;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--num)}
@@ -407,6 +715,10 @@ video.vid{cursor:pointer;object-fit:cover}
 .chap.active .chn,.chap.active .cht,.chap.active .chl,.chap.active .chq{animation:rise7 .7s cubic-bezier(.22,.61,.36,1) both}
 .chap.active .cht{animation-delay:.12s}.chap.active .chl{animation-delay:.24s}.chap.active .chq{animation-delay:.36s}
 .chap .chn,.chap .cht,.chap .chl,.chap .chq{opacity:0;transform:translateY(18px)}
+.chsp{display:inline-block;margin-top:34px;font-size:30px;font-weight:700;color:#0E1C22;background:var(--orange);padding:8px 26px;border-radius:999px}
+.agsp{margin-top:auto;font-size:22px;font-weight:700;color:var(--teal)}
+[data-go].card{display:flex;flex-direction:column}
+.chap.active .chsp{animation:rise7 .7s cubic-bezier(.22,.61,.36,1) .48s both}.chap .chsp{opacity:0;transform:translateY(18px)}
 [data-go]{cursor:pointer;transition:transform .2s,box-shadow .2s}[data-go]:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(14,28,34,.12)}
 /* 右下控制列＋目錄（手機、平板可用） */
 #dock{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:4px;background:rgba(14,28,34,.86);border:1px solid rgba(255,255,255,.16);padding:5px;border-radius:12px;z-index:30;transition:opacity .5s;user-select:none}
@@ -438,6 +750,9 @@ video.vid{cursor:pointer;object-fit:cover}
 aside.spk{display:none}
 #spk{position:fixed;left:0;right:0;bottom:0;z-index:40;max-height:34vh;overflow:auto;background:rgba(10,20,24,.96);color:#E8ECEC;border-top:4px solid var(--orange);padding:16px 28px 22px;font:19px/1.7 var(--zh);white-space:pre-line;transform:translateY(100%);transition:transform .3s}
 #spk.show{transform:none}
+#spk{padding-right:300px}body.spkon #dock{z-index:46;opacity:1}
+#spk .x{position:absolute;top:8px;right:14px;width:36px;height:36px;border:0;border-radius:8px;background:rgba(255,255,255,.12);color:#E8ECEC;font:22px/36px var(--zh);cursor:pointer}#spk .x:hover{background:rgba(255,255,255,.24)}
+@media (max-width:900px){#spk{padding-right:28px;padding-bottom:70px}}
 #spk b{display:block;color:var(--orange);font-size:15px;letter-spacing:.1em;margin-bottom:4px}
 /* ===== 圖塊配色：暖沙（原深墨色） ===== */
 .card.ink [style*="#B9CACD"],.card.ink [style*="#9FB3B8"],.card.ink [style*="#DDE6E6"],.card.ink .muted{color:var(--blkTxt)!important}
@@ -460,7 +775,7 @@ aside.spk{display:none}
   #stage{transform:none!important;width:1920px;height:auto;position:static}
   .slide{position:relative;opacity:1;visibility:visible;transform:none;page-break-after:always;break-after:page;transition:none}
   #hud,#prog,#dock,#menu,#menuveil,#rotate{display:none!important}
-  .chap .chn,.chap .cht,.chap .chl,.chap .chq{opacity:1;transform:none}
+  .chap .chn,.chap .cht,.chap .chl,.chap .chq,.chap .chsp{opacity:1;transform:none}
   .mask{display:none}
   .flip .hid{opacity:1}.flip .hint{display:none}
   #p30 .card.dim{opacity:1;transform:none}.cover12{display:none}.p12pills .pill{opacity:1;transform:none}.back12 i{width:100%}
@@ -470,6 +785,129 @@ aside.spk{display:none}
   #p20 [data-on]{transform:none!important;opacity:1!important}#p20 .st{display:none}
   #p19 .rm19{display:none}#p19 .rl19{opacity:1;transform:none}#p19 .lb19{display:none}
 }
+/* P22 工法比較表（動畫改為手動逐步） */
+#p20 .on{transition-delay:calc(var(--dl,0s) * .6)}
+.sb20 span.t{margin-left:auto;border-color:var(--teal);color:var(--teal)}.sb20 span.t b{background:var(--tealSoft);color:var(--teal);font-family:var(--zh)}
+.sb20 span.t.on{background:var(--teal);color:#fff}.sb20 span.t.on b{background:#fff;color:var(--teal)}
+.tb20{position:absolute;left:0;right:0;top:205px;bottom:0;background:var(--paper);opacity:0;transform:perspective(2000px) rotateX(-12deg) translateY(30px);transform-origin:50% 0;transition:opacity .5s,transform .7s cubic-bezier(.3,.7,.3,1);pointer-events:none;z-index:3}
+.tb20.on{opacity:1;transform:none;pointer-events:auto}
+.cmp20{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;font-size:22px;line-height:1.5}
+.cmp20 th{background:var(--ink);color:#fff;font-size:24px;font-weight:900;padding:14px 22px;text-align:left}
+.cmp20 th.alt{background:var(--teal)}.cmp20 th.adv{background:var(--orange)}
+.cmp20 td{padding:16px 22px;border-top:1px solid var(--line);vertical-align:top;color:var(--body)}
+.cmp20 td b{display:block;color:var(--ink);font-weight:900;margin-bottom:4px}
+.cmp20 td.k{font-weight:900;color:var(--ink);width:170px;background:#F7F4EC}
+.cmp20 td.alt{background:var(--tealSoft)}.cmp20 td.alt b{color:var(--teal)}
+.cmp20 td.adv{color:#B4531A;font-weight:700;width:300px;background:#FDF1E8}
+/* 07 職安（ss1–ss4） */
+#ss1 .g34{display:grid;grid-template-columns:1fr 470px;gap:28px;margin-top:30px;height:640px}
+#ss1 .lv34{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+#ss1 .lv34 .card{position:relative;padding:0;display:flex;flex-direction:column;overflow:visible}
+#ss1 .hd{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 10px 14px;border-radius:17px 17px 0 0;background:#EEF2EF}
+#ss1 .hd img{height:86px;width:auto}
+#ss1 .hd span{font-size:26px;font-weight:900;color:var(--ink)}
+#ss1 .l2{border:3px solid var(--orange)}#ss1 .l2 .hd{background:var(--orange2)}
+#ss1 .me{position:absolute;top:-16px;right:14px;font-style:normal;font-size:17px;font-weight:900;color:#fff;background:var(--orange);border-radius:999px;padding:4px 14px;z-index:2}
+#ss1 .o{font-size:27px;font-weight:900;color:var(--teal);text-align:center;margin-top:16px}
+#ss1 .u{font-size:18px;color:var(--muted);text-align:center;margin:4px 12px 0;line-height:1.4;min-height:50px}
+#ss1 .lv34 ul{list-style:none;margin:12px 16px 16px;padding:14px 0 0;border-top:2px solid var(--line);display:flex;flex-direction:column;gap:10px}
+#ss1 .lv34 li{font-size:21px;font-weight:700;color:var(--ink);line-height:1.35;padding-left:16px;position:relative}
+#ss1 .lv34 li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+#ss1 .dc34{padding:22px 24px;display:flex;flex-direction:column}
+#ss1 .dc34 .h{font-size:24px;font-weight:900;color:#fff;background:var(--teal);border-radius:12px;padding:10px 16px;text-align:center}
+#ss1 .fan,#ss2 .fan{position:relative;flex:1;min-height:0}
+#ss1 .fan img,#ss2 .fan img{position:absolute;height:86%;width:auto;background:#fff;border:1px solid #D8D2C4;box-shadow:0 6px 18px rgba(0,0,0,.12);cursor:zoom-in}
+#ss1 .fan .f1{left:0;top:5%}#ss1 .fan .f2{left:14%;top:8%}#ss1 .fan .f3{left:28%;top:11%}#ss1 .fan .f4{right:0;top:14%}
+#ss2 .g35{display:grid;grid-template-columns:500px 1fr;gap:28px;margin-top:30px;height:640px}
+#ss2 .ls35{background:var(--blk);border-color:transparent;padding:22px 28px}
+#ss2 .ls35 ol{list-style:none;margin:0;padding:0;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+#ss2 .ls35 li{display:flex;gap:12px;font-size:23px;line-height:1.35;color:var(--body);border-radius:10px;padding:4px 8px;transition:background .4s,color .4s}
+#ss2 .ls35 li b{flex:none;width:1.2em;font-family:var(--num);color:var(--orange)}
+#ss2.s1 .ls35 li{color:#A7A196}#ss2.s1 .ls35 li b{color:#C9C2B5}
+#ss2.s1 .ls35 li.k{background:var(--orange);color:#fff;font-weight:900}#ss2.s1 .ls35 li.k b{color:#fff}
+#ss2 .rt35{position:relative;min-height:0}
+#ss2 .pn35{position:absolute;inset:0;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateX(24px);transition:opacity .45s,transform .45s;pointer-events:none}
+#ss2.s0 .k0,#ss2.s1 .k1{opacity:1;transform:none;pointer-events:auto}
+#ss2.noanim *{transition:none!important}
+#ss2 .r1,#ss2 .r2{flex:1;min-height:0;display:grid;gap:12px}
+#ss2 .r1{grid-template-columns:1.33fr 1.33fr 1.35fr}#ss2 .r2{grid-template-columns:.75fr 1.34fr 1.34fr 1.34fr}
+#ss2 figure{position:relative;margin:0;border-radius:14px;overflow:hidden;min-height:0;background:#DDD}
+#ss2 figure img{width:100%;height:100%;object-fit:cover;display:block}
+#ss2 figcaption{position:absolute;left:10px;bottom:10px;background:rgba(15,110,121,.92);color:#fff;font-size:18px;font-weight:700;border-radius:999px;padding:4px 14px;white-space:nowrap}
+#ss2 .k1 .h{font-size:30px;font-weight:900;color:var(--ink)}
+#ss2 .ac35{flex:1;min-height:0;display:grid;grid-template-columns:480px 1fr;gap:22px}
+#ss2 .ac35>div{display:flex;flex-direction:column;gap:10px;min-height:0}
+#ss2 .ac35 .s{font-size:20px;font-weight:900;color:#fff;background:var(--teal);border-radius:10px;padding:7px 14px;align-self:flex-start}
+#ss2 .k1 .fan .f1{left:0;top:2%}#ss2 .k1 .fan .f2{left:22%;top:8%}#ss2 .k1 .fan .f3{left:44%;top:14%}
+#ss2 .g4{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px}
+#ss3 .g36{display:grid;grid-template-columns:1240px 1fr;gap:36px;margin-top:28px;height:640px}
+#ss3 .im36{padding:8px;display:flex;align-items:center}
+#ss3 .im36 img{width:100%;height:auto;display:block;border-radius:10px;cursor:zoom-in}
+#ss3 .sd36{display:flex;flex-direction:column;justify-content:center;gap:16px}
+#ss3 .sd36 .h{font-size:34px;font-weight:900;color:var(--teal);line-height:1.3}
+#ss3 .sd36 .d{font-size:23px;line-height:1.6;color:var(--body);padding-bottom:18px;border-bottom:2px solid var(--line)}
+#ss3 .sd36 .s{font-size:19px;font-weight:700;color:var(--muted)}
+#ss3 .ch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#ss3 .ch span{font-size:21px;font-weight:700;color:var(--ink);background:var(--tealSoft);border-radius:10px;padding:9px 12px;text-align:center}
+#ss4 .g37{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px;height:640px}
+#ss4 figure{margin:0;padding:10px;display:flex;flex-direction:column;gap:10px;min-height:0}
+#ss4 .im{flex:1;min-height:0;border-radius:12px;overflow:hidden}
+#ss4 .im img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+#ss4 figcaption{display:flex;align-items:center;gap:12px;font-size:25px;font-weight:900;color:var(--ink);padding:6px 8px 8px}
+#ss4 figcaption b{flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font:900 20px/36px var(--num);text-align:center}
+
+/* P34／P35 表單翻動（1120m） */
+#ss1 .g34{grid-template-columns:1fr 520px}
+#ss1 .u{min-height:118px}
+#ss1 .u .nm{display:block}
+#ss1 .dc34{min-height:0;overflow:hidden;gap:12px;padding:18px 20px}
+.fl{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px}
+.fl .fs{position:relative;flex:1;min-height:0;cursor:pointer}
+.fl .fs img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;max-width:86%;max-height:94%;width:auto;height:auto;background:#fff;border:1px solid #D8D2C4;box-shadow:0 10px 28px rgba(0,0,0,.16);transition:transform .6s cubic-bezier(.4,0,.2,1),opacity .6s;opacity:0;pointer-events:none}
+.fl .fs img.p0{opacity:1;transform:none;z-index:5;pointer-events:auto}
+.fl .fs img.p1{opacity:.9;transform:translate(26px,10px) rotate(2.5deg) scale(.95);z-index:4}
+.fl .fs img.p2{opacity:.7;transform:translate(48px,20px) rotate(5deg) scale(.9);z-index:3}
+.fl .fs img.p3{opacity:0;transform:translate(60px,26px) rotate(6deg) scale(.86);z-index:2}
+.fl .fs img.out{opacity:0;transform:translate(-120%,-4%) rotate(-12deg);z-index:6}
+.fl .fb{flex:none;display:flex;align-items:center;justify-content:center;gap:14px}
+.fl .fb button{width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--teal);font:900 26px/1 var(--zh);cursor:pointer;padding:0 0 3px}
+.fl .fb .cp{font-size:20px;font-weight:900;color:var(--ink);min-width:7em;text-align:center}
+.fl .fb .dt{display:flex;gap:6px}.fl .fb .dt i{width:9px;height:9px;border-radius:50%;background:#D8D2C4}.fl .fb .dt i.on{background:var(--orange)}
+/* P35 */
+#ss2 .g35{grid-template-columns:440px 1fr;gap:24px}
+#ss2 .ls35{padding:22px 22px}
+#ss2 .ls35 li{font-size:21px}
+#ss2 .ac35{grid-template-columns:440px 1fr;gap:22px}
+#ss2 .k1 .fl .fs img{max-width:96%}
+/* 1120n：P34／P35 表單再放大 */
+#ss1 .g34{height:715px;grid-template-columns:1fr 560px}
+#ss1 .dc34{padding:14px 16px;gap:8px}
+#ss1 .dc34 .h{font-size:22px;padding:8px 14px}
+#ss2 .g35{height:715px}
+#ss2 .ac35{grid-template-columns:480px 1fr}
+.fl{gap:6px}
+.fl .fs img{max-width:94%;max-height:99%}
+.fl .fs img.p1{transform:translate(18px,8px) rotate(2deg) scale(.96)}
+.fl .fs img.p2{transform:translate(34px,14px) rotate(4deg) scale(.92)}
+.fl .fb button{width:36px;height:36px;font-size:24px}
+/* 1120o：P37 門禁管制改流程圖 */
+#ss4 .g37{grid-template-columns:1fr 1.75fr 1fr 1fr;gap:18px}
+#ss4 .g37>figure{height:100%;box-sizing:border-box}
+#ss4 .fc .im{position:relative;background:#fff;border:1px solid var(--line)}
+#ss4 .fc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box}
+/* 1120p：P34／P35 表單改右側整欄（與標題同高） */
+#ss1 .rp,#ss2 .rp{position:absolute;right:0;top:0;bottom:0;width:520px;display:flex;flex-direction:column;gap:10px}
+#ss1 .rh,#ss2 .rh{font-size:34px;font-weight:900;color:var(--ink);line-height:1.2}
+#ss1 .rh{font-size:30px}
+#ss1 .rc,#ss2 .rc{align-self:flex-start;font-size:22px;font-weight:900;color:#fff;background:var(--teal);border-radius:10px;padding:7px 16px}
+#ss1 .rp .fl .fs img,#ss2 .rp .fl .fs img{max-width:92%;max-height:98%}
+#ss1 .kicker,#ss1 h1.t,#ss1 .g34{margin-right:560px}
+#ss1 .g34{grid-template-columns:1fr;height:715px}
+#ss2 .rp{opacity:0;transform:translateX(40px);transition:opacity .5s,transform .5s;pointer-events:none}
+#ss2.s1 .rp{opacity:1;transform:none;pointer-events:auto}
+#ss2 .g35{transition:margin-right .5s}
+#ss2.s1 .g35{margin-right:560px}
+#ss2 .ac35{grid-template-columns:1fr}
 </style>
 </head>
 <body>
@@ -486,7 +924,7 @@ aside.spk{display:none}
     <div style="width:180px;height:10px;background:var(--orange);margin:48px 0 40px"></div>
     <p style="font-size:38px;color:#CFDCDD;line-height:1.5">從歷史建物保護、精細拆除<br>到智慧工地的現場經驗</p>
   </div>
-  <div class="abs" style="left:120px;bottom:90px;font-size:24px;color:#8FA4AA;line-height:1.7">豐譽營造股份有限公司 ／ 正龍工程股份有限公司　共同承攬<br>主講：魏志全</div>
+  <div class="abs" style="left:120px;bottom:90px;font-size:24px;color:#8FA4AA;line-height:1.7">豐譽營造股份有限公司 ／ 正龍工程股份有限公司　共同承攬<br>報告人：林博弘所長、魏志全所長、林暐勝技師、施工組、品管組、職安組</div>
 </section>
 
 <!-- 2 AGENDA -->
@@ -496,13 +934,13 @@ aside.spk{display:none}
     <div class="kicker">AGENDA</div>
     <h1 class="t">簡報大綱</h1>
     <div class="grid" style="grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;margin-top:64px;gap:22px">
-      <div class="card" data-go="ch1" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">01</div><h3 style="margin-top:18px">工程概要</h3></div>
-      <div class="card" data-go="ch2" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">02</div><h3 style="margin-top:18px">歷史建物保護</h3></div>
-      <div class="card" data-go="ch3" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">03</div><h3 style="margin-top:18px">營建廢棄物資源化與循環經濟</h3></div>
-      <div class="card" data-go="ch4" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">04</div><h3 style="margin-top:18px">設計規劃</h3></div>
-      <div class="card ink" data-go="ch5" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">05</div><h3 style="margin-top:18px">智慧科技輔助及 AI 應用</h3></div>
-      <div class="card ink" data-go="ch6" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">06</div><h3 style="margin-top:18px">工地職安衛</h3></div>
-      <div class="card ink" data-go="ch7" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">07</div><h3 style="margin-top:18px">BIM</h3></div>
+      <div class="card" data-go="ch1" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">01</div><h3 style="margin-top:18px">工程概要</h3><p class="agsp">主講｜林博弘所長</p></div>
+      <div class="card" data-go="ch2" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">02</div><h3 style="margin-top:18px">歷史建物保護</h3><p class="agsp">主講｜魏志全所長</p></div>
+      <div class="card" data-go="ch3" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">03</div><h3 style="margin-top:18px">營建廢棄物資源化與循環經濟</h3><p class="agsp">主講｜魏志全所長</p></div>
+      <div class="card" data-go="ch4" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">04</div><h3 style="margin-top:18px">設計規劃</h3><p class="agsp">主講｜林暐勝技師</p></div>
+      <div class="card ink" data-go="ch5" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">05</div><h3 style="margin-top:18px">BIM 應用</h3><p class="agsp">主講｜林暐勝技師</p></div>
+      <div class="card ink" data-go="ch6" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">06</div><h3 style="margin-top:18px">智慧施工與品質管理</h3><p class="agsp">主講｜施工組、品管組</p></div>
+      <div class="card ink" data-go="ch7" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">07</div><h3 style="margin-top:18px">工地職安衛與自動化管理</h3><p class="agsp">主講｜職安組</p></div>
     </div>
   </div>
 </section>
@@ -511,14 +949,14 @@ aside.spk{display:none}
 <section class="slide dark chap" data-sec="01 工程概要" id="ch1" data-title="01 工程概要">
   <img class="chbg" src="assets/e340242940.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">01</div><div class="cht">工程概要</div><div class="chl"></div><p class="chq">衛福部辦公園區裡的國家級防疫基地</p></div>
+  <div class="chin"><div class="chn">01</div><div class="cht">工程概要</div><div class="chl"></div><p class="chq">衛福部辦公園區裡的國家級防疫基地</p><p class="chsp">主講｜林博弘所長</p></div>
 </section>
 
 <!-- 3 SITE -->
 <section class="slide" data-sec="01 工程概要">
   <div class="pad">
     <div class="kicker">01 工程概要</div>
-    <h1 class="t">衛福部辦公園區裡的國家級防疫基地</h1>
+    <h1 class="t">衛生福利部防疫中心興建工程</h1>
     <div class="grid" style="grid-template-columns:1.05fr 1fr;margin-top:40px;height:720px;gap:40px">
       <img src="assets/2cd0c5de9d.jpg" class="img" alt="基地空拍圖：衛福部、本案基地、食藥署新建大樓">
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -577,28 +1015,11 @@ aside.spk{display:none}
   </div>
 </section>
 
-<!-- 6 TIMELAPSE -->
-<section class="slide" data-sec="01 工程概要" id="p6">
-  <div class="pad">
-    <div class="kicker">01 工程概要｜施工進度</div>
-    <h1 class="t">現場縮時攝影</h1>
-    <div style="display:grid;grid-template-columns:1210px 1fr;gap:30px;margin-top:30px;align-items:start">
-      <div><video id="tl1" src="assets/timelapse_long.mp4" poster="assets/poster_long.jpg" class="img" style="width:1210px;height:681px" preload="auto" muted playsinline></video><div class="cap">2025/09/19 拆除前 → 2026/11/18 開挖中｜進頁自動播放約 30 秒（點畫面可暫停）</div></div>
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <div style="font-size:26px;font-weight:900;color:var(--teal)">截至 11/27</div>
-      <div class="card ink" style="padding:24px 30px"><p class="muted" style="color:#9FB3B8;font-size:20px">累積天數</p><div class="num" style="font-size:72px;color:#fff"><span class="odo" data-v="436">436</span><span style="font-size:28px;font-family:var(--zh);font-weight:700"> 日曆天</span></div></div>
-      <div class="card" style="padding:24px 30px"><p class="muted" style="font-size:20px">預定進度</p><div class="num" style="font-size:72px;color:var(--ink)"><span class="odo" data-v="4.54">4.54</span><span style="font-size:36px">%</span></div></div>
-      <div class="card" style="border:2px solid var(--orange);padding:24px 30px"><p class="muted" style="font-size:20px">實際進度（估）</p><div class="num" style="font-size:72px;color:var(--orange)"><span class="odo" data-v="5.15">5.15</span><span style="font-size:36px">%</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- 章節分隔頁 02 -->
 <section class="slide dark chap" data-sec="02 歷史建物保護" id="ch2" data-title="02 歷史建物保護">
   <img class="chbg" src="assets/cbc1ec2127.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">02</div><div class="cht">歷史建物保護</div><div class="chl"></div><p class="chq">先保護、再拆除：延續一甲子的防疫記憶</p></div>
+  <div class="chin"><div class="chn">02</div><div class="cht">歷史建物保護</div><div class="chl"></div><p class="chq">先保護、再拆除：延續一甲子的防疫記憶</p><p class="chsp">主講｜魏志全所長</p></div>
 </section>
 
 <!-- 7 HISTORY｜起源與保護理由 -->
@@ -634,12 +1055,12 @@ aside.spk{display:none}
 （按 →）所以為什麼要保護？它見證臺灣一甲子的防疫歷史；中央棟是機關門面、串聯南北兩棟，因此原地保存；未來 1 樓做防疫歷史展覽室、2 樓做共享閱覽空間，讓歷史繼續被使用。</aside>
 </section>
 
-<!-- 8 SCOPE + 意象保留 (full bleed) -->
+<!-- 8 SCOPE：空拍聚光燈 → 無人機飛入（北棟→曲面薄殼、南棟→柱頭、中央門廳→三層防護） -->
 <section class="slide dark nofoot" data-sec="02 歷史建物保護" id="p8">
-  <img src="assets/a2688b84a5.jpg" class="abs" style="inset:0;width:1920px;height:1080px;object-fit:cover" alt="拆除範圍：北棟與南棟拆除、中央門廳保存、局部保留曲面薄殼與柱頭構件">
+  <div class="dr10"><img src="assets/a2688b84a5.jpg" alt="拆除範圍：北棟與南棟拆除、中央門廳保存、局部保留曲面薄殼與柱頭構件"></div>
+  <div class="ui10">
   <div class="abs" style="left:0;right:0;bottom:0;height:150px;background:linear-gradient(0deg,rgba(14,28,34,.85),rgba(14,28,34,0))"></div>
   <div class="lens"><span class="lt"></span></div>
-  <!-- 三個熱區的左右範圍（%）可依照片微調 -->
   <div class="hot" data-i="0" style="left:0%;width:40%"></div>
   <div class="hot" data-i="1" style="left:40.3%;width:23.7%"></div>
   <div class="hot" data-i="2" style="left:64.3%;width:35.7%"></div>
@@ -647,84 +1068,62 @@ aside.spk{display:none}
     <span class="p8c" data-i="0"><b>北棟</b>拆除</span><span class="p8c" data-i="2"><b>南棟</b>拆除</span><span class="p8c keep" data-i="1"><b>中央門廳</b>保存</span>
   </div>
   <div class="ttl8"><div class="kicker">02 歷史建物保護</div><h1>拆除既有建物與<br>歷史建築防護說明</h1></div>
-  <aside class="spk">拆除之前，我們先處理「要留下來的」。（按 →）北棟拆除、（按 →）南棟拆除、（按 →）中間的中央門廳原地保存。下一頁看依機關要求保存的三件記憶構件。</aside>
-</section>
-
-<!-- 8-2 保存三樣記憶構件 -->
-<section class="slide" data-sec="02 歷史建物保護" id="p8b">
-  <div class="pad p8b">
-
-    <div class="kicker">02 歷史建物保護｜拆除前的意象保留</div>
-    <h1 class="t">保存三樣記憶構件</h1>
-    <p class="sub8">中央門廳原地保留；南、北棟拆除後延續原始立面意象；構件未來結合公共藝術展示</p>
-    <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:28px;margin-top:30px">
-      <div class="card c8"><div class="i8"><img src="assets/p7-16/bei.jpg" class="img zm" alt="興建碑"></div>
-        <div class="b8"><div class="hd8"><h3>興建碑</h3><span class="num">0.45<small> 噸</small></span></div>
-        <p>圓盤鋸切割（含周圍牆體），堆高機搬運<br><span class="muted">保留尺寸 1.10 × 0.90 × 0.28 m</span></p>
-        <button class="zoom" data-src="assets/p7-16/bei_steps.jpg" data-cap="興建碑：監造查驗尺寸 → 養生膠帶保護 → 底部銑孔 → 圓盤鋸切割 → 堆高機搬運 → 玻纖板保護 → 吊卡車吊運 → 倉庫集中放置">看切割流程 ›</button></div></div>
-      <div class="card c8" style="border:3px solid var(--orange)"><div class="i8"><img src="assets/p7-16/shell.jpg" class="img zm" alt="屋頂曲面薄殼（紅框為切除位置）"></div>
-        <div class="b8"><div class="hd8"><h3>屋頂曲面薄殼</h3><span class="num">1.8<small> 噸</small></span></div>
-        <p>切除兩處，震動較小的鏈鋸切割，200T 吊車吊運<br><span class="muted">保留尺寸 5.35 × 0.6 m</span></p>
-        <button class="zoom" data-src="assets/54674d0c63.jpg" data-cap="曲面薄殼的 3D 列印模型，用來事先規劃切割與吊裝">看 3D 列印模型 ›</button></div></div>
-      <div class="card c8"><div class="i8"><img src="assets/p7-16/col.jpg" class="img zm" alt="柱頭（會同機關選擇兩組拆除，擇一保留）"></div>
-        <div class="b8"><div class="hd8"><h3>柱頭構件</h3><span class="num">0.6<small> 噸</small></span></div>
-        <p>會同機關選兩組、擇一保留；鏈鋸切割，40T 吊車＋吊籠<br><span class="muted">保留尺寸 1.3 × 0.55 × 0.46 m</span></p>
-        <button class="zoom" data-src="assets/p7-16/col_3d.jpg" data-cap="柱頭切割後以吊籠保護吊運">看吊運方式 ›</button></div></div>
+  </div>
+  <div class="dt10" data-k="0">
+    <div class="ph10x"><img src="assets/p7-16/shell.jpg" class="zm" alt="屋頂曲面薄殼（紅框為切除位置）"><span class="cp10">紅框＝切除位置（兩處）</span></div>
+    <div class="hd10"><div class="kicker">北棟｜拆除前的意象保留</div><h2>屋頂曲面薄殼</h2><p>舊大樓最有辨識度的屋頂語彙，拆除前先切下保存，未來結合公共藝術展示</p></div>
+    <div class="pn10">
+      <div class="card st10"><div class="n10 num">1.8<small> 噸／處</small></div>
+        <table class="t10"><tr><td>切除數量</td><td>兩處</td></tr><tr><td>保留尺寸</td><td>5.35 × 0.6 m</td></tr><tr><td>切割</td><td>震動較小的鏈鋸</td></tr><tr><td>吊運</td><td>200T 吊車</td></tr></table></div>
+      <div class="tw10"><figure class="ph10"><img src="assets/p7-16/shell_3d.jpg" class="img contain zm" alt="曲面薄殼吊裝示意"><figcaption>吊裝示意</figcaption></figure><figure class="ph10"><img src="assets/54674d0c63.jpg" class="img contain zm" alt="曲面薄殼的 3D 列印模型，用來事先規劃切割與吊裝"><figcaption>3D 列印模型</figcaption></figure></div>
     </div>
+  </div>
+  <div class="dt10" data-k="1">
+    <div class="ph10x"><img src="assets/p7-16/col.jpg" class="zm" alt="柱頭（會同機關選擇兩組拆除，擇一保留）"><span class="cp10">黃框＝選定的柱頭位置</span></div>
+    <div class="hd10"><div class="kicker">南棟｜拆除前的意象保留</div><h2>柱頭構件</h2><p>會同機關選定兩組拆除、擇一保留，延續原始立面意象</p></div>
+    <div class="pn10">
+      <div class="card st10"><div class="n10 num">0.6<small> 噸</small></div>
+        <table class="t10"><tr><td>選定方式</td><td>選兩組、擇一保留</td></tr><tr><td>保留尺寸</td><td>1.3 × 0.55 × 0.46 m</td></tr><tr><td>切割</td><td>鏈鋸</td></tr><tr><td>吊運</td><td>40T 吊車＋吊籠</td></tr></table></div>
+      <figure class="ph10" style="flex:1"><img src="assets/p7-16/col_3d.jpg" class="img contain zm" alt="柱頭切割後以吊籠保護吊運"><figcaption>吊籠保護吊運</figcaption></figure>
     </div>
-  <aside class="spk">除了門廳本身，依機關要求再切下三件記憶構件：
-興建碑約 0.45 噸，連同周圍牆體用圓盤鋸切下，先貼養生膠帶、底部銑孔，再用堆高機搬運。
-屋頂的曲面薄殼是舊大樓最有辨識度的語彙，切除兩處，每處約 1.8 噸，用震動比較小的鏈鋸切割、200 噸吊車吊下，事先還做了 3D 列印模型規劃。
-柱頭約 0.6 噸，會同機關選兩組、擇一保留，用吊籠保護吊運。這些構件未來會結合公共藝術展示。</aside>
-</section>
-
-<!-- 9 PROTECTION｜怎麼保護 -->
-<section class="slide gen" data-sec="02 歷史建物保護" id="p9">
-  <div class="pad">
-    <div class="kicker ain">02 歷史建物保護｜怎麼保護</div>
-    <h1 class="t ain" style="--d:1">優先保護歷史建築，才開始拆除</h1>
-    <div class="grid" style="grid-template-columns:1.05fr 1fr;gap:36px;margin-top:32px">
-      <div>
-        <div class="lyr ain" style="--d:2" title="點一下看現場照片">
+  </div>
+  <div class="dt10 dk2" data-k="2">
+    <div class="ph10x"><img src="assets/5dbf8f8430.jpg" class="zm" alt="中央門廳：重型支撐架、頂棚、防塵網與透氣帆布"><span class="cp10">重型支撐架＋頂棚＋防塵網；正面以透氣帆布美化</span></div>
+    <div class="hd10"><div class="kicker">中央門廳｜原地保存</div><h2>先保護，才開始拆除</h2><p>歷建防護全部完成，才開始拆東棟：把保護寫進施工順序</p></div>
+    <div class="pn10">
+        <div class="lyr" title="點一下看現場照片">
           <div class="hb9">中央棟<small>保留區</small></div>
-          <div class="ly9 l1 fr" data-s="1" style="--dl:0"></div><div class="ly9 l2 fr" data-s="1" style="--dl:1"></div><div class="ly9 l3 fr" data-s="1" style="--dl:2"></div>
+          <div class="ly9 l1" style="--dl:0"></div><div class="ly9 l2" style="--dl:1"></div><div class="ly9 l3" style="--dl:2"></div>
           <div class="dz9">東棟 2R<small>拆除區</small></div>
           <button class="zoom zl9" data-src="assets/124264402d.jpg" data-cap="歷史建築（中央棟）三層防護：示意圖與現場照片">看現場照片 ›</button>
         </div>
-        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px">
-          <div class="card fr" data-s="1" style="--dl:0;border-left:8px solid var(--orange);padding:18px 20px"><p class="muted" style="font-size:18px">第一層</p><h3 style="font-size:25px">養生膠帶防護膜</h3><p style="font-size:19px">鏈鋸切割時，防水泥漿噴濺</p></div>
-          <div class="card fr" data-s="1" style="--dl:1;border-left:8px solid #6E8A92;padding:18px 20px"><p class="muted" style="font-size:18px">第二層</p><h3 style="font-size:25px">GIP 鋼管架</h3><p style="font-size:19px">結構拆除時，攔截掉落物</p></div>
-          <div class="card fr" data-s="1" style="--dl:2;border-left:8px solid #A9773F;padding:18px 20px"><p class="muted" style="font-size:18px">第三層</p><h3 style="font-size:25px">保護木板</h3><p style="font-size:19px">攔截飛落的碎塊</p></div>
+        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:12px">
+          <div class="card f10" style="--dl:0;border-left:8px solid var(--orange);padding:14px 16px"><p class="muted" style="font-size:16px">第一層</p><h3 style="font-size:22px;margin-bottom:4px">養生膠帶防護膜</h3><p style="font-size:17px;line-height:1.4">防鏈鋸切割水泥漿噴濺</p></div>
+          <div class="card f10" style="--dl:1;border-left:8px solid #6E8A92;padding:14px 16px"><p class="muted" style="font-size:16px">第二層</p><h3 style="font-size:22px;margin-bottom:4px">GIP 鋼管架</h3><p style="font-size:17px;line-height:1.4">結構拆除時攔截掉落物</p></div>
+          <div class="card f10" style="--dl:2;border-left:8px solid #A9773F;padding:14px 16px"><p class="muted" style="font-size:16px">第三層</p><h3 style="font-size:22px;margin-bottom:4px">保護木板</h3><p style="font-size:17px;line-height:1.4">攔截飛落的碎塊</p></div>
         </div>
-      </div>
-      <div>
-        <div class="grid ain" style="--d:3;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr);gap:16px;height:300px">
-          <img src="assets/5dbf8f8430.jpg" class="img zm" alt="帆布美化的歷史建物正面"><img src="assets/412db99006.jpg" class="img contain zm" alt="重型施工架、防塵網與頂棚">
-        </div>
-        <p class="cap ain" style="--d:3">一般施工鷹架全面升級為<b style="color:var(--ink)">重型支撐架＋頂棚＋防塵網</b>；正面以透氣帆布美化，記載過去、現在與未來</p>
-        <div class="card ink fr" data-s="1" style="--dl:3;margin-top:18px;padding:22px 28px">
-          <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:27px">即時監測</h3><span style="font-size:18px;color:#9FB3B8">實測曲線見 P27</span></div>
+        <div class="card ink f10" style="--dl:3;padding:18px 24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="font-size:25px;margin:0">即時監測</h3></div>
           <table class="t9">
             <tr><td>傾斜計、沉陷點（開挖／排樁期間）</td><td>一週 3 次 → <b>每天 3 次</b></td></tr>
             <tr><td>電子式傾斜計</td><td>每 30 分鐘一筆</td></tr>
             <tr><td>傾斜警戒值</td><td>1/600 → <b>加嚴至 1/937.5</b></td></tr>
           </table>
         </div>
-      </div>
+        <figure class="ph10 f10" style="--dl:4;flex:1"><img src="assets/412db99006.jpg" class="img contain zm" alt="重型施工架、防塵網與頂棚"><figcaption>鷹架升級：重型支撐架＋頂棚＋防塵網</figcaption></figure>
     </div>
-    <div class="band fr" data-s="1" style="--dl:3.6;margin-top:24px"><b>重點</b>歷建防護全部完成，才開始拆東棟：把保護寫進施工順序，而不是事後補救。</div>
   </div>
-  <aside class="spk">怎麼保護？原則只有一句：先護後拆。中央棟的保護措施全部完成之後，才能拆旁邊的東棟。
-（按一次 →，三層依序落下，接著出現監測與重點）第一層養生膠帶防護膜，鏈鋸切割時水泥漿會噴濺，先把外牆和玻璃包起來；第二層 GIP 鋼管架，攔截掉落物；第三層保護木板，擋住飛落的碎塊。
-右邊是現場：一般施工鷹架全面升級成重型支撐架，加頂棚和防塵網；正面用透氣帆布美化，上面寫著這棟建築的過去、現在與未來。
-監測方面，傾斜計和沉陷點在開挖、排樁期間從一週三次提高到每天三次；電子式傾斜計每半小時一筆；傾斜警戒值也從 1/600 加嚴到 1/937.5，實測曲線在後面 P27 會看到。</aside>
+  <aside class="spk">拆除之前，我們先處理「要留下來的」。
+（按 →）先看北棟，北棟拆除。（按 →）鏡頭飛進北棟屋頂、轉正面對曲面薄殼：這是舊大樓最有辨識度的語彙，切除兩處，每處約 1.8 噸，用震動比較小的鏈鋸切割、200 噸吊車吊下，事先還做了 3D 列印模型規劃。
+（按 →）拉回空拍，南棟拆除。（按 →）飛到南棟、轉正看柱頭構件：會同機關選兩組、擇一保留，約 0.6 噸，鏈鋸切割，用 40 噸吊車加吊籠保護吊運。這些構件未來會結合公共藝術展示。
+（按 →）最後是中央門廳，原地保存。（按 →）往前飛到門廳正面：原則是先護後拆。第一層養生膠帶防護膜，防鏈鋸切割的水泥漿噴濺；第二層 GIP 鋼管架，攔截掉落物；第三層保護木板，擋住飛落的碎塊。一般鷹架全面升級成重型支撐架，加頂棚和防塵網，正面用透氣帆布美化。監測頻率從一週三次提高到每天三次，電子式傾斜計每半小時一筆，警戒值從 1/600 加嚴到 1/937.5。</aside>
 </section>
 
 <!-- 章節分隔頁 03 -->
 <section class="slide dark chap" data-sec="03 營建廢棄物資源化與循環經濟" id="ch3" data-title="03 營建廢棄物資源化與循環經濟">
   <img class="chbg" src="assets/p7-16/sorting_area.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">03</div><div class="cht">營建廢棄物資源化與循環經濟</div><div class="chl"></div><p class="chq">先確定材料要去哪裡，再決定怎麼拆</p></div>
+  <div class="chin"><div class="chn">03</div><div class="cht">營建廢棄物資源化與循環經濟</div><div class="chl"></div><p class="chq">先確定材料要去哪裡，再決定怎麼拆</p><p class="chsp">主講｜魏志全所長</p></div>
 </section>
 
 <!-- 10 START WITH END｜接續精細拆除 -->
@@ -773,7 +1172,7 @@ aside.spk{display:none}
     </div>
     <div style="display:flex;gap:24px;margin-top:20px;height:262px;align-items:stretch">
       <img src="assets/p7-16/sorting_signs.jpg" class="img zm" style="width:724px;height:262px;flex:none;object-fit:contain;background:transparent" alt="裝修材分類暫置區：木材、玻璃、塑膠回收區與有價廢料區">
-      <div style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center"><h3 style="font-size:28px;font-weight:900;color:var(--ink)">裝修材分類暫置</h3><p style="font-size:19px;line-height:1.55;margin-top:6px">分三類：可回收、不可回收、有價物；木材、玻璃、塑膠、有價物（銅、鋼筋、型鋼、鋁）各有分區，每區設標牌或立架，附色標與圖示，不同包商的工人也看得懂</p></div>
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center"><h3 style="font-size:28px;font-weight:900;color:var(--ink)">裝修材分類暫置</h3><p style="font-size:19px;line-height:1.55;margin-top:6px">分可回收、不可回收、有價物三類，每區附色標與圖示，不同包商的工人都看得懂</p></div>
       <div style="width:440px;flex:none;display:flex;flex-direction:column;justify-content:center"><img src="assets/fefb3121b8.jpg" class="img zm contain" style="width:440px;height:176px;background:transparent" alt="以回收鋁材再製的紀念尺"><p class="cap" style="margin-top:4px">回收材料再製的紀念品：鋁尺與筆</p><p style="font-size:19px;font-weight:900;color:var(--teal);line-height:1.4">分類，是為了讓每一類材料符合下一個用途的品質條件</p></div>
     </div>
   </div>
@@ -789,7 +1188,7 @@ PVC 地磚：送潔安環保造粒。
 <!-- 12 SIX STEPS（原 P11）-->
 <section class="slide gen" data-sec="03 營建廢棄物資源化與循環經濟" id="p11" data-auto="1">
   <div class="pad">
-    <div class="kicker ain">03 營建廢棄物資源化與循環經濟｜以終為始</div>
+    <div class="kicker ain">03 營建廢棄物資源化與循環經濟｜拆除流程</div>
     <h1 class="t ain" style="--d:1">精細拆除六步驟：從施工前準備到流向結案</h1>
     <div class="steps12"><div class="st12 ain" style="--d:2"><span class="num">01</span><h3>調查與計畫</h3><p>建築與材料清冊、危害辨識、去向確認</p></div><div class="st12 ain" style="--d:3"><span class="num">02</span><h3>安全隔離</h3><p>水電停用、危害物確認、鄰房保護</p></div><div class="st12 ain" style="--d:4"><span class="num">03</span><h3>分層拆解</h3><p>先可再用構件，再設備與裝修，最後結構</p></div><div class="st12 ain" style="--d:5"><span class="num">04</span><h3>源頭分類</h3><p>材質分區、標示，避免污染與破損</p></div><div class="st12 ain" style="--d:6"><span class="num">05</span><h3>清運過磅</h3><p>合法車輛、文件、重量與影像紀錄</p></div><div class="st12 ain" style="--d:7"><span class="num">06</span><h3>後端驗證</h3><p>收受證明、加工資料、再利用與結案報告</p></div></div>
     <div class="cap12 ain" style="--d:8">現場影片｜第 1 段為過往做法，2–4 段為本案做法</div>
@@ -890,7 +1289,7 @@ PVC 地磚：送潔安環保造粒。
         <p class="muted fr" data-s="1" style="font-size:18px">每輛代表約 10 車次（以每車 20 噸計）</p>
         <div class="fr" data-s="2" style="margin-top:auto;border-top:2px solid var(--line);padding-top:18px;display:flex;gap:30px;align-items:flex-end">
           <div><p class="muted" style="font-size:19px">運輸減碳試算</p><div class="num" style="font-size:72px;color:var(--teal)"><span class="cnt" data-to="72.5" data-dec="1">72.5</span><span style="font-size:30px;font-family:var(--zh);font-weight:700"> 噸 CO₂e</span></div></div>
-          <p class="muted" style="font-size:18px;line-height:1.6">5,537 噸 × 100 km × 0.131 kg／延噸公里<br>每趟砂石車約 262 kg CO₂e<br>運距為假設值；係數為第三方轉述，正式引用前請複核</p>
+          <p class="muted" style="font-size:18px;line-height:1.6">5,537 噸 × 100 km × 0.131 kg／延噸公里<br>每趟砂石車約 262 kg CO₂e<br>運距為假設值</p>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -902,7 +1301,7 @@ PVC 地磚：送潔安環保造粒。
     <div class="band or fr" data-s="5" style="margin-top:24px"><b>重點</b>資源循環同時減少開採、運輸與碳排。</div>
   </div>
   <aside class="spk">（進頁後自動播放）每一輛小卡車代表大約十趟砂石車。如果用傳統方式，要另外開採購買 5,537 噸天然河砂，增加約 277 車次的長途運輸；本案直接省下。
-運輸減碳試算：噸數 × 運距 × 大貨車係數 0.131 公斤 CO₂e／延噸公里。如果再生砂比天然砂少跑 100 公里，約少排 72.5 噸 CO₂e，平均每趟約 262 公斤。運距是假設值，係數為第三方轉述，正式引用前請複核。
+運輸減碳試算：噸數 × 運距 × 大貨車係數 0.131 公斤 CO₂e／延噸公里。如果再生砂比天然砂少跑 100 公里，約少排 72.5 噸 CO₂e，平均每趟約 262 公斤。運距是假設值。
 三個比率：預壘樁與假設工程的天然細骨材 100% 被置換；循環再生的工程體積占 B5 總量 36.4%；實際回到工地的純砂占 27.7%。</aside>
 </section>
 
@@ -910,54 +1309,123 @@ PVC 地磚：送潔安環保造粒。
 <section class="slide dark chap" data-sec="04 設計規劃" id="ch4" data-title="04 設計規劃">
   <img class="chbg" src="assets/8cafee6c36.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">04</div><div class="cht">設計規劃</div><div class="chl"></div><p class="chq">假設工程與替代工法：讓工地更安全、更有效率</p></div>
+  <div class="chin"><div class="chn">04</div><div class="cht">設計規劃</div><div class="chl"></div><p class="chq">假設工程與替代工法：讓工地更安全、更有效率</p><p class="chsp">主講｜林暐勝技師</p></div>
 </section>
 
 <!-- 17 預壘樁壓梁調降（配合施工構台及出入口水溝） -->
-<section class="slide" data-sec="04 設計規劃">
+<section class="slide" data-sec="04 設計規劃" id="p17h">
   <div class="bignum">04</div>
   <div class="pad">
     <div class="kicker">04 設計規劃｜假設工程 1</div>
     <h1 class="t">工區臨時地坪高程檢討</h1>
-    <p style="font-size:26px;color:var(--muted);margin-top:8px;font-weight:700">預壘樁壓梁配合施工構台及出入口水溝調降</p>
-    <div class="grid" style="grid-template-columns:1fr 700px;gap:30px;margin-top:18px;height:590px;grid-template-rows:minmax(0,1fr)">
-      <div class="card" style="padding:16px 18px;display:flex;flex-direction:column;min-height:0">
-        <div style="flex:1;min-height:0;position:relative"><img src="assets/p17_capbeam_plan.jpg" class="img contain zm" style="position:absolute;inset:0;background:#fff" alt="全區帽梁（壓梁）高程平面圖：-70 段配合構台梁施作、-100 段配合排水降梁"></div>
-        <p class="cap" style="margin-top:8px;font-size:17px">全區帽梁高程平面圖（PI-06）：紫色 −70＝配合構台梁施作；紅色 −100＝配合景觀排水降梁</p>
+    <div class="sb20 sb19"><span data-i="0"><b>1</b>原構想：沿用原地坪</span><span data-i="1"><b>2</b>套入景觀圖：永久排水溝</span><span data-i="2"><b>3</b>套入構台與第一層支撐</span><span data-i="3" class="t"><b>✓</b>現場成果</span></div>
+    <div class="mn19">
+      <div class="card mp19">
+        <svg viewBox="-10 260 1890 770" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="工區外圍壓梁高程示意平面">
+          <rect x="-10" y="260" width="1890" height="770" fill="#FBF8F1"/>
+          <g class="pf19" fill="rgba(238,106,31,.16)" stroke="#EE6A1F" stroke-width="3" stroke-dasharray="10 8"><rect x="216" y="586" width="278" height="214" rx="6"/><rect x="510" y="410" width="264" height="116" rx="6"/><rect x="790" y="832" width="230" height="98" rx="6"/><rect x="1606" y="770" width="104" height="160" rx="6"/></g>
+          <g font-size="34" font-weight="700" fill="#9A9184" text-anchor="middle">
+            <text x="638" y="712" font-size="30">歷史建物</text><text x="1215" y="660">行政棟・實驗棟</text><text x="1783" y="800" font-size="28">A</text><text x="1783" y="836" font-size="28">滯洪池</text><text x="118" y="600">B、C</text><text x="118" y="640">滯洪池</text><text x="874" y="1020" font-size="28">油槽</text>
+          </g>
+          <g class="sg19" fill="none" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+            <path class="g" d="M208 320V578"/><path class="g" d="M502 808V535"/><path class="g" d="M782 535V825"/><path class="g" d="M838 938V992H910V938"/>
+            <path class="g" d="M1722 345V938"/><path class="g" d="M782 938H1600"/><path class="g" d="M1718 706H1848V938"/>
+            <path class="l" d="M208 320H1710L1722 345"/><path class="l" d="M208 808H502"/><path class="l" d="M555 840V550H720V655"/><path class="l" d="M720 655V840"/><path class="l" d="M208 440H92V500L28 568V715H208"/>
+            <path class="c" d="M208 578V808"/><path class="c" d="M502 535H782"/><path class="c" d="M782 825V938"/><path class="c" d="M1600 938H1718"/><path class="c" d="M1718 938H1848"/>
+          </g>
+          <g class="tg19 t0" font-size="34" font-weight="900"><rect x="1010" y="430" width="620" height="64" rx="32" fill="#5E6A70"/><text x="1320" y="474" text-anchor="middle" fill="#fff">壓梁頂＝原地坪高度（一圈都一樣）</text></g>
+          <g class="tg19 t1" font-size="28" font-weight="900" fill="#fff">
+            <rect x="740" y="338" width="480" height="50" rx="25" fill="#1F7FA6"/><text x="980" y="373" text-anchor="middle">GL−100　配合景觀排水溝</text>
+            <rect x="236" y="822" width="250" height="50" rx="25" fill="#1F7FA6"/><text x="361" y="857" text-anchor="middle">GL−100 覆土</text>
+            <rect x="548" y="592" width="174" height="44" rx="22" fill="#1F7FA6"/><text x="635" y="623" text-anchor="middle" font-size="24">GL−65 水池</text>
+            <rect x="548" y="760" width="174" height="44" rx="22" fill="#1F7FA6"/><text x="635" y="791" text-anchor="middle" font-size="22">GL−80 連通道</text>
+            <rect x="-6" y="380" width="214" height="44" rx="22" fill="#1F7FA6"/><text x="101" y="411" text-anchor="middle" font-size="22">GL−30 景觀高程</text>
+          </g>
+          <g class="tg19 t2" font-size="26" font-weight="900" fill="#fff">
+            <rect x="222" y="666" width="210" height="44" rx="22" fill="#E0631A"/><text x="327" y="697" text-anchor="middle">GL−70 構台</text>
+            <rect x="537" y="446" width="210" height="44" rx="22" fill="#E0631A"/><text x="642" y="477" text-anchor="middle">GL−70 構台</text>
+            <rect x="805" y="860" width="210" height="44" rx="22" fill="#E0631A"/><text x="910" y="891" text-anchor="middle">GL−70 構台</text>
+            <rect x="1460" y="958" width="210" height="44" rx="22" fill="#E0631A"/><text x="1565" y="989" text-anchor="middle">GL−70 構台</text>
+            <rect x="1680" y="958" width="200" height="44" rx="22" fill="#B8541A"/><text x="1780" y="989" text-anchor="middle">GL−25 支撐</text>
+            <g fill="#5E6A70" font-size="24"><text x="226" y="460">GL−60</text><text x="1736" y="560">GL−25</text><text x="1110" y="985">GL−25 一般段</text></g>
+          </g>
+        </svg>
+        <div class="lg19"><span><i style="background:#A9B2B5"></i>沿用原地坪</span><span class="k1"><i style="background:#1F7FA6"></i>配合永久景觀・排水</span><span class="k2"><i style="background:#EE6A1F"></i>配合構台・第一層支撐</span><span class="k2"><i style="background:rgba(238,106,31,.25);border:2px dashed #EE6A1F;height:14px;width:24px"></i>施工構台範圍</span><em>GL＝基地地面高程（單位 cm）</em><button class="zoom" data-src="assets/p17_capbeam_plan.jpg" data-cap="全區帽梁高程平面圖（PI-06）">看高程圖</button><button class="zoom" data-src="assets/p19_platform.jpg" data-cap="構台周長及樁編號（安全支撐工程施工圖）">看構台圖</button></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:12px;min-height:0">
-        <div class="card" style="padding:8px 14px"><svg viewBox="0 0 640 372" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="施工構台大梁擱置於調降後壓梁的斷面示意">
-  <rect x="0" y="110" width="640" height="262" fill="#EFE6D3"/>
-  <line x1="0" y1="110" x2="640" y2="110" stroke="#7A6A50" stroke-width="2" stroke-dasharray="6 5"/>
-  <text x="6" y="103" font-size="15" fill="#7A6A50">GL±0</text>
-  <rect x="78" y="330" width="64" height="40" fill="#B9B2A3"/>
-  <rect x="40" y="264" width="140" height="66" fill="#C9CFD0" stroke="#5E6A70" stroke-width="3"/>
-  <text x="110" y="304" text-anchor="middle" font-size="18" font-weight="900" fill="#2E3B41">壓梁</text>
-  <text x="110" y="356" text-anchor="middle" font-size="14" fill="#5E6A70">預壘樁</text>
-  <rect x="40" y="165" width="140" height="99" fill="rgba(238,106,31,.08)" stroke="#B4531A" stroke-width="2.5" stroke-dasharray="7 5"/>
-  <rect x="150" y="176" width="480" height="88" fill="#0F6E79"/>
-  <text x="400" y="227" text-anchor="middle" font-size="19" font-weight="900" fill="#fff">構台大梁 H400</text>
-  <path d="M228 88h44v8h-18v72h18v8h-44v-8h18v-72h-18z" fill="#2E3B41"/><path d="M348 88h44v8h-18v72h18v8h-44v-8h18v-72h-18z" fill="#2E3B41"/><path d="M468 88h44v8h-18v72h18v8h-44v-8h18v-72h-18z" fill="#2E3B41"/><path d="M588 88h44v8h-18v72h18v8h-44v-8h18v-72h-18z" fill="#2E3B41"/>
-  <text x="430" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#2E3B41">小梁 H400</text>
-  <rect x="150" y="44" width="480" height="44" fill="#8A857B"/>
-  <text x="390" y="72" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">覆工板 20 cm</text>
-  <text x="140" y="62" text-anchor="end" font-size="15" font-weight="700" fill="#2E3B41">構台完成面</text>
-  <text x="140" y="80" text-anchor="end" font-size="15" font-weight="700" fill="#2E3B41">GL+0.30</text>
-  <g font-size="15" font-weight="700">
-    <rect x="200" y="286" width="26" height="5" fill="#EE6A1F"/><text x="234" y="294" fill="#C0571C">壓梁頂調降至 GL−0.70（＝構台大梁底）</text>
-    <rect x="200" y="314" width="26" height="10" fill="none" stroke="#B4531A" stroke-width="2" stroke-dasharray="5 3"/><text x="234" y="324" fill="#B4531A">一般段壓梁頂約 GL−0.25～−0.60，會與大梁衝突</text>
-  </g>
-</svg></div>
-        <div class="card" style="padding:16px 22px;border-left:8px solid var(--orange)"><h3 style="font-size:24px;margin-bottom:4px">配合施工構台：4 處壓梁降至 GL−0.70 m</h3><p style="font-size:19px;line-height:1.5">構台完成面 GL+0.30＝覆工板 20 cm＋小梁 H400＋大梁 H400，大梁底剛好落在 GL−0.70，直接擱置在壓梁上（約 25、22、10、11 m 四段）</p></div>
-        <div class="card" style="padding:16px 22px;border-left:8px solid var(--teal)"><h3 style="font-size:24px;margin-bottom:4px">配合排水溝：壓梁降至 GL−1.00 m</h3><p style="font-size:19px;line-height:1.5">圖面標註「配合景觀排水降梁」，預留水溝深度，日後施作不必再打除壓梁</p></div>
-        
+      <div class="ex19">
+        <div class="card pn19" data-k="0">
+          <p class="q19">第 1 次：最初的想法</p>
+          <h3>地坪不用加高，直接沿用原本的高度</h3>
+          <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif">
+            <rect x="0" y="120" width="600" height="130" fill="#E2D3B5"/>
+            <rect x="0" y="104" width="272" height="16" fill="#5B5F62"/><text x="136" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#2E3B41">原柏油路面（歷建前停車場）</text>
+            <rect x="272" y="166" width="46" height="84" fill="#DDD6C8" stroke="#B9B2A3" stroke-width="2"/><text x="295" y="214" text-anchor="middle" font-size="15" fill="#5E6A70" writing-mode="tb">預壘樁</text>
+            <rect x="272" y="104" width="46" height="62" fill="#C9CFD0" stroke="#5E6A70" stroke-width="3"/><text x="295" y="141" text-anchor="middle" font-size="17" font-weight="900" fill="#2E3B41">壓梁</text>
+            <rect x="318" y="104" width="282" height="16" fill="#9A9184"/><text x="460" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#2E3B41">臨時地坪（既有地坪高度）</text>
+            <line x1="0" y1="104" x2="600" y2="104" stroke="#EE6A1F" stroke-width="3" stroke-dasharray="10 7"/>
+            <rect x="370" y="150" width="210" height="40" rx="20" fill="#fff"/><text x="475" y="177" text-anchor="middle" font-size="19" font-weight="700" fill="#5E6A70">一樣平，最省事</text>
+          </svg>
+          <p class="a19">歷建前的停車場柏油路面、或既有建物的地坪，<b>直接當臨時地坪</b>；預壘樁上的壓梁也做到<b>同一個高度</b>。</p>
+        </div>
+        <div class="card pn19" data-k="1">
+          <p class="q19">第 2 次：套入景觀圖，發現衝突</p>
+          <h3>永久排水溝比現有地坪低</h3>
+          <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif">
+            <rect x="0" y="100" width="600" height="150" fill="#E2D3B5"/><line x1="300" y1="30" x2="300" y2="250" stroke="#fff" stroke-width="6"/>
+            <text x="150" y="30" text-anchor="middle" font-size="21" font-weight="900" fill="#C0392B">✗ 照原高度做</text><text x="450" y="30" text-anchor="middle" font-size="21" font-weight="900" fill="#0F6E79">✓ 壓梁先預降</text>
+            <rect x="0" y="88" width="290" height="12" fill="#9A9184"/>
+            <rect x="127" y="148" width="46" height="102" fill="#DDD6C8" stroke="#B9B2A3" stroke-width="2"/><rect x="127" y="88" width="46" height="60" fill="#C9CFD0" stroke="#5E6A70" stroke-width="3"/>
+            <rect x="92" y="88" width="116" height="72" fill="rgba(192,57,43,.18)" stroke="#C0392B" stroke-width="3" stroke-dasharray="8 6"/>
+            <text x="150" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#C0392B" stroke="#E2D3B5" stroke-width="5" paint-order="stroke">水溝撞到壓梁</text><text x="150" y="218" text-anchor="middle" font-size="18" font-weight="700" fill="#C0392B" stroke="#E2D3B5" stroke-width="5" paint-order="stroke">→ 日後要打石清運</text>
+            <rect x="310" y="88" width="290" height="12" fill="#9A9184"/>
+            <rect x="427" y="226" width="46" height="24" fill="#DDD6C8" stroke="#B9B2A3" stroke-width="2"/><rect x="427" y="166" width="46" height="60" fill="#C9CFD0" stroke="#5E6A70" stroke-width="3"/>
+            <rect x="392" y="88" width="116" height="72" fill="rgba(31,127,166,.14)" stroke="#1F7FA6" stroke-width="3" stroke-dasharray="8 6"/><text x="450" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#1F7FA6">永久排水溝</text>
+            <text x="482" y="202" font-size="17" font-weight="700" fill="#0F6E79">壓梁 GL−100</text>
+          </svg>
+          <p class="a19">景觀圖的永久排水溝比現況低；地坪若照原高度做，水溝施作前就得<b>先打石、清運</b>。</p>
+          <p class="c19">壓梁先預降，水溝可以直接施作。</p>
+        </div>
+        <div class="card pn19" data-k="2">
+          <p class="q19">第 3 次：納入施工構台與第一層支撐</p>
+          <h3>壓梁高度依構台、支撐升降</h3>
+          <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif">
+            <rect x="0" y="70" width="600" height="180" fill="#E2D3B5"/><line x1="300" y1="20" x2="300" y2="250" stroke="#fff" stroke-width="6"/>
+            <text x="150" y="26" text-anchor="middle" font-size="19" font-weight="900" fill="#B4531A">構台梁跨坐在壓梁上</text><text x="450" y="26" text-anchor="middle" font-size="19" font-weight="900" fill="#0F6E79">支撐要頂到壓梁</text>
+            <rect x="0" y="58" width="70" height="12" fill="#5B5F62"/><rect x="70" y="58" width="222" height="12" fill="#8A857B"/><text x="185" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#2E3B41">覆工板＝鋪面高度</text>
+            <rect x="96" y="70" width="10" height="34" fill="#2E3B41"/><rect x="176" y="70" width="10" height="34" fill="#2E3B41"/><rect x="256" y="70" width="10" height="34" fill="#2E3B41"/>
+            <rect x="42" y="104" width="250" height="30" fill="#0F6E79"/><text x="185" y="125" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">構台大梁</text>
+            <rect x="42" y="134" width="46" height="56" fill="#C9CFD0" stroke="#EE6A1F" stroke-width="4"/><text x="65" y="167" text-anchor="middle" font-size="16" font-weight="900" fill="#2E3B41">壓梁</text>
+            <rect x="42" y="190" width="46" height="60" fill="#DDD6C8" stroke="#B9B2A3" stroke-width="2"/>
+            <text x="190" y="170" text-anchor="middle" font-size="17" font-weight="700" fill="#B4531A">壓梁頂降到 GL−70</text><text x="190" y="194" text-anchor="middle" font-size="17" font-weight="700" fill="#B4531A">＝大梁底</text>
+            <rect x="310" y="60" width="290" height="190" fill="#EFE9DD"/><rect x="310" y="60" width="38" height="190" fill="#E2D3B5"/>
+            <line x1="310" y1="60" x2="600" y2="60" stroke="#7A6A50" stroke-width="2" stroke-dasharray="6 5"/><text x="596" y="54" text-anchor="end" font-size="15" fill="#7A6A50">GL±0</text>
+            <rect x="348" y="60" width="46" height="80" fill="#D9C9A6"/>
+            <rect x="348" y="140" width="46" height="80" fill="#C9CFD0" stroke="#EE6A1F" stroke-width="4"/><text x="371" y="186" text-anchor="middle" font-size="16" font-weight="900" fill="#2E3B41" writing-mode="tb">壓梁</text>
+            <rect x="348" y="220" width="46" height="30" fill="#DDD6C8" stroke="#B9B2A3" stroke-width="2"/>
+            <rect x="394" y="140" width="206" height="32" fill="#0B4E56"/><text x="497" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">短向支撐 GL−100</text>
+            <g fill="#0F6E79"><rect x="440" y="108" width="34" height="5"/><rect x="440" y="135" width="34" height="5"/><rect x="454" y="108" width="6" height="32"/></g>
+            <text x="482" y="122" font-size="15" font-weight="700" fill="#0F6E79">長向支撐 GL−60</text>
+            <line x1="394" y1="140" x2="600" y2="140" stroke="#EE6A1F" stroke-width="2" stroke-dasharray="5 4"/>
+            
+            
+          </svg>
+          <ul class="b19"><li><b>構台大梁</b>跨坐在部分壓梁上<br>壓梁降到 GL−70，構台面才和鋪面一樣高</li><li><b>第一層支撐</b>：短向與壓梁同高 GL−100<br>長向疊在上方 GL−60，壓梁高程依此升降</li></ul>
+        </div>
+      </div>
+      <div class="ph19">
+        <figure><img src="assets/p22_photo1.jpg" class="zm" alt="構台梁坐在預壘樁壓梁上"><figcaption>構台梁坐在預壘樁壓梁上</figcaption></figure>
+        <figure><img src="assets/p22_photo2.jpg" class="zm" alt="配合長短向支撐調整預壘樁壓梁高度"><figcaption>配合長短向支撐調整預壘樁壓梁高度</figcaption></figure>
+        <figure><img src="assets/p22_photo4.jpg" class="zm" alt="構台覆工板銜接於原施作鋪面（2026/11/19）"><figcaption>構台覆工板銜接於原施作鋪面</figcaption></figure>
+        <span class="tg22">現場現況 2026/11</span>
       </div>
     </div>
-    <div class="band or" style="margin-top:18px;font-size:28px;padding:16px 32px"><b style="font-size:34px">施工一次到位</b>壓梁先調降到位，減少後續打除、廢棄物清運的成本</div>
+    <div class="band or bd19"><b style="font-size:32px">施工一次到位</b><span>壓梁先依永久設施、構台與支撐調好高度：日後不打除、少清運，構台面與原鋪面順接</span></div>
   </div>
-  <aside class="spk">這一頁是工區臨時地坪的高程檢討，重點在預壘樁壓梁的高程。一般段壓梁頂大約在 GL 負 0.25 到負 0.6 公尺，但施工構台的大梁要擱在壓梁上：構台完成面 GL 正 0.3，往下是 20 公分覆工板、H400 小梁、H400 大梁，大梁底剛好在 GL 負 0.7。所以在構台經過的四段，約 25、22、10、11 公尺，壓梁先降到 GL 負 0.7。
-另外配合排水溝的深度，把壓梁降到 GL 負 1.0。
-重點是施工一次到位：壓梁施作時就先調降，不用之後再打除，減少後續打除和廢棄物清運的成本。</aside>
+  <aside class="spk">這一頁講工區臨時地坪和壓梁高程，是怎麼一步一步檢討出來的。左邊是工區外圍一圈的壓梁，顏色代表它為什麼做這個高度，數字都是以 GL、也就是基地地面高程起算。
+（第 1 次）一開始的想法很單純：臨時地坪不用加高，直接沿用原本的柏油路面，也就是歷建前的停車場，或既有建物的地坪高度；預壘樁上的壓梁也做到一樣高。
+（按 →　第 2 次）把景觀圖套進來，發現永久排水溝比現況低；地坪若照原高度做，水溝施作前就得先打石、清運。所以壓梁先預降，水溝可以直接施作。北側排水溝這段降到 GL 負 100，另外配合覆土、水池、連通道、景觀高程也各自調整，這些是藍色。
+（按 →　第 3 次）再把施工構台和第一層支撐放進來。淺橘色是施工構台的範圍，構台大梁要跨坐在部分壓梁上，所以這四段壓梁降到 GL 負 70，正好是大梁底，構台面就和鋪面一樣高；第一層支撐要完整頂到壓梁，短向在 GL 負 100、長向在 GL 負 60，壓梁就依支撐高度升降，這些是橘色。
+（按 →　現場成果）現場照片：構台梁坐在壓梁上、壓梁配合長短向支撐調整高度、構台覆工板銜接原施作鋪面。重點是施工一次到位：日後不用打除、減少清運。</aside>
 </section>
 
 <!-- 18 WALKWAY -->
@@ -966,8 +1434,47 @@ PVC 地磚：送潔安環保造粒。
     <div class="kicker">04 設計規劃｜假設工程 2</div>
     <h1 class="t">人行安全通道</h1>
     <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px">
-      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">01</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">緣由</h3><div style="height:330px;background:#fff;border-radius:14px;border:1px solid var(--line)"><img src="assets/bfb9d8a8eb.png" class="img contain" alt="緣由示意圖"></div><p style="font-size:23px;line-height:1.6;margin-top:18px">土方車、機具與步行人員共用出入口與通道，動線交會處容易發生碰撞。</p></div>
-      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">02</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">作法</h3><div style="height:330px;background:#fff;border-radius:14px;border:1px solid var(--line)"><svg viewBox="0 0 1470 850" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block" role="img" aria-label="作法示意圖：車道（行車動線）與頂棚下的人行通道，以欄杆實體隔開">
+      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">01</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">緣由</h3><div style="height:430px;background:#fff;border-radius:14px;border:1px solid var(--line)"><svg viewBox="0 0 1470 850" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="緣由示意圖：從大門守衛亭進入工區，須先戴安全帽；吊掛作業可能物體飛落；人車未分道">
+  <rect x="0" y="640" width="1470" height="40" fill="#EFE6D3"/>
+  <!-- 施工中大樓＋塔吊 -->
+  <rect x="1010" y="170" width="300" height="470" fill="#E6ECEA" stroke="#9AA7AB" stroke-width="3"/>
+  <g stroke="#9AA7AB" stroke-width="3"><line x1="1010" y1="250" x2="1310" y2="250"/><line x1="1010" y1="330" x2="1310" y2="330"/><line x1="1010" y1="410" x2="1310" y2="410"/><line x1="1010" y1="490" x2="1310" y2="490"/><line x1="1010" y1="570" x2="1310" y2="570"/><line x1="1110" y1="170" x2="1110" y2="640"/><line x1="1210" y1="170" x2="1210" y2="640"/></g>
+  <rect x="1310" y="170" width="26" height="470" fill="rgba(42,110,180,.25)" stroke="#5B8DB8" stroke-width="2"/>
+  <rect x="1372" y="40" width="26" height="600" fill="none" stroke="#E2A21E" stroke-width="5"/>
+  <path d="M1372 40l26 40M1398 80l-26 40M1372 120l26 40M1398 160l-26 40M1372 200l26 40M1398 240l-26 40M1372 280l26 40M1398 320l-26 40M1372 360l26 40M1398 400l-26 40M1372 440l26 40M1398 480l-26 40M1372 520l26 40M1398 560l-26 40" stroke="#E2A21E" stroke-width="3"/>
+  <rect x="860" y="34" width="590" height="18" fill="#E2A21E"/>
+  <line x1="960" y1="52" x2="960" y2="236" stroke="#2E3B41" stroke-width="3"/>
+  <rect x="908" y="236" width="104" height="18" fill="#B33A2E"/><rect x="908" y="256" width="104" height="18" fill="#B33A2E"/>
+  <g fill="#6B7C88"><rect x="944" y="312" width="22" height="12" transform="rotate(25 955 318)"/><rect x="928" y="364" width="16" height="10" transform="rotate(-30 936 369)"/><rect x="960" y="410" width="20" height="10" transform="rotate(50 970 415)"/></g>
+  <g stroke="#6B7C88" stroke-width="3" stroke-dasharray="6 6"><line x1="955" y1="290" x2="955" y2="304"/><line x1="936" y1="340" x2="936" y2="356"/><line x1="970" y1="384" x2="970" y2="402"/></g>
+  <!-- 守衛亭＋大門 -->
+  <rect x="40" y="420" width="210" height="220" fill="#DCE3E1" stroke="#12707A" stroke-width="5"/>
+  <rect x="26" y="404" width="238" height="22" fill="#12707A"/>
+  <rect x="72" y="460" width="90" height="70" fill="#BFD3DB" stroke="#12707A" stroke-width="3"/>
+  <rect x="180" y="470" width="50" height="170" fill="#9FB3B8"/>
+  <text x="145" y="600" text-anchor="middle" font-size="44" font-weight="900" fill="#12707A">守衛亭</text>
+  <rect x="250" y="540" width="16" height="100" fill="#3A4852"/>
+  <g><rect x="266" y="548" width="200" height="14" fill="#fff" stroke="#B33A2E" stroke-width="2"/><rect x="286" y="548" width="24" height="14" fill="#B33A2E"/><rect x="334" y="548" width="24" height="14" fill="#B33A2E"/><rect x="382" y="548" width="24" height="14" fill="#B33A2E"/><rect x="430" y="548" width="24" height="14" fill="#B33A2E"/></g>
+  <text x="420" y="616" text-anchor="middle" font-size="38" font-weight="900" fill="#2E3B41">大門</text>
+  <!-- 人員：戴安全帽 -->
+  <g transform="translate(330 512)"><circle cx="0" cy="0" r="17" fill="#F2C9A0"/><path d="M-20 -4a20 20 0 0 1 40 0z" fill="#F5D90A" stroke="#2B2B2B" stroke-width="3"/><rect x="-16" y="20" width="32" height="62" rx="10" fill="#1E7A4F"/><line x1="-8" y1="82" x2="-12" y2="126" stroke="#2E3B41" stroke-width="9" stroke-linecap="round"/><line x1="8" y1="82" x2="14" y2="126" stroke="#2E3B41" stroke-width="9" stroke-linecap="round"/></g>
+  <!-- 土方車（往大門方向） -->
+  <rect x="560" y="500" width="250" height="110" rx="8" fill="#E07A2E"/><rect x="560" y="500" width="250" height="16" fill="#C9661F"/>
+  <path d="M480 540h80v70h-80z" fill="#4A5A66"/><rect x="490" y="550" width="50" height="34" rx="4" fill="#BFD3DB"/>
+  <circle cx="520" cy="622" r="26" fill="#2B2B2B"/><circle cx="640" cy="622" r="26" fill="#2B2B2B"/><circle cx="760" cy="622" r="26" fill="#2B2B2B"/>
+  <circle cx="520" cy="622" r="10" fill="#9AA7AB"/><circle cx="640" cy="622" r="10" fill="#9AA7AB"/><circle cx="760" cy="622" r="10" fill="#9AA7AB"/>
+  <!-- 行人與土方車同一條路 -->
+  <g transform="translate(905 512)"><circle cx="0" cy="0" r="17" fill="#F2C9A0"/><path d="M-20 -4a20 20 0 0 1 40 0z" fill="#fff" stroke="#2B2B2B" stroke-width="3"/><rect x="-16" y="20" width="32" height="62" rx="10" fill="#5B8DB8"/><line x1="-8" y1="82" x2="-16" y2="126" stroke="#2E3B41" stroke-width="9" stroke-linecap="round"/><line x1="8" y1="82" x2="16" y2="126" stroke="#2E3B41" stroke-width="9" stroke-linecap="round"/></g>
+  <path d="M830 650h-60" stroke="#C0571C" stroke-width="6" marker-end="url(#ar20)"/>
+  <defs><marker id="ar20" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C0571C"/></marker></defs>
+  <!-- 編號說明 -->
+  <g font-weight="900"><circle cx="110" cy="300" r="34" fill="#EE6A1F"/><text x="110" y="314" text-anchor="middle" font-size="40" fill="#fff">1</text><text x="156" y="316" font-size="48" fill="#12343B">先戴安全帽</text></g>
+  <g font-weight="900"><polygon points="1072,286 1100,336 1044,336" fill="#F5D90A" stroke="#2B2B2B" stroke-width="3"/><text x="1072" y="331" text-anchor="middle" font-size="30" fill="#2B2B2B">!</text><circle cx="520" cy="120" r="34" fill="#EE6A1F"/><text x="520" y="134" text-anchor="middle" font-size="40" fill="#fff">2</text><text x="566" y="137" font-size="48" fill="#B33A2E">吊掛物體飛落</text></g>
+  <g font-weight="900"><polygon points="975,450 1005,504 945,504" fill="#F5D90A" stroke="#2B2B2B" stroke-width="3"/><text x="975" y="499" text-anchor="middle" font-size="30" fill="#2B2B2B">!</text><circle cx="520" cy="410" r="34" fill="#EE6A1F"/><text x="520" y="424" text-anchor="middle" font-size="40" fill="#fff">3</text><text x="566" y="427" font-size="48" fill="#12343B">人車未分道</text></g>
+  <rect x="15" y="677" width="1440" height="6" fill="#12343B"/>
+  
+</svg></div><p style="font-size:22px;line-height:1.55;margin-top:18px">進工區雖然要先戴安全帽，但周邊吊掛有<b style="color:var(--orange)">物體飛落</b>風險，加上<b style="color:var(--ink)">人車未分道</b>，行人安全仍然堪慮。</p></div>
+      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">02</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">作法</h3><div style="height:430px;background:#fff;border-radius:14px;border:1px solid var(--line)"><svg viewBox="0 0 1470 850" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block" role="img" aria-label="作法示意圖：車道（行車動線）與頂棚下的人行通道，以欄杆實體隔開">
   <rect x="35" y="450" width="640" height="230" fill="#FBE3D1"/>
   <text x="355" y="388" text-anchor="middle" font-size="34" font-weight="900" fill="#C0571C" font-family="Noto Sans TC,Noto Sans CJK TC,sans-serif">車道（行車動線）</text>
   <!-- 土方車：車頭朝向讀者 -->
@@ -1002,54 +1509,46 @@ PVC 地磚：送潔安環保造粒。
   <text x="1276" y="470" text-anchor="middle" font-size="34" font-weight="900" fill="#12707A" font-family="Noto Sans TC,Noto Sans CJK TC,sans-serif">工務所</text>
   <text x="1276" y="510" text-anchor="middle" font-size="24" fill="#12343B" font-family="Noto Sans TC,Noto Sans CJK TC,sans-serif">各單位辦公室</text>
   <rect x="15" y="677" width="1440" height="6" fill="#12343B"/>
-</svg></div><p style="font-size:23px;line-height:1.6;margin-top:18px">通道緊貼工務所一側，上方以紅色鋼構頂棚遮擋並設照明，以欄杆和土方車排隊的車道實體隔開。</p></div>
-      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">03</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">執行狀況</h3><div style="height:330px"><img src="assets/f0e89315b5.jpg" class="img" alt="11/16 現場照片"></div><p style="font-size:23px;line-height:1.6;margin-top:18px">土方車在車道排隊時，人員走頂棚下的通道進出工務所，人車不交會。</p></div>
+</svg></div><p style="font-size:21px;line-height:1.55;margin-top:18px">因此增設<b style="color:var(--ink)">鋼構頂棚＋欄杆</b>，做出一條緩衝走廊：上方擋落物、側邊與土方車道實體隔開，並設照明。</p></div>
+      <div><div class="num" style="font-size:22px;color:var(--orange);font-weight:800">03</div><h3 style="font-size:32px;font-weight:900;color:var(--ink);margin:4px 0 16px">執行狀況</h3><div style="height:430px;position:relative"><img src="assets/p20_walk2.jpg" class="img zm" alt="執行狀況：左側車道（行車動線），右側欄杆內為頂棚下的人行通道（2026/11/19）"><span class="tg23" style="left:16px;right:auto;background:#C0571C">車道</span><span class="tg23" style="background:#1E7A4F">人行通道</span></div><p style="font-size:22px;line-height:1.55;margin-top:18px">車道與通道以欄杆實體分隔；行人走在<b style="color:var(--ink)">頂棚下</b>進出工務所，不與車輛交會，也不怕上方落物，更安全。</p></div>
     </div>
   </div>
 </section>
 
-<!-- 19 REST AREA：平面 → 立牆轉 3D → 放入設備 → 切換實景 -->
-<section class="slide" data-sec="04 設計規劃" id="p19">
+<!-- 19 REST AREA：CAD 平面 → 可旋轉縮放的立體模型 → 模型 ⇄ 現場照片對照 -->
+<section class="slide" data-sec="04 設計規劃" id="p24r">
   <div class="pad">
     <div class="kicker">04 設計規劃｜假設工程 3</div>
     <h1 class="t">休息區：從平面規劃到實際建置</h1>
-    <div class="grid" style="grid-template-columns:1080px 1fr;gap:30px;margin-top:30px">
-      <div class="st19">
-        <div class="rm19">
-          <div class="fl19"></div>
-          <div class="w19 wb"></div><div class="w19 wl"></div><div class="w19 wr"><i class="pst19"></i></div><div class="w19 wf"></div>
-          <i class="lt19" style="top:22px"></i><i class="lt19" style="top:328px"></i>
-          <i class="cv19" style="left:121px;top:275px;background:#E7ECEA"></i><i class="cv19" style="left:295px;top:275px;background:#E7ECEA"></i><i class="cv19" style="left:479px;top:275px"></i><i class="cv19" style="left:479px;top:57px"></i>
-          <div class="fw19" style="left:121px;top:275px"><i class="fan19"></i></div><div class="fw19" style="left:295px;top:275px"><i class="fan19"></i></div><div class="fw19" style="left:479px;top:275px"><i class="fan19"></i></div><div class="fw19" style="left:479px;top:57px"><i class="fan19"></i></div>
-          <div class="cub19 desk" data-b="57,77,129,44,26"></div><div class="cub19 desk" data-b="231,77,129,44,26"></div><div class="cub19 desk" data-b="57,166,129,44,26"></div><div class="cub19 desk" data-b="231,166,129,44,26"></div>
-          <div class="cub19 chr" data-b="64,129,15,15,16"></div><div class="cub19 chr" data-b="114,129,15,15,16"></div><div class="cub19 chr" data-b="164,129,15,15,16"></div><div class="cub19 chr" data-b="238,129,15,15,16"></div><div class="cub19 chr" data-b="288,129,15,15,16"></div><div class="cub19 chr" data-b="338,129,15,15,16"></div>
-          <div class="cub19 chr" data-b="64,219,15,15,16"></div><div class="cub19 chr" data-b="114,219,15,15,16"></div><div class="cub19 chr" data-b="164,219,15,15,16"></div><div class="cub19 chr" data-b="238,219,15,15,16"></div><div class="cub19 chr" data-b="288,219,15,15,16"></div><div class="cub19 chr" data-b="338,219,15,15,16"></div>
-          <div class="cub19 pwr" data-b="418,120,92,92,64"></div>
-          <div class="rf19"></div>
-          <div class="bb19" style="left:470px;top:18px;--z:136px;--k:0"><span>軌道燈</span></div>
-          <div class="bb19" style="left:295px;top:275px;--z:150px;--k:1"><span>吊扇</span></div>
-          <div class="bb19" style="left:464px;top:166px;--z:70px;--k:2"><span>飲水・配電・充電</span></div><div class="bb19" style="left:121px;top:100px;--z:30px;--k:2.5"><span>座位區桌椅</span></div>
-          <div class="bb19" style="left:640px;top:250px;--z:150px;--k:3"><span>職安海報</span></div>
-          <div class="bb19 rfl" style="left:60px;top:0px;--z:160px;--k:4"><span>鋼構頂棚＋側邊帆布</span></div>
-        </div>
-        <div class="rl19">
-          <figure><img src="assets/0a0f696d0f.jpg" class="zm" alt="休息室燈具現況"><figcaption>休息室燈具現況</figcaption></figure>
-          <figure><img src="assets/863d192343.jpg" class="zm" alt="職安帆布前置作業"><figcaption>職安帆布前置作業</figcaption></figure>
-          <figure><img src="assets/d69ddda5de.jpg" class="zm" alt="休息區配電"><figcaption>休息區配電</figcaption></figure>
-          <figure><img src="assets/faf49285ee.jpg" class="zm" alt="軌道燈接電"><figcaption>軌道燈接電</figcaption></figure>
-        </div>
-        <span class="lb19">平面規劃（示意）</span>
+    <div class="grid" style="grid-template-columns:1010px 1fr;gap:26px;margin-top:22px">
+      <div class="vw24">
+        <div class="cam24"><div class="sc24"></div></div>
+        <div class="lb24w"></div>
+        <span class="lb24">CAD 平面圖</span>
+        <div class="tb24"><button data-a="in" title="放大">＋</button><button data-a="out" title="縮小">－</button><button data-a="roof" title="屋頂">屋頂</button><button data-a="reset" title="回到預設視角">重設</button></div>
+        <span class="hint24">拖曳旋轉｜右鍵或 Shift＋拖曳平移｜滾輪縮放</span>
       </div>
-      <div style="display:flex;flex-direction:column;gap:14px">
-        <div class="sp19" data-i="0"><b class="num">1</b><div><h3>平面規劃</h3><p>座位區、飲水充電、職安海報牆與出入口配置</p></div></div>
-        <div class="sp19" data-i="1"><b class="num">2</b><div><h3>立牆轉 3D</h3><p>依平面立起牆面，確認空間與動線</p></div></div>
-        <div class="sp19" data-i="2"><b class="num">3</b><div><h3>放入設備</h3><p>軌道燈、風扇、職安海報、配電・充電，上方加鋼構頂棚</p></div></div>
-        <div class="sp19" data-i="3"><b class="num">4</b><div><h3>切換實景</h3><p>現場依規劃完成建置</p></div></div>
-        <div class="card ink" style="padding:20px 24px;margin-top:auto"><h3 style="font-size:26px">鋼構頂棚＋側邊帆布</h3><p style="font-size:20px;color:#B9CACD">遮陽避雨，讓工人有固定的休息空間；內部設軌道燈、風扇、職安海報與配電充電。</p></div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-height:0">
+        <div class="sp24" data-i="0"><b class="num">1</b><div><h3>CAD 平面圖</h3><p>守衛亭、簽到區、三叉機到休息區</p></div></div>
+        <div class="sp24" data-i="1"><b class="num">2</b><div><h3>立體模型</h3><p>可拖曳旋轉、縮放，從各角度檢查</p></div></div>
+        <div class="sp24" data-i="2"><b class="num">3</b><div><h3>模型 ⇄ 現場對照</h3><p class="ch24"><span data-i="2">入口處</span><span data-i="3">危害告知簽到處</span><span data-i="4">座位區・帆布海報</span></p></div></div>
+        <div class="pv24">
+          <div class="pc24 on" data-k="-1"><div class="lg24"><h3>模型內容</h3><ul>
+            <li><i style="background:#9FB3B8"></i>守衛亭</li><li><i style="background:#3A4852"></i>人臉辨識三叉機</li>
+            <li><i style="background:#fff;border:2px solid #5E6A70"></i>危害告知簽到區</li><li><i style="background:#2F5D50"></i>職安衛海報</li>
+            <li><i style="background:#3FA34D"></i>AED</li><li><i style="background:#F5F5F5;border:2px solid #9AA7AB"></i>安衛公佈欄</li>
+            <li><i style="background:#566E4E"></i>漏電檢測機</li><li><i style="background:#FF7A2F"></i>管制欄杆</li><li><i style="background:#B33A2E"></i>大門欄杆</li><li><i style="background:#fff;border:2px solid #9AA7AB"></i>出工統計公布欄</li><li><i style="background:#F2F2F2;border:2px solid #9AA7AB;border-radius:50%"></i>吊扇</li><li><i style="background:#6B6F72"></i>菸灰桶・插座</li><li><i style="background:#0F6E79"></i>座位區桌椅</li>
+            <li><i style="background:#ECEFEF;border:2px solid #9AA7AB"></i>水冷扇</li><li><i style="background:#C9302C"></i>飲料機</li>
+            <li><i style="background:#fff;border:2px solid #B33A2E"></i>職安海報牆</li><li><i style="background:rgba(200,220,225,.8)"></i>帆布海報</li>
+            <li><i style="background:#F5C542"></i>軌道燈</li></ul></div></div>
+          <figure class="pc24" data-k="0"><img src="assets/p24_c2.jpg" alt="入口處：大門欄杆、出工統計公布欄、AED、漏電檢測機（2026/11/19）"><i class="mk24" style="left:16%;top:60%">1</i><i class="mk24" style="left:42%;top:50%">2</i><i class="mk24" style="left:61%;top:47%">3</i><i class="mk24" style="left:68%;top:42%">4</i><figcaption>① 大門欄杆 ② 出工統計公布欄 ③ AED ④ 漏電檢測機</figcaption></figure>
+          <figure class="pc24" data-k="1"><img src="assets/p24_r1.jpg" alt="簽到・危害告知區：職安衛海報、簽到桌、人臉辨識三叉機（2026/11/19）"><i class="mk24" style="left:84%;top:42%">1</i><i class="mk24" style="left:50%;top:56%">2</i><i class="mk24" style="left:12%;top:50%">3</i><figcaption>① 職安衛海報 ② 危害告知簽到區 ③ 人臉辨識三叉機</figcaption></figure>
+          <figure class="pc24" data-k="2"><img src="assets/p24_r6.jpg" alt="座位區、帆布海報、職安海報牆、水冷扇、飲料機、菸灰桶、插座、吊扇（2026/11/19）"><i class="mk24" style="left:44%;top:57%">1</i><i class="mk24" style="left:9%;top:44%">2</i><i class="mk24" style="left:84%;top:38%">3</i><i class="mk24" style="left:93%;top:78%">4</i><i class="mk24" style="left:30%;top:50%">5</i><i class="mk24" style="left:56%;top:69%">6</i><i class="mk24" style="left:59%;top:54%">7</i><i class="mk24" style="left:9%;top:12%">8</i><figcaption>① 座位區 ② 帆布海報 ③ 職安海報牆 ④ 水冷扇 ⑤ 飲料機 ⑥ 菸灰桶 ⑦ 插座 ⑧ 吊扇</figcaption></figure>
+        </div>
       </div>
     </div>
   </div>
-  <aside class="spk">休息區是從平面規劃開始的。（按 →）依平面把牆立起來，轉成 3D 確認空間；（按 →）再把設備放進去：軌道燈、風扇、職安海報牆、配電與充電，上方是鋼構頂棚、側邊加帆布；（按 →）最後是現場實際完成的樣子。也可以直接點右邊的步驟切換。</aside>
+  <aside class="spk">休息區是從 CAD 平面圖開始規劃的：從大門、守衛亭、三叉機門禁，到簽到和危害告知區，再進到休息區。（按 →）把平面轉成立體模型，可以直接拖曳旋轉、滾輪縮放，從各個角度看。（按 →）接下來用同一個角度對照現場照片：先看大門入口處，有欄杆、守衛亭外牆的出工統計公布欄、AED 和漏電檢測機；（按 →）再到三叉機外的危害告知簽到處，有職安衛海報、簽到桌和人臉辨識三叉機；（按 →）最後是座位區，帆布海報、職安海報牆、水冷扇、飲料機、菸灰桶、插座和吊扇。可以看到現場幾乎就是照著模型施作出來的。</aside>
 </section>
 
 <!-- 20 TWO STAGE：剖面動畫（原設計序列式 vs 替代工法平行式） -->
@@ -1057,78 +1556,64 @@ PVC 地磚：送潔安環保造粒。
   <div class="pad">
     <div class="kicker">04 設計規劃｜替代工法</div>
     <h1 class="t">兩階段開挖 → 一階段同步開挖</h1>
-    <div class="sb20"><span data-i="1"><b>1</b>打設擋土樁</span><span data-i="2"><b>2</b>開挖・架設支撐</span><span data-i="3"><b>3</b>構築地下結構</span><span data-i="4" class="o"><b>4</b>原設計：再開挖滯洪池</span><span data-i="5" class="o"><b>5</b>原設計：構築滯洪池</span></div>
+    <div class="sb20"><span data-i="1"><b>1</b>打設擋土樁</span><span data-i="2"><b>2</b>開挖・架設支撐</span><span data-i="3"><b>3</b>構築地下結構</span><span data-i="4" class="o"><b>4</b>原設計：再開挖滯洪池</span><span data-i="5" class="o"><b>5</b>原設計：構築滯洪池</span><span data-i="6" class="t"><b>⇄</b>工法比較表</span></div>
     <div class="grid" style="grid-template-columns:1fr 1fr;gap:30px;margin-top:20px">
       <div class="card c20"><div class="hd20"><span class="pill" style="background:#E3DED3;color:var(--ink)">原設計：分兩階段</span><span class="tg20">序列式施工</span></div><svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" class="sec20" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif"><rect x="0" y="50" width="1000" height="390" fill="#E2D3B5"/><line x1="0" y1="50" x2="1000" y2="50" stroke="#7A6A50" stroke-width="3"/><rect x="318" y="50" width="374" height="44" fill="#FBF8F1" class="ex" data-on="2"/><rect x="318" y="94" width="374" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:1.1s"/><rect x="318" y="160" width="374" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:2.2s"/><rect x="318" y="226" width="374" height="75" fill="#FBF8F1" class="ex" data-on="2" style="--dl:3.3s"/><rect x="32" y="50" width="268" height="44" fill="#FBF8F1" class="ex" data-on="4"/><rect x="32" y="94" width="268" height="123" fill="#FBF8F1" class="ex" data-on="4" style="--dl:1.1s"/><rect x="706" y="50" width="269" height="44" fill="#FBF8F1" class="ex" data-on="4"/><rect x="706" y="94" width="269" height="123" fill="#FBF8F1" class="ex" data-on="4" style="--dl:1.1s"/><rect x="318" y="80" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:0.7s"/><rect x="318" y="146" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:1.8s"/><rect x="318" y="212" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:2.9000000000000004s"/><rect x="32" y="80" width="268" height="9" fill="#0F6E79" class="st" data-on="4" data-off="5" style="--dl:0.7s"/><rect x="706" y="80" width="269" height="9" fill="#0F6E79" class="st" data-on="4" data-off="5" style="--dl:0.7s"/><g class="bd" data-on="3" style="--dl:0s"><rect x="322" y="52" width="366" height="249" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="322" y="94" width="366" height="7" fill="#5E6A70"/><rect x="322" y="160" width="366" height="7" fill="#5E6A70"/><rect x="322" y="226" width="366" height="7" fill="#5E6A70"/><rect x="322" y="294" width="366" height="7" fill="#5E6A70"/></g><g class="bd" data-on="5" style="--dl:0s"><rect x="36" y="52" width="260" height="165" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="36" y="94" width="260" height="7" fill="#5E6A70"/><rect x="36" y="210" width="260" height="7" fill="#5E6A70"/></g><g class="bd" data-on="5" style="--dl:0s"><rect x="710" y="52" width="261" height="165" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="710" y="94" width="261" height="7" fill="#5E6A70"/><rect x="710" y="210" width="261" height="7" fill="#5E6A70"/></g><rect x="408" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="594" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="162" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="836" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="18.0" y="30" width="12" height="410" fill="#8A857B" class="pl" data-on="1" style="--dl:0.2s"/><rect x="297.0" y="30" width="12" height="410" fill="#EE6A1F" class="pl" data-on="1"/><rect x="688.0" y="30" width="12" height="410" fill="#EE6A1F" class="pl" data-on="1"/><rect x="969.0" y="30" width="12" height="410" fill="#8A857B" class="pl" data-on="1" style="--dl:0.2s"/><text x="166" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">雨水滯洪池(行政棟)</text><text x="410" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">行政棟</text><text x="600" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">實驗棟</text><text x="840" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">雨水滯洪池(實驗棟)</text><line x1="505" y1="50" x2="505" y2="440" stroke="#7A6A50" stroke-width="1.5" stroke-dasharray="6 6"/><g class="ok" data-on="5" style="--dl:1.2s"><rect x="380" y="330" width="250" height="56" rx="28" fill="#EE6A1F"/><text x="505" y="367" font-size="23" font-weight="700" fill="#fff" text-anchor="middle">✓ 全區地下結構完成</text></g></svg><p class="d20">主體結構完成後，才能開挖兩側滯洪池與油槽</p></div>
       <div class="card c20" style="border:2px solid var(--teal)"><div class="hd20"><span class="pill" style="background:var(--teal);color:#fff">替代工法：一階段同步</span><span class="tg20" style="color:var(--teal)">平行式施工</span></div><svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" class="sec20" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif"><rect x="0" y="50" width="1000" height="390" fill="#E2D3B5"/><line x1="0" y1="50" x2="1000" y2="50" stroke="#7A6A50" stroke-width="3"/><rect x="318" y="50" width="374" height="44" fill="#FBF8F1" class="ex" data-on="2"/><rect x="318" y="94" width="374" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:1.1s"/><rect x="318" y="160" width="374" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:2.2s"/><rect x="318" y="226" width="374" height="75" fill="#FBF8F1" class="ex" data-on="2" style="--dl:3.3s"/><rect x="32" y="50" width="268" height="44" fill="#FBF8F1" class="ex" data-on="2"/><rect x="32" y="94" width="268" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:1.1s"/><rect x="32" y="160" width="268" height="57" fill="#FBF8F1" class="ex" data-on="2" style="--dl:2.2s"/><rect x="706" y="50" width="269" height="44" fill="#FBF8F1" class="ex" data-on="2"/><rect x="706" y="94" width="269" height="66" fill="#FBF8F1" class="ex" data-on="2" style="--dl:1.1s"/><rect x="706" y="160" width="269" height="57" fill="#FBF8F1" class="ex" data-on="2" style="--dl:2.2s"/><rect x="318" y="80" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:0.7s"/><rect x="318" y="146" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:1.8s"/><rect x="318" y="212" width="374" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:2.9000000000000004s"/><rect x="32" y="80" width="268" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:0.7s"/><rect x="32" y="146" width="268" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:1.8s"/><rect x="706" y="80" width="269" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:0.7s"/><rect x="706" y="146" width="269" height="9" fill="#0F6E79" class="st" data-on="2" data-off="3" style="--dl:1.8s"/><g class="bd" data-on="3" style="--dl:0s"><rect x="322" y="52" width="366" height="249" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="322" y="94" width="366" height="7" fill="#5E6A70"/><rect x="322" y="160" width="366" height="7" fill="#5E6A70"/><rect x="322" y="226" width="366" height="7" fill="#5E6A70"/><rect x="322" y="294" width="366" height="7" fill="#5E6A70"/></g><g class="bd" data-on="3" style="--dl:0.3s"><rect x="36" y="52" width="260" height="165" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="36" y="94" width="260" height="7" fill="#5E6A70"/><rect x="36" y="210" width="260" height="7" fill="#5E6A70"/></g><g class="bd" data-on="3" style="--dl:0.3s"><rect x="710" y="52" width="261" height="165" fill="#C9CFD0" stroke="#5E6A70" stroke-width="4"/><rect x="710" y="94" width="261" height="7" fill="#5E6A70"/><rect x="710" y="210" width="261" height="7" fill="#5E6A70"/></g><rect x="408" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="594" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="162" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="836" y="36" width="9" height="400" fill="#0B4E56" class="pl" data-on="1" style="--dl:0.4s"/><rect x="16.0" y="30" width="16" height="410" fill="#EE6A1F" class="pl" data-on="1" style="--dl:0.2s"/><rect x="295.0" y="30" width="16" height="410" fill="#EE6A1F" class="pl" data-on="1"/><rect x="686.0" y="30" width="16" height="410" fill="#EE6A1F" class="pl" data-on="1"/><rect x="967.0" y="30" width="16" height="410" fill="#EE6A1F" class="pl" data-on="1" style="--dl:0.2s"/><text x="166" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">雨水滯洪池(行政棟)</text><text x="410" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">行政棟</text><text x="600" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">實驗棟</text><text x="840" y="472" font-size="21" font-weight="700" fill="#2E3B41" text-anchor="middle">雨水滯洪池(實驗棟)</text><line x1="505" y1="50" x2="505" y2="440" stroke="#7A6A50" stroke-width="1.5" stroke-dasharray="6 6"/><g class="ok" data-on="3" style="--dl:1.6s"><rect x="380" y="330" width="250" height="56" rx="28" fill="#0F6E79"/><text x="505" y="367" font-size="23" font-weight="700" fill="#fff" text-anchor="middle">✓ 全區地下結構完成</text></g></svg><p class="d20">全區同步開挖、架設支撐，主體、滯洪池、油槽的地下結構一起往上蓋</p></div>
     </div>
-    <div class="lg20"><span><i style="background:#EE6A1F"></i>混凝土排樁（原 D60 → 替代 D80）</span><span><i style="background:#8A857B"></i>預壘樁 D60（原設計滯洪池）</span><span><i style="background:#0F6E79"></i>水平支撐</span><span><i style="background:#0B4E56;width:8px"></i>中間樁</span><span><i style="background:#C9CFD0;border:2px solid #5E6A70"></i>地下結構</span></div>
+    <div class="lg20"><span><i style="background:#EE6A1F"></i>擋土樁（原設計 D=60cm 排樁 → 替代 D=80cm 預壘樁）</span><span><i style="background:#8A857B"></i>預壘樁 D60（原設計滯洪池）</span><span><i style="background:#0F6E79"></i>水平支撐</span><span><i style="background:#0B4E56;width:8px"></i>中間樁</span><span><i style="background:#C9CFD0;border:2px solid #5E6A70"></i>地下結構</span></div>
+    <div class="tb20">
+      <table class="cmp20">
+        <tr><th>比較項目</th><th>原契約設計</th><th class="alt">建議替代方案</th><th class="adv">顯著優勢</th></tr>
+        <tr><td class="k">擋土樁規格</td><td><b>多重規格，分區施做</b>結構體：D=60cm 排樁<br>雨水滯洪池：D=60cm 預壘樁<br>發電機油槽：D=40cm 預壘樁</td><td class="alt"><b>統一規格，全面強化</b>全區（結構體、滯洪池）統一採用 D=80cm 預壘樁<br>油槽改採預壘樁搭配背拉微型樁</td><td class="adv">✓ 樁體勁度提升<br>✓ 施工標準化</td></tr>
+        <tr><td class="k">施工順序</td><td><b>序列式施工</b>主結構體完成後，才能分區進行滯洪池、油槽之擋土與結構施作</td><td class="alt"><b>平行式施工</b>全區同步開挖支撐後，地下結構（主建物、水池、油槽）可同步向上構築</td><td class="adv">✓ 工作面加大<br>✓ 縮減地下層施工風險</td></tr>
+        <tr><td class="k">結構效益</td><td>符合基本設計要求</td><td class="alt"><b>勁度提升</b>D=80cm 預壘樁提供更大勁度，有效保護鄰房及歷史建築</td><td class="adv">✓ 鄰房及歷史建築保護更佳</td></tr>
+      </table>
+    </div>
   </div>
-  <aside class="spk">（按 →）先打設擋土樁：原設計主體用 60 公分混凝土排樁、滯洪池用 60 公分預壘樁；替代工法全區統一 80 公分排樁。
+  <aside class="spk">（按 →）先打設擋土樁：原設計主體用 60 公分混凝土排樁、滯洪池用 60 公分預壘樁；替代工法全區統一 80 公分預壘樁。
 （按 →）開挖並架設支撐：原設計只開挖主體，四挖三撐；替代工法主體和兩側滯洪池同步開挖。
 （按 →）構築地下結構，同時拆除支撐：替代工法到這一步，主體、滯洪池、油槽的地下結構已經一起完成。
-（按 →）原設計要等主體完成，才回頭開挖兩側滯洪池；（按 →）再構築滯洪池結構，才算全區完成。這就是序列式和平行式的差別。</aside>
+（按 →）原設計要等主體完成，才回頭開挖兩側滯洪池；（按 →）再構築滯洪池結構，才算全區完成。這就是序列式和平行式的差別。
+（按 → 翻到工法比較表）擋土樁從多重規格、分區施做，改成全區統一 D=80cm 預壘樁，勁度提升、施工標準化；施工順序從序列式改成平行式，工作面加大、縮減地下層施工風險；勁度提升也讓鄰房和歷史建築得到更好的保護。</aside>
 </section>
 
 <!-- 章節分隔頁 05 -->
-<section class="slide dark chap" data-sec="05 智慧科技輔助及 AI 應用" id="ch5" data-title="05 智慧科技輔助及 AI 應用">
-  <img class="chbg" src="assets/75b993a80c.jpg" alt="">
+<section class="slide dark chap" data-sec="05 BIM 應用" id="ch5" data-title="05 BIM 應用">
+  <img class="chbg" src="assets/0ff0e8e77c.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">05</div><div class="cht">智慧科技輔助及 AI 應用</div><div class="chl"></div><p class="chq">用數據看著工地：監測、管理與自動化</p></div>
+  <div class="chin"><div class="chn">05</div><div class="cht">BIM 應用</div><div class="chl"></div><p class="chq">先在模型裡蓋一次，再到現場施工</p><p class="chsp">主講｜林暐勝技師</p></div>
 </section>
 
-<!-- 22 MONITOR -->
-<section class="slide" data-sec="05 智慧科技輔助及 AI 應用" id="p22">
+<!-- 05-1 BIM -->
+<section class="slide" data-sec="05 BIM 應用">
   <div class="bignum">05</div>
   <div class="pad">
-    <div class="kicker">05 智慧科技輔助及 AI 應用</div>
-    <h1 class="t">歷史建物監測：24 小時看著它</h1>
-    <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:32px;margin-top:40px">
-      <div>
-        <div class="mon">
-          <div class="montb"><div class="seg" id="m22"><button data-s="0">沉陷點</button><button data-s="2">電子式傾斜計</button></div><span class="src22">資料：115.11.04 週會簡報｜10/27–11/2</span></div>
-          <svg id="c22" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg"></svg>
-        </div>
-        <div class="band" id="b22" style="margin-top:20px;font-size:23px"></div>
-      </div>
+    <div class="kicker">05 BIM 應用</div>
+    <h1 class="t">BIM 在本案的應用</h1>
+    <div class="grid" style="grid-template-columns:1.35fr 1fr;gap:34px;margin-top:40px">
+      <div><div style="aspect-ratio:16/9"><img src="assets/0ff0e8e77c.jpg" class="img" alt="BIM 模型：開挖順序模擬畫面"></div><p class="cap">開挖順序模擬（排樁、開挖支撐 IFC 模型）</p></div>
       <div style="display:flex;flex-direction:column;gap:18px">
-        <div class="card"><h3>監測什麼</h3><p style="font-size:21px">沉陷點、建物傾斜計、電子式傾斜計（每 30 分鐘自動回傳）</p></div>
-        <div class="card"><h3>自主加密</h3><p style="font-size:21px">開挖及排樁期間，由一週三次提高到每天三次</p></div>
-        <div class="card ink"><h3>標準更嚴</h3><p style="font-size:21px;color:#B9CACD">傾斜警戒值由 <span class="num" style="color:#fff">1/600</span> 自主提高到 <span class="num" style="color:var(--orange)">1/937.5</span>，即電子式傾斜計的 <span class="num" style="color:#fff">220</span> 秒</p></div>
+        <p class="note">由暐勝技師負責（內容待確認）</p>
+        <div class="card"><h3>施工前風險評估</h3><p style="font-size:21px">用模型確認施工順序、盤點高風險作業，檢討結構細節、施工介面與工區配置。</p></div>
+        <div class="card"><h3>開挖順序模擬</h3><p style="font-size:21px">以排樁、開挖支撐模型比較原設計與替代工法的施工順序。</p></div>
+        <div style="height:160px"><img src="assets/3aee5412de.png" class="img" alt="施工前 BIM 檢討畫面"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 23 DUST + CAMERA -->
-<section class="slide" data-sec="05 智慧科技輔助及 AI 應用">
-  <div class="pad">
-    <div class="kicker">05 智慧科技輔助及 AI 應用</div>
-    <h1 class="t">灑水降塵與攝影機管理</h1>
-    <div class="grid" style="grid-template-columns:1fr 1fr 1fr;gap:26px;margin-top:34px;height:660px;grid-template-rows:minmax(0,1fr)">
-      <div class="card" style="display:flex;flex-direction:column;min-height:0;padding:24px 26px">
-        <h3>灑水降塵</h3>
-        <div style="flex:1;min-height:0;position:relative;margin:14px 0 18px;background:#F7F4EC;border-radius:14px"><img src="assets/p23_sprinkler.jpg" class="img contain zm" style="background:transparent;position:absolute;inset:0" alt="拆除階段圍籬頂灑水降塵（2026-10-01）"></div>
-        <p style="font-size:22px;line-height:1.6">拆除階段以灑水抑制揚塵，以維護工區周邊的空氣品質。</p>
-      </div>
-      <div class="card" style="display:flex;flex-direction:column;min-height:0;padding:24px 26px">
-        <h3>土車出土：車身輪胎清洗</h3>
-        <div style="flex:1;min-height:0;position:relative;margin:14px 0 18px;background:#F7F4EC;border-radius:14px"><img src="assets/p23_truckwash.jpg" class="img contain zm" style="background:transparent;position:absolute;inset:0" alt="土車出場前於洗車台清洗車身與輪胎（2026/11/11）"></div>
-        <p style="font-size:22px;line-height:1.6">出土階段土車出場前清洗車身與輪胎，避免帶泥上路、污染道路。</p>
-      </div>
-      <div class="card" style="display:flex;flex-direction:column;min-height:0;padding:24px 26px">
-        <h3>攝影機：土方、車輛管制</h3>
-        <div style="flex:1;min-height:0;position:relative;margin:14px 0 18px;background:#F7F4EC;border-radius:14px"><img src="assets/f9cd353114.jpg" class="img contain zm" style="background:transparent;position:absolute;inset:0" alt="新進工班停車規範 4 步驟"></div>
-        <p style="font-size:22px;line-height:1.6">車輛以 LINE 群組四步驟完成進場建檔、掃碼打卡，進場資訊自動推播到管理群組，可即時查詢車主與聯絡方式。</p>
-      </div>
-    </div>
-  </div>
+<!-- 章節分隔頁 06 -->
+<section class="slide dark chap" data-sec="06 智慧施工與品質管理" id="ch6" data-title="06 智慧施工與品質管理">
+  <img class="chbg" src="assets/75b993a80c.jpg" alt="">
+  <div class="chveil"></div>
+  <div class="chin"><div class="chn">06</div><div class="cht">智慧施工與品質管理</div><div class="chl"></div><p class="chq">用數據管工地：出土、排樁、取樣到監測</p><p class="chsp">主講｜施工組、品管組</p></div>
 </section>
 
 <!-- 24 EARTH SYSTEM -->
-<section class="slide" data-sec="05 智慧科技輔助及 AI 應用">
+<section class="slide" data-sec="06 智慧施工與品質管理">
   <div class="pad">
-    <div class="kicker">05 智慧科技輔助及 AI 應用</div>
+    <div class="kicker">06 智慧施工與品質管理</div>
     <h1 class="t">土方管理系統：車籍查詢與派車</h1>
     <div style="width:900px;margin-top:40px">
       <div style="display:flex;flex-direction:column;gap:18px">
@@ -1142,9 +1627,9 @@ PVC 地磚：送潔安環保造粒。
 </section>
 
 <!-- 25 PILE REPORT -->
-<section class="slide" data-sec="05 智慧科技輔助及 AI 應用" id="p25">
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p25">
   <div class="pad">
-    <div class="kicker">05 智慧科技輔助及 AI 應用</div>
+    <div class="kicker">06 智慧施工與品質管理</div>
     <h1 class="t">排樁進度日報：60 分鐘縮短到 2 分鐘</h1>
     <div class="grid" style="grid-template-columns:560px 1fr;gap:40px;margin-top:40px">
       <div style="display:flex;flex-direction:column;gap:20px">
@@ -1161,82 +1646,346 @@ PVC 地磚：送潔安環保造粒。
 </section>
 
 <!-- 26 QC + RFID -->
-<section class="slide" data-sec="05 智慧科技輔助及 AI 應用">
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p28q">
   <div class="pad">
-    <div class="kicker">05 智慧科技輔助及 AI 應用</div>
-    <h1 class="t">品管與 AI 連動：施工組與品管組接軌</h1>
-    <div class="grid" style="grid-template-columns:1.1fr 1fr;gap:36px;margin-top:38px">
-      <div style="height:690px;background:#fff;border-radius:14px;border:1px solid var(--line);padding:10px"><img src="assets/375348778a.jpg" class="img contain" alt="全區 QC 進度看板"></div>
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <p style="font-size:24px;line-height:1.6">預壘樁試體管制系統透過雲端 API 讀取施工進度，自動追蹤：</p>
-        <div class="grid" style="grid-template-columns:1fr 1fr;gap:10px;font-size:22px">
-          <span class="pill" style="background:var(--tealSoft);color:var(--teal)">① 打設總進度</span><span class="pill" style="background:var(--tealSoft);color:var(--teal)">② 試體取樣率</span>
-          <span class="pill" style="background:var(--tealSoft);color:var(--teal)">③ 實驗室收件進度</span><span class="pill" style="background:var(--tealSoft);color:var(--teal)">④ 抗壓會驗結案率</span>
-          <span class="pill" style="background:var(--tealSoft);color:var(--teal)">⑤ 每月排程一覽</span>
+    <div class="kicker">06 智慧施工與品質管理｜試體取樣</div>
+    <h1 class="t">每天打設、每天取樣：一支都不能漏</h1>
+    <p class="ld30">哪一支樁取過、哪一支還沒取，靠人工對很容易漏。</p>
+    <div class="g30">
+      <div class="card pc30"><svg class="pd30 hp" viewBox="0 0 240 600" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="預壘樁示意：壓梁混凝土、樁身水泥砂漿">
+  <defs>
+    <pattern id="cc30p" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#BFC6C8"/><circle cx="3" cy="4" r="1.6" fill="#9AA3A6"/><circle cx="10" cy="9" r="2.2" fill="#A7AFB2"/><circle cx="6" cy="12" r="1" fill="#8D9699"/></pattern>
+    <pattern id="gr30p" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#DCCFB2"/><circle cx="2" cy="3" r=".9" fill="#C2B190"/><circle cx="7" cy="7" r=".9" fill="#C9B998"/></pattern>
+  </defs>
+  <rect x="0" y="36" width="240" height="564" fill="#EFE6D3"/>
+  <line x1="0" y1="36" x2="240" y2="36" stroke="#7A6A50" stroke-width="2" stroke-dasharray="7 6"/><text x="4" y="26" font-size="15" fill="#7A6A50">GL±0</text>
+  <g class="c"><rect x="30" y="60" width="180" height="96" fill="url(#cc30p)" stroke="#0F6E79" stroke-width="4"/>
+    <rect class="lb" x="20" y="88" width="200" height="44" rx="22" fill="#0F6E79"/><text x="120" y="117" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">壓梁：混凝土</text></g>
+  <g class="p"><rect x="36" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/><rect x="94" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/><rect x="152" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/>
+    <rect class="lb" x="10" y="340" width="220" height="44" rx="22" fill="#EE6A1F"/><text x="120" y="369" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">樁身：水泥砂漿</text></g>
+</svg></div>
+      <div class="r28">
+        <div class="card im28"><img src="assets/375348778a.jpg" class="zm" alt="預壘樁試體管制系統：全區 QC 進度看板"><span class="tg">品管組 QC 進度看板</span></div>
+        <div class="sd28">
+          <div class="card bx28"><p class="h28">同一張樁位圖，兩組共用</p>
+            <div class="rw28"><span class="c">施工組</span>打設數量、工率</div>
+            <div class="rw28"><span class="q">品管組</span>依樁號取樣、送驗</div>
+            <p class="rs28">取樣與現場<em>同步閉合</em></p></div>
+          <div class="card bx28"><p class="h28">系統自動追蹤</p>
+            <ol class="ol28"><li>打設總進度</li><li>試體取樣率</li><li>實驗室收件</li><li>抗壓會驗結案</li><li>每月排程</li></ol></div>
         </div>
-        <div class="card"><h3>混凝土強度分析</h3><p>預壘樁水泥砂漿抗壓強度平均 <span class="num" style="font-size:34px;color:var(--orange)">487</span> kg/cm²</p></div>
-        <div class="card ink" style="display:grid;grid-template-columns:1fr 170px;gap:20px;align-items:center"><div><h3>導入 RFID 系統控管試體流向</h3><p style="font-size:21px;color:#B9CACD">混凝土、鋼筋試體埋入 RFID 晶片，在建檔、埋入、實驗室收件、28 天會驗共掃描 4 次，全程掌握試體流向。</p></div><img src="assets/c987272d83.jpg" class="img" style="height:170px" alt="RFID 試體讀取確認"></div>
       </div>
     </div>
   </div>
+  <aside class="spk">每天打設、每天取樣，哪一支樁取過、哪一支還沒取，靠人工對很容易漏。
+先看左邊的預壘樁：樁身灌的是水泥砂漿，上面的壓梁澆的是混凝土，兩種材料的試體控管方式不同。這一頁先講樁身的水泥砂漿。
+施工組已經有統計施工數量和工率的系統，每支樁的位置都標在圖上；品管組直接沿用同一張圖和樁號，所以取樣數量和現場是同步閉合的。系統自動追蹤五項：打設總進度、試體取樣率、實驗室收件、抗壓會驗結案率和每月排程。</aside>
 </section>
 
-<!-- 章節分隔頁 06 -->
-<section class="slide dark chap" data-sec="06 工地職安衛" id="ch6" data-title="06 工地職安衛">
-  <img class="chbg" src="assets/06e83d844a.jpg" alt="">
-  <div class="chveil"></div>
-  <div class="chin"><div class="chn">06</div><div class="cht">工地職安衛</div><div class="chl"></div><p class="chq">開工至今，職安衛怎麼落實</p></div>
+<!-- 29 預壘樁水泥砂漿強度統計 -->
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p28s">
+  <div class="pad">
+    <div class="kicker">06 智慧施工與品質管理｜品質分析</div>
+    <h1 class="t">樁身水泥砂漿強度：施作期間持續監控</h1>
+    <div class="g30" style="margin-top:22px">
+      <div class="card pc30"><svg class="pd30 hp" viewBox="0 0 240 600" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="預壘樁示意：壓梁混凝土、樁身水泥砂漿">
+  <defs>
+    <pattern id="cc30p" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#BFC6C8"/><circle cx="3" cy="4" r="1.6" fill="#9AA3A6"/><circle cx="10" cy="9" r="2.2" fill="#A7AFB2"/><circle cx="6" cy="12" r="1" fill="#8D9699"/></pattern>
+    <pattern id="gr30p" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#DCCFB2"/><circle cx="2" cy="3" r=".9" fill="#C2B190"/><circle cx="7" cy="7" r=".9" fill="#C9B998"/></pattern>
+  </defs>
+  <rect x="0" y="36" width="240" height="564" fill="#EFE6D3"/>
+  <line x1="0" y1="36" x2="240" y2="36" stroke="#7A6A50" stroke-width="2" stroke-dasharray="7 6"/><text x="4" y="26" font-size="15" fill="#7A6A50">GL±0</text>
+  <g class="c"><rect x="30" y="60" width="180" height="96" fill="url(#cc30p)" stroke="#0F6E79" stroke-width="4"/>
+    <rect class="lb" x="20" y="88" width="200" height="44" rx="22" fill="#0F6E79"/><text x="120" y="117" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">壓梁：混凝土</text></g>
+  <g class="p"><rect x="36" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/><rect x="94" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/><rect x="152" y="156" width="52" height="420" fill="url(#gr30p)" stroke="#EE6A1F" stroke-width="3"/>
+    <rect class="lb" x="10" y="340" width="220" height="44" rx="22" fill="#EE6A1F"/><text x="120" y="369" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">樁身：水泥砂漿</text></g>
+</svg></div>
+      <div class="r29">
+        <div class="card ch29">
+          <p class="ct29"><b>平均強度</b>每組 3 顆方塊試體平均（kgf/cm²），5–7 月</p>
+          <svg viewBox="0 0 1036 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Microsoft JhengHei,sans-serif"><line x1="52" x2="1022" y1="239.9" y2="239.9" stroke="#E6E1D6"/><text x="44" y="244.9" text-anchor="end" font-size="15" fill="#7A8287">300</text><line x1="52" x2="1022" y1="164.6" y2="164.6" stroke="#E6E1D6"/><text x="44" y="169.6" text-anchor="end" font-size="15" fill="#7A8287">400</text><line x1="52" x2="1022" y1="89.3" y2="89.3" stroke="#E6E1D6"/><text x="44" y="94.3" text-anchor="end" font-size="15" fill="#7A8287">500</text><line x1="52" x2="1022" y1="14.0" y2="14.0" stroke="#E6E1D6"/><text x="44" y="19.0" text-anchor="end" font-size="15" fill="#7A8287">600</text><rect x="52" y="254.9" width="970" height="15.1" fill="rgba(214,69,51,.08)"/><line x1="52" x2="1022" y1="254.9" y2="254.9" stroke="#D64533" stroke-width="2.5" stroke-dasharray="8 6"/><text x="1022" y="247.9" text-anchor="end" font-size="17" font-weight="700" fill="#D64533" stroke="#fff" stroke-width="5" paint-order="stroke">設計強度 fc′ 280 kgf/cm²</text><polyline points="52.0,136.1 64.3,69.3 76.6,54.4 88.8,62.1 101.1,74.8 113.4,53.7 125.7,68.9 137.9,105.0 150.2,92.7 162.5,61.0 174.8,143.7 187.1,152.5 199.3,90.7 211.6,81.4 223.9,139.7 236.2,142.1 248.5,109.0 260.7,99.0 273.0,138.0 285.3,175.9 297.6,153.1 309.8,129.4 322.1,141.6 334.4,126.9 346.7,138.3 359.0,159.6 371.2,127.8 383.5,140.4 395.8,176.5 408.1,134.5 420.4,149.1 432.6,150.9 444.9,124.7 457.2,75.5 469.5,95.5 481.7,109.6 494.0,172.9 506.3,122.1 518.6,160.9 530.9,93.8 543.1,102.4 555.4,97.5 567.7,196.2 580.0,147.3 592.3,178.7 604.5,119.1 616.8,128.2 629.1,152.7 641.4,177.4 653.6,175.1 665.9,96.0 678.2,101.6 690.5,180.9 702.8,154.2 715.0,50.6 727.3,136.2 739.6,208.6 751.9,92.8 764.2,189.5 776.4,140.5 788.7,156.4 801.0,217.2 813.3,190.1 825.5,131.3 837.8,152.7 850.1,131.1 862.4,117.9 874.7,142.7 886.9,113.8 899.2,125.3 911.5,147.3 923.8,170.0 936.1,114.0 948.3,91.9 960.6,196.6 972.9,122.1 985.2,214.4 997.4,191.3 1009.7,120.9 1022.0,174.2" fill="none" stroke="#2F6DB3" stroke-width="2.2" stroke-linejoin="round"/><line x1="52" x2="1022" y1="132.2" y2="132.2" stroke="#0F6E79" stroke-width="3"/><text x="58" y="156.2" font-size="18" font-weight="900" fill="#0F6E79" stroke="#fff" stroke-width="5" paint-order="stroke">平均 443</text><circle cx="52.0" cy="136.1" r="3.4" fill="#1E3A8A"/><circle cx="64.3" cy="69.3" r="3.4" fill="#1E3A8A"/><circle cx="76.6" cy="54.4" r="3.4" fill="#1E3A8A"/><circle cx="88.8" cy="62.1" r="3.4" fill="#1E3A8A"/><circle cx="101.1" cy="74.8" r="3.4" fill="#1E3A8A"/><circle cx="113.4" cy="53.7" r="3.4" fill="#1E3A8A"/><circle cx="125.7" cy="68.9" r="3.4" fill="#1E3A8A"/><circle cx="137.9" cy="105.0" r="3.4" fill="#1E3A8A"/><circle cx="150.2" cy="92.7" r="3.4" fill="#1E3A8A"/><circle cx="162.5" cy="61.0" r="3.4" fill="#1E3A8A"/><circle cx="174.8" cy="143.7" r="3.4" fill="#1E3A8A"/><circle cx="187.1" cy="152.5" r="3.4" fill="#1E3A8A"/><circle cx="199.3" cy="90.7" r="3.4" fill="#1E3A8A"/><circle cx="211.6" cy="81.4" r="3.4" fill="#1E3A8A"/><circle cx="223.9" cy="139.7" r="3.4" fill="#1E3A8A"/><circle cx="236.2" cy="142.1" r="3.4" fill="#1E3A8A"/><circle cx="248.5" cy="109.0" r="3.4" fill="#1E3A8A"/><circle cx="260.7" cy="99.0" r="3.4" fill="#1E3A8A"/><circle cx="273.0" cy="138.0" r="3.4" fill="#1E3A8A"/><circle cx="285.3" cy="175.9" r="3.4" fill="#1E3A8A"/><circle cx="297.6" cy="153.1" r="3.4" fill="#1E3A8A"/><circle cx="309.8" cy="129.4" r="3.4" fill="#1E3A8A"/><circle cx="322.1" cy="141.6" r="3.4" fill="#1E3A8A"/><circle cx="334.4" cy="126.9" r="3.4" fill="#1E3A8A"/><circle cx="346.7" cy="138.3" r="3.4" fill="#1E3A8A"/><circle cx="359.0" cy="159.6" r="3.4" fill="#1E3A8A"/><circle cx="371.2" cy="127.8" r="3.4" fill="#1E3A8A"/><circle cx="383.5" cy="140.4" r="3.4" fill="#1E3A8A"/><circle cx="395.8" cy="176.5" r="3.4" fill="#1E3A8A"/><circle cx="408.1" cy="134.5" r="3.4" fill="#1E3A8A"/><circle cx="420.4" cy="149.1" r="3.4" fill="#1E3A8A"/><circle cx="432.6" cy="150.9" r="3.4" fill="#1E3A8A"/><circle cx="444.9" cy="124.7" r="3.4" fill="#1E3A8A"/><circle cx="457.2" cy="75.5" r="3.4" fill="#1E3A8A"/><circle cx="469.5" cy="95.5" r="3.4" fill="#1E3A8A"/><circle cx="481.7" cy="109.6" r="3.4" fill="#1E3A8A"/><circle cx="494.0" cy="172.9" r="3.4" fill="#1E3A8A"/><circle cx="506.3" cy="122.1" r="3.4" fill="#1E3A8A"/><circle cx="518.6" cy="160.9" r="3.4" fill="#1E3A8A"/><circle cx="530.9" cy="93.8" r="3.4" fill="#1E3A8A"/><circle cx="543.1" cy="102.4" r="3.4" fill="#1E3A8A"/><circle cx="555.4" cy="97.5" r="3.4" fill="#1E3A8A"/><circle cx="567.7" cy="196.2" r="3.4" fill="#1E3A8A"/><circle cx="580.0" cy="147.3" r="3.4" fill="#1E3A8A"/><circle cx="592.3" cy="178.7" r="3.4" fill="#1E3A8A"/><circle cx="604.5" cy="119.1" r="3.4" fill="#1E3A8A"/><circle cx="616.8" cy="128.2" r="3.4" fill="#1E3A8A"/><circle cx="629.1" cy="152.7" r="3.4" fill="#1E3A8A"/><circle cx="641.4" cy="177.4" r="3.4" fill="#1E3A8A"/><circle cx="653.6" cy="175.1" r="3.4" fill="#1E3A8A"/><circle cx="665.9" cy="96.0" r="3.4" fill="#1E3A8A"/><circle cx="678.2" cy="101.6" r="3.4" fill="#1E3A8A"/><circle cx="690.5" cy="180.9" r="3.4" fill="#1E3A8A"/><circle cx="702.8" cy="154.2" r="3.4" fill="#1E3A8A"/><circle cx="715.0" cy="50.6" r="3.4" fill="#1E3A8A"/><circle cx="727.3" cy="136.2" r="3.4" fill="#1E3A8A"/><circle cx="739.6" cy="208.6" r="3.4" fill="#1E3A8A"/><circle cx="751.9" cy="92.8" r="3.4" fill="#1E3A8A"/><circle cx="764.2" cy="189.5" r="3.4" fill="#1E3A8A"/><circle cx="776.4" cy="140.5" r="3.4" fill="#1E3A8A"/><circle cx="788.7" cy="156.4" r="3.4" fill="#1E3A8A"/><circle cx="801.0" cy="217.2" r="3.4" fill="#1E3A8A"/><circle cx="813.3" cy="190.1" r="3.4" fill="#1E3A8A"/><circle cx="825.5" cy="131.3" r="3.4" fill="#1E3A8A"/><circle cx="837.8" cy="152.7" r="3.4" fill="#1E3A8A"/><circle cx="850.1" cy="131.1" r="3.4" fill="#1E3A8A"/><circle cx="862.4" cy="117.9" r="3.4" fill="#1E3A8A"/><circle cx="874.7" cy="142.7" r="3.4" fill="#1E3A8A"/><circle cx="886.9" cy="113.8" r="3.4" fill="#1E3A8A"/><circle cx="899.2" cy="125.3" r="3.4" fill="#1E3A8A"/><circle cx="911.5" cy="147.3" r="3.4" fill="#1E3A8A"/><circle cx="923.8" cy="170.0" r="3.4" fill="#1E3A8A"/><circle cx="936.1" cy="114.0" r="3.4" fill="#1E3A8A"/><circle cx="948.3" cy="91.9" r="3.4" fill="#1E3A8A"/><circle cx="960.6" cy="196.6" r="3.4" fill="#1E3A8A"/><circle cx="972.9" cy="122.1" r="3.4" fill="#1E3A8A"/><circle cx="985.2" cy="214.4" r="3.4" fill="#1E3A8A"/><circle cx="997.4" cy="191.3" r="3.4" fill="#1E3A8A"/><circle cx="1009.7" cy="120.9" r="3.4" fill="#1E3A8A"/><circle cx="1022.0" cy="174.2" r="3.4" fill="#1E3A8A"/><text x="52.0" y="293" font-size="15" fill="#7A8287">5 月</text><text x="457.2" y="293" font-size="15" fill="#7A8287">6 月</text><text x="837.8" y="293" font-size="15" fill="#7A8287">7 月</text></svg>
+          <div class="ph29">
+            <figure><img src="assets/p29_sand.jpg" class="zm" alt="預壘樁水泥砂漿：現場倒砂拌合"><figcaption>現場倒砂拌合</figcaption></figure>
+            <figure><img src="assets/p29_sample.jpg" class="zm" alt="現場取樣：5×5×5 cm 方塊試體（2026/6/26）"><figcaption>現場取樣</figcaption></figure>
+            <figure><img src="assets/p29_cube.jpg" class="zm" alt="方塊試體抗壓試驗（2026/6/23）"><figcaption>方塊試體抗壓試驗</figcaption></figure>
+          </div>
+        </div>
+        <div class="sd29">
+          <div class="st29"><div class="n"><b>443</b><small>kgf/cm²</small></div><p>平均強度</p></div>
+          <div class="st29"><div class="n" style="color:var(--teal)"><b>100</b><small>%</small></div><p>符合設計強度 280 kgf/cm²</p></div>
+          <div class="st29 v"><p class="q">變異較大時</p><ol><li>分析原因</li><li>與工班確認拌合</li></ol><p class="nt">現場倒砂拌合，起伏較大</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="spk">這是樁身水泥砂漿 5 到 7 月的強度，每一點是一組 3 顆方塊試體的平均。我們在施作期間持續監控，看澆注強度有沒有符合設計強度 280：平均 443，全部符合。
+預壘樁的水泥砂漿是現場倒砂拌合，強度起伏會比預拌混凝土大。看到變異比較大的時候，先分析原因，例如倒砂、加水量、取樣或壓驗，再適時跟工班確認拌合狀況。
+樁身灌漿完成後，接著施作壓梁，壓梁澆的是混凝土，下一頁說明混凝土試體怎麼控管。</aside>
 </section>
 
-<!-- 27 SAFETY -->
-<section class="slide" data-sec="06 工地職安衛">
+<!-- 28b RFID 試體流向 -->
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p28r">
+  <div class="pad">
+    <div class="kicker">06 智慧施工與品質管理｜試體管理</div>
+    <h1 class="t">壓梁混凝土試體：RFID 追蹤流向</h1>
+    <div class="g30" style="position:relative;margin-top:22px">
+      <div class="card pc30"><svg class="pd30 hc" viewBox="0 0 240 600" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif" role="img" aria-label="預壘樁示意：壓梁混凝土、樁身水泥砂漿">
+  <defs>
+    <pattern id="cc30c" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#BFC6C8"/><circle cx="3" cy="4" r="1.6" fill="#9AA3A6"/><circle cx="10" cy="9" r="2.2" fill="#A7AFB2"/><circle cx="6" cy="12" r="1" fill="#8D9699"/></pattern>
+    <pattern id="gr30c" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#DCCFB2"/><circle cx="2" cy="3" r=".9" fill="#C2B190"/><circle cx="7" cy="7" r=".9" fill="#C9B998"/></pattern>
+  </defs>
+  <rect x="0" y="36" width="240" height="564" fill="#EFE6D3"/>
+  <line x1="0" y1="36" x2="240" y2="36" stroke="#7A6A50" stroke-width="2" stroke-dasharray="7 6"/><text x="4" y="26" font-size="15" fill="#7A6A50">GL±0</text>
+  <g class="c"><rect x="30" y="60" width="180" height="96" fill="url(#cc30c)" stroke="#0F6E79" stroke-width="4"/>
+    <rect class="lb" x="20" y="88" width="200" height="44" rx="22" fill="#0F6E79"/><text x="120" y="117" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">壓梁：混凝土</text></g>
+  <g class="p"><rect x="36" y="156" width="52" height="420" fill="url(#gr30c)" stroke="#EE6A1F" stroke-width="3"/><rect x="94" y="156" width="52" height="420" fill="url(#gr30c)" stroke="#EE6A1F" stroke-width="3"/><rect x="152" y="156" width="52" height="420" fill="url(#gr30c)" stroke="#EE6A1F" stroke-width="3"/>
+    <rect class="lb" x="10" y="340" width="220" height="44" rx="22" fill="#EE6A1F"/><text x="120" y="369" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">樁身：水泥砂漿</text></g>
+  <g class="q30">
+    <line x1="0" y1="156" x2="240" y2="156" stroke="#EE6A1F" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="6" y="166" width="228" height="164" rx="14" fill="#fff" stroke="#EE6A1F" stroke-width="3"/>
+    <text x="120" y="194" text-anchor="middle" font-size="19" font-weight="900" fill="#12343B">水泥砂漿</text>
+    <text x="120" y="217" text-anchor="middle" font-size="19" font-weight="900" fill="#12343B">為什麼不用晶片？</text>
+    <line x1="22" y1="230" x2="218" y2="230" stroke="#E3DED3" stroke-width="2"/>
+    <text x="120" y="254" text-anchor="middle" font-size="17" fill="#3B4A50">晶片 <tspan font-weight="900" fill="#0F6E79">5×6 cm</tspan></text>
+    <text x="120" y="278" text-anchor="middle" font-size="17" fill="#3B4A50">方塊試體 <tspan font-weight="900" fill="#B4531A">5×5×5 cm</tspan></text>
+    <text x="120" y="312" text-anchor="middle" font-size="20" font-weight="900" fill="#EE6A1F">→ 埋不進去</text>
+  </g>
+</svg></div>
+      <div class="cx30"><figure><img src="assets/p30_chip.jpg" class="zm" alt="RFID 晶片放上水泥砂漿方塊試體：埋不進去"><figcaption>晶片 5×6 cm 放上方塊試體：埋不進去</figcaption></figure></div>
+      <div class="st30">
+        <div class="vs30">
+          <div class="card old"><p class="q">傳統</p><h3>手寫標籤＋紙本</h3><ul><li>標籤脫落、字跡模糊</li><li>送樣途中難追</li></ul></div>
+          <i>→</i>
+          <div class="card new"><p class="q">本案</p><h3>埋晶片，掃描 4 次</h3><div class="sc30"><span>建檔</span><span>埋晶片</span><span>實驗室收件</span><span>28 天會驗</span></div></div>
+        </div>
+        <div class="ps30">
+          <figure><img src="assets/rfid_embed.jpg" class="zm" alt="混凝土試體埋入 RFID 晶片"><figcaption>埋入晶片</figcaption></figure>
+          <figure><img src="assets/rfid_check.jpg" class="zm" alt="確認晶片讀取正常"><figcaption>確認讀取</figcaption></figure>
+          <figure><img src="assets/rfid_lab.jpg" class="zm" alt="實驗室入水前掃描"><figcaption>實驗室掃描</figcaption></figure>
+        </div>
+      </div>
+      <div class="fu30">
+        <div class="wb29">
+        <div class="wh29"><b>RFID 晶片編號管理網頁</b><span>示範記錄表｜完整表單與試體清單（7 張表單、27 顆試體）</span><a href="https://cdcweekly1610-cell.github.io/RFID-system/" target="_blank" rel="noopener">開啟網頁 ↗</a></div>
+        <table class="tb29"><tr><th>表單編號</th><th>取樣時間</th><th>取樣位置／強度</th><th>試體編號／RFID 標籤</th><th>7 天</th><th>28 天</th></tr>
+        <tr><td class="f">1150901-210-01</td><td>09/01 08:00</td><td>南側基礎工程<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170000<b>11E7ECAB0B25</b></span><span><i>#2</i>RE2801170000<b>11D7ECAB0B25</b></span><span><i>#3</i>RE2801170000<b>01C7ECAB0B25</b></span></div></td><td class="d">09/08</td><td class="d">09/29</td></tr><tr><td class="f">1150827-210-01</td><td>08/27 08:00</td><td>東側B區結構<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>1327ECAF0B25</b></span><span><i>#2</i>RE2801170200<b>1317ECAF0B25</b></span><span><i>#3</i>RE2801170200<b>0307ECAF0B25</b></span><span><i>#4</i>RE2801170200<b>01F7ECAB0B25</b></span></div></td><td class="d">09/03</td><td class="d">09/24</td></tr><tr><td class="f">1150825-210-01</td><td>08/25 08:00</td><td>西北側預壘樁帽梁及滯洪池BC<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>0128ECB80B25</b></span><span><i>#2</i>RE2801170200<b>1138ECB80B25</b></span><span><i>#3</i>RE2801170200<b>1377ECAF0B25</b></span><span><i>#4</i>RE2801170200<b>0148ECB80B25</b></span></div></td><td class="d">09/01</td><td class="d">09/22</td></tr><tr><td class="f">1150813-210-01</td><td>08/13 08:00</td><td>西北側預壘樁帽梁及滯洪池BC<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>15D8ECB20B25</b></span><span><i>#2</i>RE2801170200<b>15E8ECB20B25</b></span><span><i>#3</i>RE2801170200<b>1108ECB80B25</b></span><span><i>#4</i>RE2801170200<b>0118ECB80B25</b></span></div></td><td class="d">08/20</td><td class="d">09/10</td></tr><tr><td class="f">1150807-210-01</td><td>08/07 08:00</td><td>東側、北側預壘樁帽梁<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>0598ECB20B25</b></span><span><i>#2</i>RE2801170200<b>15B8ECB20B25</b></span><span><i>#3</i>RE2801170200<b>05C8ECB20B25</b></span><span><i>#4</i>RE2801170200<b>05A8ECB20B25</b></span></div></td><td class="d">08/14</td><td class="d">09/04</td></tr><tr><td class="f">1150804-210-01</td><td>08/04 08:00</td><td>北側預壘樁帽梁 (圓柱試體)<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>0325ECAF0B25</b></span><span><i>#2</i>RE2801170200<b>0315ECAF0B25</b></span><span><i>#3</i>RE2801170200<b>1305ECAF0B25</b></span><span><i>#4</i>RE2801170200<b>11F5ECAB0B25</b></span></div></td><td class="d">08/11</td><td class="d">09/01</td></tr><tr><td class="f">1150730-210-01</td><td>07/30 08:00</td><td>滯洪池A槽梁<em>210 kgf/cm²</em></td><td><div class="ids"><span><i>#1</i>RE2801170200<b>1548ECB20B25</b></span><span><i>#2</i>RE2801170200<b>0568ECB20B25</b></span><span><i>#3</i>RE2801170200<b>0568ECB20B25</b></span><span><i>#4</i>RE2801170200<b>1578ECB20B25</b></span></div></td><td class="d">08/06</td><td class="d">08/27</td></tr>
+        </table>
+      </div>
+        <div class="sd30">
+          <p class="q">未來</p>
+          <div class="it30"><b>報告自動回傳</b><span>不再人工輸入</span></div>
+          <div class="it30"><b>異常即時提醒</b><span>逾期、未達標主動通知</span></div>
+          <div class="it30"><b>完整品質履歷</b><span>每顆試體都可回溯</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="spk">（進頁：左邊的預壘樁示意彈回來，壓梁亮起，並亮起「水泥砂漿為什麼不用晶片？」和照片，右側其他地方變暗）
+各位可能會問：既然有晶片可以管理試體，前面樁身的水泥砂漿為什麼不用？照片是我們實際把晶片放上水泥砂漿方塊試體：RFID 晶片大約 5×6 公分，比 5×5×5 公分的方塊試體還大，埋不進去。所以晶片只用在壓梁的混凝土圓柱試體，這裡剛好也是兩種材料的分界。
+（按 →）照片和橘色說明框收起。壓梁澆的是混凝土。
+傳統做法靠手寫標籤和紙本，標籤可能脫落、字跡模糊，送樣途中也很難追。本案每顆試體埋入晶片，建檔、埋晶片、實驗室收件、28 天會驗各掃一次，確認最後驗的就是當初取的那一顆。
+下面三張照片是埋入晶片、確認讀取、實驗室掃描。
+（按 →）未來會往自動化走：左邊是我們自己做的晶片編號管理網頁，每張表單綁定每顆試體的 RFID 編號和試壓日；右邊三個方向：報告自動回傳、異常即時提醒，形成完整的品質履歷。</aside>
+</section>
+
+<!-- 31 壓梁混凝土：兩廠強度比較（世宇簡報 p.32） -->
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p30c">
+  <div class="pad">
+    <div class="kicker">06 智慧施工與品質管理｜品質分析</div>
+    <h1 class="t">壓梁混凝土強度：換算設計強度百分比再比較</h1>
+    <div class="g30" style="margin-top:20px">
+      <div class="cg31">
+        <div class="card cw31">
+          <div class="lgd31"><span><i style="background:#2B6A47;border-radius:50%"></i>宥辰（再生砂）</span><span><i style="background:#5D7287;border-radius:50%"></i>亞東（天然砂）</span><span><i style="background:#16241B;height:4px"></i>平均</span><span data-leg-ref></span></div>
+          <svg viewBox="0 25 1000 495" data-cmpchart aria-label="宥辰與亞東預拌混凝土早期與 28 天抗壓強度比較圖" font-family="Noto Sans TC,Noto Sans CJK TC,Microsoft JhengHei,sans-serif"></svg>
+          <div class="md31" data-cmpmode><button data-a="0">實測值 kgf/cm²</button><button data-a="1">設計強度百分比</button></div>
+        </div>
+        <div class="ro31">
+          <p class="hd31" data-cmp-head></p>
+          <div class="card rc31 y"><span class="k">宥辰（再生砂）｜設計 210｜11 組</span><b data-cmp-y></b><span class="s" data-cmp-ys></span></div>
+          <div class="card rc31 a"><span class="k">亞東（天然砂）｜設計 210／280／350｜14 組</span><b data-cmp-a></b><span class="s" data-cmp-as></span></div>
+          <p class="dt31" data-cmp-detail></p>
+        </div>
+      </div>
+    </div>
+    <div class="band or" style="margin-top:16px;font-size:24px;padding:14px 30px"><b style="font-size:30px">重點</b><span>兩廠 28 天試體全數超過設計強度：宥辰平均達 139%，亞東 160%</span></div>
+  </div>
+  <aside class="spk">（先看「實測值」，再按 → 切到「設計強度百分比」；點任一個點可看該組資料）
+先說明為什麼不能直接比數字：宥辰這 11 組設計強度都是 210，亞東 14 組裡有 1 組 210、3 組 280、10 組 350。設計強度越高，實測值本來就越高，所以直接比 kgf/cm² 不公平。
+換算成「實測值 ÷ 設計強度」之後就能放在同一把尺上比較：
+28 天：宥辰 11 組平均達設計 139%，33 個試體全數合格，最低單一試體 116%；亞東 14 組平均 160%，42 個試體全數合格，最低單一試體 128%。兩廠都有充足餘裕，亞東的餘裕較大。
+早期：宥辰 7 天平均約設計 78%；亞東早期試驗在 7 到 11 天之間，平均約 107%。
+同一批次配對來看，7 天強度約為 28 天的：宥辰約 56%、亞東約 65%。也就是再生砂混凝土早期強度發展較慢，但到 28 天都能達到設計強度。
+補充：同為 210 等級，亞東只有 1 組（32 天，平均 330，157%），樣本太少，所以用百分比整體比較。</aside>
+</section>
+
+
+<!-- 22 MONITOR -->
+<section class="slide" data-sec="06 智慧施工與品質管理" id="p22">
   <div class="bignum">06</div>
   <div class="pad">
-    <div class="kicker">06 工地職安衛</div>
-    <h1 class="t">工區開工至今的職安衛如何執行？</h1>
-    <div class="grid" style="grid-template-columns:520px 1fr;gap:36px;margin-top:38px">
-      <div class="card" style="background:var(--blk);border-color:transparent">
-        <ol class="ol27" style="list-style:none;font-size:26px;line-height:1.45;color:var(--body);height:100%;display:flex;flex-direction:column;justify-content:space-between">
-          <li><b class="num" style="color:var(--orange)">1</b><span>安衛權責：四級管理、權責分工</span></li>
-          <li><b class="num" style="color:var(--orange)">2</b><span>施工安全風險評估：5×5 矩陣、<br>施工前 BIM 檢討</span></li>
-          <li><b class="num" style="color:var(--orange)">3</b><span>統合管理與協議組織</span></li>
-          <li><b class="num" style="color:var(--orange)">4</b><span>緊急應變演練</span></li>
-          <li><b class="num" style="color:var(--orange)">5</b><span>機具進場前管制：一機三證</span></li>
-          <li><b class="num" style="color:var(--orange)">6</b><span>檢驗停留點</span></li>
-          <li><b class="num" style="color:var(--orange)">7</b><span>安全衛生自動檢查</span></li>
-          <li><b class="num" style="color:var(--orange)">8</b><span>個人防護具</span></li>
-          <li><b class="num" style="color:var(--orange)">9</b><span>導入 AI 車輛管制</span></li>
-        </ol>
+    <div class="kicker">06 智慧施工與品質管理</div>
+    <h1 class="t">歷史建物監測：24 小時看著它</h1>
+    <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:32px;margin-top:40px">
+      <div>
+        <div class="mon">
+          <div class="montb"><div class="seg" id="m22"><button data-s="0">沉陷點</button><button data-s="2">電子式傾斜計</button></div></div>
+          <svg id="c22" viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="band" id="b22" style="margin-top:20px;font-size:23px"></div>
       </div>
-      <div><div style="height:600px;background:#fff;border-radius:14px;padding:10px"><img src="assets/06e83d844a.jpg" class="img contain" alt="職安精進作為照片"></div><p class="cap">取自區域聯防簡報「職安精進作為」</p></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="ts30">
+          <figure><img src="assets/p30_ts1.jpg" class="zm" alt="歷史建物上方的自動全測站"><figcaption>歷建上方：自動全測站</figcaption></figure>
+          <figure><img src="assets/p30_ts2.jpg" class="zm" alt="全測站 4G 通訊控制箱"><figcaption>4G 通訊控制箱</figcaption></figure>
+        </div>
+        <div class="card" style="padding:18px 24px;border-left:8px solid var(--teal)"><h3 style="font-size:24px;margin-bottom:4px">自動全測站：遠端操控、定時量測</h3><p style="font-size:19px;line-height:1.55">連接網路並預設量測腳本，可遠端操控；依設定的時段，定時自動量測沉陷點與傾斜計讀數。</p></div>
+        <div class="kv30">
+          <div><b>監測項目</b><span>沉陷點、建物傾斜計、電子式傾斜計（每 30 分鐘自動回傳）</span></div>
+          <div><b>自主加密</b><span>開挖及排樁期間，由一週三次提高到每天三次</span></div>
+          <div class="hl"><b>標準更嚴</b><span>傾斜警戒值由 1/600 自主提高到 <em>1/937.5</em>（電子式傾斜計 220 秒）</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- 章節分隔頁 07 -->
-<section class="slide dark chap" data-sec="07 BIM" id="ch7" data-title="07 BIM">
-  <img class="chbg" src="assets/0ff0e8e77c.jpg" alt="">
+<section class="slide dark chap" data-sec="07 工地職安衛與自動化管理" id="ch7" data-title="07 工地職安衛與自動化管理">
+  <img class="chbg" src="assets/06e83d844a.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">07</div><div class="cht">BIM</div><div class="chl"></div><p class="chq">先在模型裡蓋一次，再到現場施工</p></div>
+  <div class="chin"><div class="chn">07</div><div class="cht">工地職安衛<br>與自動化管理</div><div class="chl"></div><p class="chq">從四級管理、現場落實，到智慧監測與自動化</p><p class="chsp">主講｜職安組</p></div>
 </section>
 
-<!-- 28 BIM -->
-<section class="slide" data-sec="07 BIM">
-  <div class="bignum">07</div>
+<!-- 27 SAFETY -->
+<!-- 34 職安四級管理 -->
+<section class="slide" data-sec="07 工地職安衛與自動化管理" id="ss1">
   <div class="pad">
-    <div class="kicker">07 BIM</div>
-    <h1 class="t">BIM 在本案的應用</h1>
-    <div class="grid" style="grid-template-columns:1.35fr 1fr;gap:34px;margin-top:40px">
-      <div><div style="aspect-ratio:16/9"><img src="assets/0ff0e8e77c.jpg" class="img" alt="BIM 模型：開挖順序模擬畫面"></div><p class="cap">開挖順序模擬（排樁、開挖支撐 IFC 模型）</p></div>
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <p class="note">由暐勝技師負責（內容待確認）</p>
-        <div class="card"><h3>施工前風險評估</h3><p style="font-size:21px">用模型確認施工順序、盤點高風險作業，檢討結構細節、施工介面與工區配置。</p></div>
-        <div class="card"><h3>開挖順序模擬</h3><p style="font-size:21px">以排樁、開挖支撐模型比較原設計與替代工法的施工順序。</p></div>
-        <div style="height:160px"><img src="assets/3aee5412de.png" class="img" alt="施工前 BIM 檢討畫面"></div>
+    <div class="kicker">07 工地職安衛與自動化管理｜安全衛生政策及推動</div>
+    <h1 class="t">職安四級管理：從總公司到協力廠商</h1>
+    <div class="g34">
+      <div class="lv34">
+        <div class="card l4"><div class="hd"><img src="assets/ss_ic4.png" alt=""><span>第四級</span></div><p class="o">總公司</p><p class="u">職安室</p><ul><li>擬訂安衛政策</li><li>擬定安衛標準</li><li>稽查與考核</li></ul></div>
+        <div class="card l3"><div class="hd"><img src="assets/ss_ic3.png" alt=""><span>第三級</span></div><p class="o">工程處</p><p class="u">北工處<br>魏秀朱</p><ul><li>現場輔導</li><li>職安協助</li></ul></div>
+        <div class="card l2"><em class="me">本專案</em><div class="hd"><img src="assets/ss_ic2.png" alt=""><span>第二級</span></div><p class="o">工程專案</p><p class="u">本專案工地<span class="nm">林博弘</span><span class="nm">顏靖樺</span><span class="nm">孫珮菁</span></p><ul><li>規劃安衛教育訓練</li><li>安衛推動運作</li><li>安衛巡查</li><li>矯正預防</li></ul></div>
+        <div class="card l1"><div class="hd"><img src="assets/ss_ic1.png" alt=""><span>第一級</span></div><p class="o">協力廠商</p><p class="u">各業務主管</p><ul><li>責任分區</li><li>安衛執行</li><li>自動檢查</li></ul></div>
+      </div>
+    </div>
+    <div class="rp">
+      <p class="rh">依據職安管理計畫推動管制作為</p>
+      <p class="rc">管理計畫與作業許可單</p>
+      <div class="fl" data-flip>
+        <div class="fs"><img src="assets/ss_plan.jpg" alt="職安衛管理計畫" data-cap="職安衛管理計畫"><img src="assets/ss_form1.jpg" alt="動火作業工作許可單" data-cap="動火作業許可"><img src="assets/ss_form2.jpg" alt="吊掛作業工作許可單" data-cap="吊掛作業許可"><img src="assets/ss_form3.jpg" alt="作業許可表單" data-cap="作業許可表單"></div>
+        <div class="fb"><button class="pv" aria-label="上一張">‹</button><span class="cp"></span><span class="dt"></span><button class="nx" aria-label="下一張">›</button></div>
       </div>
     </div>
   </div>
+  <aside class="spk">職安採四級管理，權責分工到每一層。
+第四級是總公司職安室，負責擬訂安衛政策、擬定安衛標準，並做稽查與考核。
+第三級是北工處，由魏秀朱負責現場輔導和職安協助。
+第二級就是本專案工地，林博弘、顏靖樺、孫珮菁，負責規劃安衛教育訓練、安衛推動運作、安衛巡查與矯正預防。
+第一級是協力廠商的各業務主管，做責任分區、安衛執行和自動檢查。
+右邊是本案的職業安全衛生管理計畫和各項作業許可單，所有管制作為都依照管理計畫推動。</aside>
 </section>
+
+<!-- 35 現階段職安做法（0 照片｜1 安全衛生自動檢查計畫） -->
+<section class="slide" data-sec="07 工地職安衛與自動化管理" id="ss2">
+  <div class="pad">
+    <div class="kicker">07 工地職安衛與自動化管理｜現階段做法</div>
+    <h1 class="t">現階段：職安衛怎麼執行？</h1>
+    <div class="g35">
+      <div class="card ls35">
+        <ol>
+          <li><b>1</b>安衛權責：四級管理、權責分工</li>
+          <li><b>2</b>施工安全風險評估：5×5 矩陣、施工前 BIM 檢討</li>
+          <li><b>3</b>統合管理與協議組織</li>
+          <li><b>4</b>緊急應變演練</li>
+          <li><b>5</b>機具進場前管制：一機三證</li>
+          <li><b>6</b>檢驗停留點</li>
+          <li class="k"><b>7</b>安全衛生自動檢查</li>
+          <li><b>8</b>個人防護具</li>
+          <li><b>9</b>導入 AI 車輛管制</li>
+        </ol>
+      </div>
+      <div class="rt35">
+        <div class="pn35 k0">
+          <div class="r1">
+            <figure><img src="assets/ss_leak.jpg" class="zm" alt="檢查漏電斷路器"><figcaption>檢查漏電斷路器</figcaption></figure>
+            <figure><img src="assets/ss_lift.jpg" class="zm" alt="吊具檢查及色標管理"><figcaption>吊具檢查及色標管理</figcaption></figure>
+            <figure><img src="assets/ss_map.jpg" class="zm" alt="職安地圖"><figcaption>職安地圖</figcaption></figure>
+          </div>
+          <div class="r2">
+            <figure><img src="assets/ss_noise.jpg" class="zm" alt="自主噪音檢測"><figcaption>自主噪音檢測</figcaption></figure>
+            <figure><img src="assets/ss_ppe.jpg" class="zm" alt="提供個人防護具"><figcaption>提供個人防護具</figcaption></figure>
+            <figure><img src="assets/ss_rail.jpg" class="zm" alt="欄杆自主查驗：拉力測試"><figcaption>欄杆拉力測試</figcaption></figure>
+            <figure><img src="assets/ss_trans.jpg" class="zm" alt="變壓器保護"><figcaption>變壓器保護</figcaption></figure>
+          </div>
+        </div>
+        <div class="pn35 k1">
+          <div class="ac35">
+            <div class="pr35"><p class="s">各項巡檢及檢查紀錄</p><div class="g4">
+              <figure><img src="assets/ss_hook.jpg" class="zm" alt="掛勾有舌片"><figcaption>掛勾有舌片</figcaption></figure>
+              <figure><img src="assets/ss_patrol.jpg" class="zm" alt="技師巡檢"><figcaption>技師巡檢</figcaption></figure>
+              <figure><img src="assets/ss_sling.jpg" class="zm" alt="纖維繩無損傷"><figcaption>纖維繩無損傷</figcaption></figure>
+              <figure><img src="assets/ss_tool.jpg" class="zm" alt="手工具漏電檢測"><figcaption>手工具漏電檢測</figcaption></figure>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rp">
+      <p class="rh">安全衛生自動檢查計畫</p>
+      <p class="rc">圖示自動檢查表單</p>
+      <div class="fl" data-flip>
+              <div class="fs"><img src="assets/ss_chk1.jpg" alt="堆高機操作安全圖示檢查表" data-cap="堆高機操作"><img src="assets/ss_chk2.jpg" alt="施工架組拆作業安全圖示檢查表" data-cap="施工架組拆"><img src="assets/ss_chk3.jpg" alt="固定式起重機安全圖示檢查表" data-cap="固定式起重機"></div>
+              <div class="fb"><button class="pv" aria-label="上一張">‹</button><span class="cp"></span><span class="dt"></span><button class="nx" aria-label="下一張">›</button></div>
+            </div>
+    </div>
+  </div>
+  <aside class="spk">開工至今，職安衛主要從這九項落實：四級權責分工、5×5 風險矩陣與施工前 BIM 檢討、統合管理與協議組織、緊急應變演練、機具進場一機三證、檢驗停留點、安全衛生自動檢查、個人防護具，以及導入 AI 車輛管制。
+右邊是現場照片：檢查漏電斷路器、吊具檢查及色標管理、職安地圖、自主噪音檢測、提供個人防護具、欄杆拉力測試和變壓器保護。
+（按 →）以第 7 項安全衛生自動檢查為例：我們把檢查表做成圖示化表單，工人一看就懂；各項巡檢都有紀錄，例如掛勾有沒有舌片、技師巡檢、纖維繩有沒有損傷、手工具漏電檢測。</aside>
+</section>
+
+<!-- 36 未來：智慧動能系統 -->
+<section class="slide" data-sec="07 工地職安衛與自動化管理" id="ss3">
+  <div class="pad">
+    <div class="kicker">07 工地職安衛與自動化管理｜未來規劃</div>
+    <h1 class="t">未來：導入智慧動能系統，整合工地監測數據</h1>
+    <div class="g36">
+      <div class="card im36"><img src="assets/ss_dash.jpg" class="zm" alt="智慧動能系統：工地環境監測看板"></div>
+      <div class="sd36">
+        <p class="h">溫濕環境、噪音振動防治</p>
+        <p class="d">智慧動能系統整合工地環境監測數據，提升工地安全管理效率，並強化預防風險能力。</p>
+        <p class="s">看板上的監測項目</p>
+        <div class="ch"><span>溫度</span><span>濕度</span><span>PM2.5／PM10</span><span>噪音</span><span>風速・風向</span><span>冷熱危害</span><span>空氣品質</span><span>無災害天數</span></div>
+      </div>
+    </div>
+  </div>
+  <aside class="spk">未來我們要導入智慧動能系統，把工地的監測數據整合在同一個看板上。
+重點在溫濕環境和噪音振動防治：看板即時顯示溫度、濕度、PM2.5、PM10、噪音、風速風向、冷熱危害等級，還有無災害天數。
+這樣可以提升工地安全管理效率，也強化預防風險的能力。</aside>
+</section>
+
+<!-- 37 AI 與自動化 -->
+<section class="slide" data-sec="07 工地職安衛與自動化管理" id="ss4">
+  <div class="pad">
+    <div class="kicker">07 工地職安衛與自動化管理｜AI 與自動化</div>
+    <h1 class="t">自動化感應管理：結合 AI 與自動化科技</h1>
+    <div class="g37">
+      <figure class="card"><div class="im"><img src="assets/p23_sprinkler.jpg" class="zm" alt="圍籬頂自動化灑水降塵"></div><figcaption><b>1</b>自動化灑水降塵</figcaption></figure>
+      <figure class="card fc"><div class="im"><img src="assets/f9cd353114.jpg" class="zm" alt="新進工班停車規範 4 步驟：加入群組、初次登記、掃碼打卡、危害告知"></div><figcaption><b>2</b>門禁管制</figcaption></figure>
+      <figure class="card"><div class="im"><img src="assets/ss_excav.jpg" class="zm" alt="挖掘機防撞警報器"></div><figcaption><b>3</b>挖掘機防撞警報器</figcaption></figure>
+      <figure class="card"><div class="im"><img src="assets/ss_carwarn.jpg" class="zm" alt="感應式出車警示系統"></div><figcaption><b>4</b>感應式出車警示系統</figcaption></figure>
+    </div>
+  </div>
+  <aside class="spk">目前職安結合 AI 與自動化科技的項目有四個：
+第一，自動化灑水降塵：圍籬頂設自動化灑水系統，拆除階段定時灑水抑制揚塵。
+第二，門禁管制：新進工班分四步驟，先加入現場工安 LINE 群組、到記事本連結完成車輛初次登記；之後進場只要掃 QR Code、登入車牌就完成打卡，每日下車後再親自簽署危害告知，嚴禁代簽。內部登記連結請勿外流。
+第三，挖掘機防撞警報器。
+第四，感應式出車警示系統。</aside>
+</section>
+
 
 <!-- 31 THANKS -->
 <section class="slide dark" data-sec="謝謝聆聽">
@@ -1332,17 +2081,49 @@ PVC 地磚：送潔安環保造粒。
     return {set:function(v){st=v;apply(st,false);},get:function(){return st;}};
   }
 
-  // P8 拆除範圍：北棟 → 南棟 → 中央門廳 → 列出三種構件
+  // P10 拆除範圍：空拍聚光燈 → 無人機飛入
+  // 0 空拍｜1 北棟拆除｜2 飛入：曲面薄殼｜3 南棟拆除｜4 飛入：柱頭｜5 中央門廳保存｜6 飛入：三層防護
   (function(){
     var sec=$('#p8');if(!sec)return;
-    var lens=$('.lens',sec),lt=$('.lt',sec),hots=$$('.hot',sec),chips=$$('.p8c',sec),parts=null;
-    var B=[['北棟',0],['中央門廳',1],['南棟',0]],SEQ=[0,2,1];
+    var dr=$('.dr10',sec),ui=$('.ui10',sec),lens=$('.lens',sec),lt=$('.lt',sec),hots=$$('.hot',sec),chips=$$('.p8c',sec),dts=$$('.dt10',sec);
+    var B=[['北棟',0],['中央門廳',1],['南棟',0]],LENS=[-1,0,-1,2,-1,1,-1];
+    // 飛行目標（1920×1080 畫面座標）：x, y, 最終放大倍率, 轉向角（正＝向左轉）
+    var FLY={0:[772,150,3.4,24],1:[1335,270,3.0,-24],2:[995,470,2.3,0]};
+    var anim=null,tm=[],last=0;
+    function clear(){if(anim){anim.cancel();anim=null;}tm.forEach(clearTimeout);tm=[];}
     function focus(i){if(i<0){lens.classList.remove('on');return;}var h=hots[i];lens.style.left=h.style.left;lens.style.width=h.style.width;
       lens.classList.toggle('keep',!!B[i][1]);lt.textContent=B[i][0]+'｜'+(B[i][1]?'保存':'拆除');lens.classList.add('on');}
-    function apply(s){var lit=SEQ.slice(0,Math.min(s,3));chips.forEach(function(c){c.classList.toggle('on',lit.indexOf(+c.dataset.i)>=0);});
-      focus(s>=1&&s<=3?SEQ[s-1]:-1);}
-    var sp=stepper(sec,3,apply);
-    hots.concat(chips).forEach(function(h){h.addEventListener('click',function(){sp.set(SEQ.indexOf(+h.dataset.i)+1);});});
+    function tf(k,p){var f=FLY[k],x=f[0],y=f[1];
+      if(p===0)return 'translate(0px,0px) scale(1) rotateY(0deg)';
+      if(p===1)return 'translate('+(960-x)+'px,'+(540-y)+'px) scale('+(1+(f[2]-1)*.72)+') rotateY(0deg)';
+      return 'translate('+(960-x)+'px,'+(540-y)+'px) scale('+f[2]+') rotateY('+f[3]+'deg)';}
+    function org(k){var f=FLY[k];dr.style.transformOrigin=f[0]+'px '+f[1]+'px';}
+    function apply(s,inst){
+      clear();
+      var k=s===2?0:s===4?1:s===6?2:-1;
+      var lit=[];if(s>=1)lit.push(0);if(s>=3)lit.push(2);if(s>=5)lit.push(1);
+      chips.forEach(function(c){c.classList.toggle('on',lit.indexOf(+c.dataset.i)>=0);});
+      focus(LENS[s]);
+      if(k>=0){
+        org(k);
+        if(inst){dr.style.transform=tf(k,2);dr.style.opacity=0;ui.style.opacity=0;dts.forEach(function(d){var on=+d.dataset.k===k;d.classList.toggle('on',on);d.classList.toggle('in',on);});last=s;return;}
+        dts.forEach(function(d){d.classList.remove('on','in');});
+        ui.style.opacity=0;dr.style.opacity=1;dr.style.transform=tf(k,0);
+        anim=dr.animate([{transform:tf(k,0)},{transform:tf(k,1),offset:.55},{transform:tf(k,2)}],{duration:2300,easing:'cubic-bezier(.45,0,.3,1)',fill:'forwards'});
+        tm.push(setTimeout(function(){dts.forEach(function(d){d.classList.toggle('on',+d.dataset.k===k);});},1750));
+        tm.push(setTimeout(function(){dr.style.transform=tf(k,2);dr.style.opacity=0;dts.forEach(function(d){if(+d.dataset.k===k)d.classList.add('in');});},2350));
+      }else{
+        var pk=last===2?0:last===4?1:last===6?2:-1;
+        dts.forEach(function(d){d.classList.remove('on','in');});
+        dr.style.opacity=1;ui.style.opacity=1;
+        if(pk>=0&&!inst){org(pk);dr.style.transform=tf(pk,0);anim=dr.animate([{transform:tf(pk,2)},{transform:tf(pk,0)}],{duration:900,easing:'cubic-bezier(.3,0,.2,1)'});}
+        else dr.style.transform=tf(0,0);
+      }
+      last=s;
+    }
+    var sp=stepper(sec,6,apply);
+    var AT={0:1,2:3,1:5};
+    hots.concat(chips).forEach(function(h){h.addEventListener('click',function(){sp.set(AT[+h.dataset.i]);});});
   })();
 
   // P12 以終為始：揭曉循環思維，步驟由右往左倒推出現
@@ -1427,22 +2208,277 @@ PVC 地磚：送潔安環保造粒。
     sp.forEach(function(e,i){e.addEventListener('click',function(){st.set(i);});});
   })();
 
-  // P20 剖面動畫：1 打樁 → 2 開挖支撐 → 3 地下結構 → 4、5 原設計再做滯洪池
-  (function(){
-    var sec=$('#p20');if(!sec)return;var els=$$('[data-on]',sec),chips=$$('.sb20 span',sec);
+  // P31 壓梁混凝土：兩廠強度比較（移植自世宇簡報 p.32）
+(()=>{const s=$('#p30c');if(!s)return;const svg=$('[data-cmpchart]',s);
+  // [製模, 部位, 設計強度, 早期齡期, 早期值, 28天齡期, [28天三試體], 報告編號]
+  const YC=[['114/12/23','北側微型樁帽梁',210,7,157,28,[296,298,291],'25014323、25014324'],['115/01/28','南側微型樁帽梁、東側圍籬防溢座',210,7,141,28,[297,286,294],'26001068、26001069'],['115/04/21','歷史建築預壘樁帽梁',210,7,173,28,[317,323,323],'26003672、26003673'],['115/07/21','南側壓樑',210,7,166,28,[253,282,301],'26007313、26007314'],['115/07/30','滯洪池 A 壓樑',210,7,178,28,[302,310,295],'26007614、26007615'],['115/08/04','北側壓樑',210,7,151,28,[272,262,262],'26007777、26007778'],['115/08/07','東側及北側壓樑',210,7,198,28,[308,315,308],'26007971、26007975'],['115/08/13','西北側及滯洪池壓樑',210,7,137,28,[243,248,265],'26008156、26008159'],['115/08/25','滯洪池 BC 壓樑',210,7,144,28,[283,261,280],'26008626、26008627'],['115/08/27','西側壓樑',210,7,183,28,[303,331,319],'26008768、26008769'],['115/09/01','歷建周圍壓樑',210,7,164,28,[312,301,316],'26008903、26008904']];
+  const YD=[['114/09/12','衛福部側門 PC（出入口拓寬）',210,null,null,32,[331,328,332],'25010424'],['115/01/03','假設工程出入口車行斜坡道',280,9,276,30,[383,399,404],'26000155、26000156'],['115/02/09','安全走廊人行道鋪面',280,11,369,28,[484,478,491],'26001758、26002081'],['115/03/05','油槽預壘樁',280,7,256,28,[440,451,459],'26002299、26002782'],['115/07/30','TB 實驗室旁邊坡排樁',350,7,309,28,[470,471,467],'26007774、26008470'],['115/07/31','TB 實驗室旁邊坡排樁',350,7,317,28,[470,448,493],'26007850、26008571'],['115/08/01','TB 實驗室旁邊坡排樁',350,9,418,30,[592,572,517],'26007885、26008572'],['115/08/03','TB 實驗室旁邊坡排樁',350,7,381,28,[600,560,563],'26007884、26008573'],['115/08/04','TB 實驗室旁邊坡排樁',350,7,358,28,[548,544,535],'26007938、26008611'],['115/08/05','TB 實驗室旁邊坡排樁',350,7,339,28,[553,513,553],'26008006、26008753'],['115/08/06','TB 實驗室旁邊坡排樁',350,7,437,28,[666,600,629],'26008052、26008754'],['115/08/07','TB 實驗室旁邊坡排樁',350,7,442,28,[671,641,669],'26008111、26008809'],['115/08/08','TB 實驗室旁邊坡排樁',350,9,399,30,[607,636,582],'26008149、26008864'],['115/08/22','TB 實驗室旁邊坡排樁帽梁',350,9,358,30,[586,519,582],'26008752、26009463']];
+  const avg=a=>a.reduce((x,y)=>x+y,0)/a.length,R=Math.round,pc=(v,f)=>v/f*100;
+  const st=D=>{const L=D.map(d=>pc(avg(d[6]),d[2])),E=D.filter(d=>d[4]).map(d=>pc(d[4],d[2])),allS=D.flatMap(d=>d[6].map(v=>pc(v,d[2])));
+    const pr=D.filter(d=>d[4]&&d[3]===7).map(d=>d[4]/avg(d[6]));
+    return {L:avg(L),E:avg(E),minS:Math.min(...allS),pass:allS.filter(v=>v>=100).length,n:allS.length,ratio:avg(pr),
+      rawE:avg(D.filter(d=>d[4]).map(d=>d[4])),rawL:avg(D.map(d=>avg(d[6])))}};
+  const SY=st(YC),SA=st(YD);
+  const NS='http://www.w3.org/2000/svg',mk=(t,a,p=svg)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+  const COL={y:'#2B6A47',a:'#5D7287'},CX={E:{y:240,a:420},L:{y:640,a:820}};
+  const axis=mk('g',{}),plot=mk('g',{});
+  const groupLab=(x,t)=>{const e=mk('text',{x,y:478,'text-anchor':'middle',class:'lb'});e.textContent=t;e.style.fill='#16241B';e.style.fontWeight='700'};
+  groupLab(330,'早期（宥辰 7 天／亞東 7～11 天）');groupLab(730,'28 天（亞東 28～32 天）');
+  [['宥辰',240],['亞東',420],['宥辰',640],['亞東',820]].forEach(([t,x])=>{const e=mk('text',{x,y:506,'text-anchor':'middle',class:'lb'});e.textContent=t});
+  const dots=[];let mode=0,sel=null;
+  const pts=[];[['y',YC],['a',YD]].forEach(([k,D])=>D.forEach((d,i)=>{if(d[4])pts.push({k,d,i,g:'E',raw:d[4],p:pc(d[4],d[2])});pts.push({k,d,i,g:'L',raw:avg(d[6]),p:pc(avg(d[6]),d[2])})}));
+  const jit=(i)=>((i%5)-2)*26+((Math.floor(i/5)%2)?13:0);
+  pts.forEach(o=>{o.x=CX[o.g][o.k]+jit(o.i);o.c=mk('circle',{cx:o.x,cy:400,r:11,fill:COL[o.k],stroke:'#FAFBF7','stroke-width':2.5,opacity:.88},plot);o.c.style.cursor='pointer';o.c.style.transition='cy .8s cubic-bezier(.3,.7,.2,1)';o.c.addEventListener('click',()=>show(o))});
+  const means=[];['E','L'].forEach(g=>['y','a'].forEach(k=>{const l=mk('line',{x1:CX[g][k]-72,x2:CX[g][k]+72,stroke:'#16241B','stroke-width':4},plot);const t=mk('text',{x:k==='y'?CX[g][k]-80:CX[g][k]+80,'text-anchor':k==='y'?'end':'start',class:'lb'},plot);t.style.fill='#16241B';t.style.fontWeight='700';l.style.transition=t.style.transition='all .8s';means.push({g,k,l,t})}));
+  function draw(){axis.innerHTML='';const raw=!mode;
+    const lo=raw?100:40,hi=raw?700:200,Y=v=>440-(v-lo)*(400/(hi-lo));
+    const ticks=raw?[100,200,300,400,500,600,700]:[40,70,100,130,160,190];
+    ticks.forEach(v=>{mk('line',{x1:95,x2:985,y1:Y(v),y2:Y(v),stroke:'#D5DBD0','stroke-width':1.5},axis);const t=mk('text',{x:84,y:Y(v)+9,'text-anchor':'end'},axis);t.textContent=raw?v:v+'%'});
+    const ref=(v,c,lab,dash)=>{mk('line',{x1:95,x2:985,y1:Y(v),y2:Y(v),stroke:c,'stroke-width':3,'stroke-dasharray':dash},axis);const t=mk('text',{x:980,y:Y(v)-10,'text-anchor':'end',class:'lb'},axis);t.textContent=lab;t.style.fill=c};
+    if(raw){ref(210,'#B9852A','設計 210','10 8');ref(280,'#B9852A','設計 280','10 8');ref(350,'#B9852A','設計 350','10 8')}
+    else{ref(100,'#B9852A','設計強度 100%','10 8');ref(70,'#7F93A8','70%','6 8')}
+    $('[data-leg-ref]',s).innerHTML=raw?'<i style="background:#B9852A;height:4px;vertical-align:5px"></i>三種設計強度，不能直接比':'<i style="background:#B9852A;height:4px;vertical-align:5px"></i>設計強度 100%';
+    pts.forEach(o=>o.c.setAttribute('cy',Y(raw?o.raw:o.p)));
+    means.forEach(m=>{const S=m.k==='y'?SY:SA;const v=raw?(m.g==='E'?S.rawE:S.rawL):(m.g==='E'?S.E:S.L);m.l.setAttribute('y1',Y(v));m.l.setAttribute('y2',Y(v));m.t.setAttribute('y',Y(v)+9);m.t.textContent=raw?R(v):R(v)+'%'});
+    $$('button',$('[data-cmpmode]',s)).forEach(b=>b.classList.toggle('on',+b.dataset.a===mode));
+    if(raw){$('[data-cmp-head]',s).textContent='實測值：設計強度不同，直接比數字不公平';
+      $('[data-cmp-y]',s).innerHTML=R(SY.rawE)+' → '+R(SY.rawL)+'<small>kgf/cm²</small>';$('[data-cmp-ys]',s).textContent='早期 → 28 天平均';
+      $('[data-cmp-a]',s).innerHTML=R(SA.rawE)+' → '+R(SA.rawL)+'<small>kgf/cm²</small>';$('[data-cmp-as]',s).textContent='早期 → 28 天平均（10 組為 350 等級）';}
+    else{$('[data-cmp-head]',s).textContent='設計強度百分比：放在同一把尺上比較';
+      $('[data-cmp-y]',s).innerHTML=R(SY.E)+'% → '+R(SY.L)+'%';$('[data-cmp-ys]',s).textContent='28 天 '+SY.pass+'/'+SY.n+' 合格｜最低單一 '+R(SY.minS)+'%｜7 天約為 28 天的 '+R(SY.ratio*100)+'%';
+      $('[data-cmp-a]',s).innerHTML=R(SA.E)+'% → '+R(SA.L)+'%';$('[data-cmp-as]',s).textContent='28 天 '+SA.pass+'/'+SA.n+' 合格｜最低單一 '+R(SA.minS)+'%｜7 天約為 28 天的 '+R(SA.ratio*100)+'%';}
+    if(!sel)$('[data-cmp-detail]',s).innerHTML='<span style="color:var(--muted)">點圖上任一點，查看該組部位、設計強度與報告編號。</span>';
+  }
+  function show(o){sel=o;pts.forEach(p=>p.c.setAttribute('r',p.d===o.d&&p.k===o.k?15:11));const d=o.d,L=avg(d[6]);
+    $('[data-cmp-detail]',s).innerHTML='<b>'+(o.k==='y'?'宥辰':'亞東')+'｜'+d[1]+'</b><br>設計 '+d[2]+'｜製模 '+d[0]+(d[4]?'<br>'+d[3]+' 天 '+d[4]+'（'+R(pc(d[4],d[2]))+'%）':'')+'<br>'+d[5]+' 天 '+d[6].join('／')+'｜平均 '+R(L)+'（'+R(pc(L,d[2]))+'%）<br><span style="color:var(--muted);font-size:15px">報告 '+d[7]+'</span>'}
+  const sp=stepper(s,1,function(v){mode=v;draw();});
+  $$('button',$('[data-cmpmode]',s)).forEach(b=>b.onclick=()=>sp.set(+b.dataset.a));
+  draw();
+  window.__cmpStats={SY,SA};
+})();
+
+  // P19 高程檢討：0 原構想｜1 套入景觀圖｜2 套入構台與支撐｜3 現場照片
+  (function(){var sec=$('#p17h');if(!sec)return;var chips=$$('.sb19 span',sec);
     function apply(s,inst){if(inst)sec.classList.add('noanim');
-      els.forEach(function(e){var a=+e.dataset.on,b=e.dataset.off?+e.dataset.off:99;e.classList.toggle('on',s>=a&&s<b);});
+      [0,1,2,3].forEach(function(k){sec.classList.toggle('s'+k,k===s);});
       chips.forEach(function(c){var i=+c.dataset.i;c.classList.toggle('on',i===s);c.classList.toggle('done',i<s);});
       if(inst){void sec.offsetWidth;setTimeout(function(){sec.classList.remove('noanim');},30);}}
-    var sp=stepper(sec,5,apply);
-    chips.forEach(function(c){c.addEventListener('click',function(){sp.set(+c.dataset.i);});});
+    var sp=stepper(sec,3,apply);
+    chips.forEach(function(c){c.addEventListener('click',function(){sp.set(+c.dataset.i);});});})();
+
+  // P29 強度統計：單一畫面
+  (function(){})();
+
+  // P30 RFID：0 為什麼只有混凝土｜1 從人工到晶片｜2 未來趨勢（按鈕開晶片編號網頁）
+  // 07 現階段職安：0 照片｜1 安全衛生自動檢查計畫
+  (function(){var sec=$('#ss2');if(!sec)return;
+    stepper(sec,1,function(s,inst){if(inst)sec.classList.add('noanim');[0,1].forEach(function(k){sec.classList.toggle('s'+k,k===s);});
+      if(inst){void sec.offsetWidth;setTimeout(function(){sec.classList.remove('noanim');},30);}});})();
+  // P29：進頁後預壘樁示意縮至左側隱藏
+  (function(){var sec=$('#p28s');if(!sec)return;var T;
+    sec._enter=function(){clearTimeout(T);sec.classList.add('noanim');sec.classList.remove('col');void sec.offsetWidth;
+      setTimeout(function(){sec.classList.remove('noanim');},30);T=setTimeout(function(){sec.classList.add('col');},600);};})();
+  // P30：0 示意彈回＋水泥砂漿為何不用晶片（照片，其他變暗）｜1 亮壓梁＋主畫面｜2 示意縮回 → 晶片網頁＋未來三項
+  (function(){var sec=$('#p28r');if(!sec)return;var svg=$('.pd30',sec),T=[],st=0;
+    function clr(){T.forEach(clearTimeout);T=[];}
+    function inst(f){sec.classList.add('noanim');f();void sec.offsetWidth;setTimeout(function(){sec.classList.remove('noanim');},30);}
+    function set(s){st=s;svg.classList.remove('h0','hc');svg.classList.add('hc');
+      sec.classList.toggle('x',s===0);sec.classList.toggle('q',s===0);sec.classList.toggle('s1',s===2);sec.classList.toggle('col',s===2);}
+    sec._enter=function(back){clr();
+      if(back){inst(function(){set(2);});return;}
+      st=0;inst(function(){sec.classList.remove('s1','q');sec.classList.add('col','x');svg.classList.remove('h0');svg.classList.add('hc');});
+      T.push(setTimeout(function(){sec.classList.remove('col');},400));
+      T.push(setTimeout(function(){sec.classList.add('q');},1100));};
+    sec._next=function(){if(st<2){clr();set(st+1);return true;}return false;};
+    sec._prev=function(){if(st>0){clr();set(st-1);return true;}return false;};})();
+
+  // P24 休息區：0 CAD 平面｜1 立體模型（可旋轉縮放）｜2–5 模型 ⇄ 現場照片對照
+  (function(){
+    var sec=$('#p24r');if(!sec)return;
+    var vw=$('.vw24',sec),sc=$('.sc24',sec),lw=$('.lb24w',sec),lb=$('.lb24',sec);
+    sc.innerHTML='<div class="fl24"></div><div class="rf24"></div>';
+    var LB=[];  // [anchor, 文字, 群組]
+    function anchor(x,y,z,txt,g){var a=el('i','an24');a.style.left=x+'px';a.style.top=y+'px';a.style.transform='translateZ('+z+'px)';sc.appendChild(a);
+      var s=el('span','',txt);lw.appendChild(s);LB.push({a:a,s:s,t:txt,g:g||{}});}
+    // 立方體：中心 x,y；寬 w、深 d、高 h；離地 z0；旋轉 r（度）；各面顏色 c=[頂,側]
+    function box(x,y,w,d,h,z0,r,c,cls){var b=el('div','o24 bx24'+(cls?' '+cls:''));b.style.left=(x-w/2)+'px';b.style.top=(y-d/2)+'px';b.style.width=w+'px';b.style.height=d+'px';
+      b.style.transform='translateZ('+(z0||0)+'px) rotateZ('+(r||0)+'deg)';
+      var top=c[0],sd=c[1]||c[0];
+      [[0,0,w,d,'translateZ('+h+'px)',null,top],[0,0,w,h,'rotateX(90deg)','top',sd],[0,d-h,w,h,'rotateX(-90deg)','bottom',sd],[0,0,h,d,'rotateY(-90deg)','left',sd],[w-h,0,h,d,'rotateY(90deg)','right',sd]]
+      .forEach(function(f){var e=el('i');e.style.left=f[0]+'px';e.style.top=f[1]+'px';e.style.width=f[2]+'px';e.style.height=f[3]+'px';e.style.transform=f[4];if(f[5])e.style.transformOrigin=f[5];e.style.background=f[6];b.appendChild(e);});
+      sc.appendChild(b);return b;}
+    // 立面（牆、帆布、海報）：從 (x1,y1) 到 (x2,y2)，離地 z0、高 h；off＝往牆面法線方向偏移
+    function plane(x1,y1,x2,y2,z0,h,cls,bg,off){var dx=x2-x1,dy=y2-y1,L=Math.hypot(dx,dy);var p=el('div','o24 pl24 '+cls);
+      p.style.left=x1+'px';p.style.top=y1+'px';p.style.width=L+'px';p.style.height=h+'px';
+      p.style.transform='rotateZ('+Math.atan2(dy,dx)+'rad) rotateX(90deg) translate3d(0,'+(z0||0)+'px,'+(off||0)+'px)';
+      var i=el('i');if(bg)i.style.backgroundImage='url('+bg+')';p.appendChild(i);sc.appendChild(p);return p;}
+    function along(x1,y1,x2,y2,t){return [x1+(x2-x1)*t,y1+(y2-y1)*t];}
+    // —— 牆與帆布（座標＝CAD 平面圖像素，約 47 px＝1 m）——
+    plane(100,700,415,28,0,130,'wl24');                         // 職安海報牆（實牆）
+    function poster(t1,t2,z0,h,img){var p1=along(100,700,415,28,t1),p2=along(100,700,415,28,t2);
+      plane(p1[0],p1[1],p2[0],p2[1],z0,h,'tx24',img,-2);plane(p2[0],p2[1],p1[0],p1[1],z0,h,'tx24',img,-2);}
+    poster(.36,.80,26,90,'assets/p24_tex_policy.jpg');poster(.82,.97,26,82,'assets/p24_tex_heat.jpg');
+    [.30,.42,.55,.68].forEach(function(t){var p=along(100,700,415,28,t);box(p[0]+.906*3,p[1]+.42*3,8,3,6,22,-65,['#F4F4F4','#DDDDDD']);});  // 插座
+    plane(690,28,690,590,0,130,'ct24');plane(690,590,405,590,0,130,'ct24');plane(405,590,405,1070,0,130,'ct24');
+    // 帆布海報（開挖側）
+    function banner(x1,y1,x2,y2,z0,h,img){plane(x1,y1,x2,y2,z0,h,'tx24',img,2);plane(x2,y2,x1,y1,z0,h,'tx24',img,2);}
+    banner(682,590,420,590,40,72,'assets/p24_tex_cdc.jpg');banner(690,580,690,440,30,92,'assets/p24_tex_safe2.jpg');
+    banner(690,140,690,400,40,72,'assets/p24_tex_cdc.jpg');
+    // 簽到區旁的職安衛海報（個人防護具配備）＋「安全」海報
+    plane(405,975,405,1050,14,104,'tx24','assets/p24_tex_ppe.jpg',2);plane(405,1050,405,975,14,104,'tx24','assets/p24_tex_ppe.jpg',2);
+    plane(405,770,405,880,40,70,'tx24','assets/p24_tex_safe.jpg',2);plane(405,880,405,770,40,70,'tx24','assets/p24_tex_safe.jpg',2);
+    // —— 傢俱：桌（含桌腳）、板凳（含椅腳）——
+    function leg(x,y,h,z0,c){var e=el('div','o24 bx24');e.style.left=(x-1.5)+'px';e.style.top=(y-1.5)+'px';e.style.width='3px';e.style.height='3px';e.style.transform='translateZ('+(z0||0)+'px)';
+      var a=el('i');a.style.cssText='left:0;top:0;width:3px;height:'+h+'px;transform-origin:top;transform:rotateX(90deg);background:'+c;e.appendChild(a);
+      var b=el('i');b.style.cssText='left:0;top:0;width:'+h+'px;height:3px;transform-origin:left;transform:rotateY(-90deg);background:'+c;e.appendChild(b);sc.appendChild(e);}
+    function rot(cx,cy,dx,dy,r){var a=r*Math.PI/180;return [cx+dx*Math.cos(a)-dy*Math.sin(a),cy+dx*Math.sin(a)+dy*Math.cos(a)];}
+    function table(x,y,r){box(x,y,86,27,2,33,r,['#FFFFFF','#E3E8E7']);[[-40,-11],[40,-11],[-40,11],[40,11]].forEach(function(o){var p=rot(x,y,o[0],o[1],r);leg(p[0],p[1],33,0,'#8C979B');});}
+    function stool(x,y,r,c){box(x,y,13,13,3,18,r,[c,c]);[[-5,-5],[5,-5],[-5,5],[5,5]].forEach(function(o){var p=rot(x,y,o[0],o[1],r);leg(p[0],p[1],18,0,c);});}
+    var COL=['#2F7D5B','#E8742E','#7C8B92'];
+    function set(x,y,r,i){table(x,y,r);[-28,0,28].forEach(function(o,k){[-28,28].forEach(function(q,m){var p=rot(x,y,o,q,r);stool(p[0],p[1],r,COL[(k+i+m)%3]);});});}
+    [[635,140],[635,247],[635,355],[635,463]].forEach(function(t,i){set(t[0],t[1],0,i);});
+    [[420,135],[364,253],[316,348]].forEach(function(t,i){set(t[0],t[1],28,i+1);});
+    // —— 守衛亭、人臉辨識三叉機、管制動線欄杆 ——
+    box(152,812,190,180,130,0,20,['#C9D3D1','#9FB3B8']);
+    box(348,648,14,30,48,0,0,['#AEB6B9','#8F989B']);box(348,640,4,4,22,48,0,['#C0C6C9']);box(348,640,10,3,16,70,0,['#1E2A30']);   // 人臉辨識三叉機（一台）
+    box(358,648,6,6,6,36,0,['#8F989B']);                                   // 轉軸（連在主機上）
+    function rod(x,y,z,L,yaw,pit,c){var r=el('div','o24 bx24');r.style.left=x+'px';r.style.top=(y-2)+'px';r.style.width=L+'px';r.style.height='4px';
+      r.style.transformOrigin='0 50%';r.style.transform='translateZ('+z+'px) rotateZ('+yaw+'deg) rotateY('+(-pit)+'deg)';
+      var a=el('i');a.style.cssText='left:0;top:0;width:'+L+'px;height:4px;background:'+c;r.appendChild(a);
+      var b=el('i');b.style.cssText='left:0;top:0;width:'+L+'px;height:4px;transform-origin:50% 50%;transform:rotateX(90deg);background:'+c;r.appendChild(b);sc.appendChild(r);}
+    rod(361,648,39,30,0,0,'#7D878B');rod(361,648,39,28,62,-52,'#7D878B');rod(361,648,39,28,-62,-52,'#7D878B');   // 三根轉臂向外擋人
+    plane(340,640,262,640,0,50,'fe24');plane(262,640,262,700,0,50,'fe24');plane(262,700,300,712,0,50,'fe24');plane(300,712,273,758,0,50,'fe24');               // 管制動線欄杆（橘色）
+    // —— 簽到・危害告知區（三叉機外、守衛亭前）：兩張桌＋文件櫃＋板凳 ——
+    table(387,833,90);table(387,921,90);
+    (function(cx,cy){var z=35,H=44,W=46,D=20,x0=cx+D/2,y0=cy-W/2;          // 文件櫃（開口朝西）
+      box(x0-1,cy,2,W,H,z,0,['#F2F2F2','#E6E6E6']);                        // 背板
+      box(cx,y0+1,D,2,H,z,0,['#F2F2F2','#E6E6E6']);box(cx,y0+W-1,D,2,H,z,0,['#F2F2F2','#E6E6E6']);box(cx,cy,D,2,H,z,0,['#F2F2F2','#E6E6E6']);   // 側板＋中隔板
+      box(cx,cy,D,W,2,z,0,['#F7F7F7','#E6E6E6']);box(cx,cy,D,W,2,z+H/2,0,['#F7F7F7','#E6E6E6']);box(cx,cy,D,W,2,z+H-2,0,['#F7F7F7','#E6E6E6']);  // 底板、層板、頂板
+      plane(cx-D/2,y0+2,cx-D/2,cy-1,z+2,H-4,'dr24',null,0);               // 北半邊：木門
+      var C=['#2F6DB3','#2E8A57','#2E8A57','#E0B12E','#2F6DB3','#2E8A57'];
+      C.forEach(function(c,i){box(cx+1,cy+4+i*3.2,14,2.6,17,z+2,0,[c,c]);});           // 下層文件夾
+      C.slice(0,4).forEach(function(c,i){box(cx+1,cy+6+i*3.2,14,2.6,15,z+H/2+1,0,[c,c]);});  // 上層文件夾
+    })(388,922);
+    stool(360,820,0,'#E8742E');stool(360,895,0,'#2F7D5B');
+    // —— AED（守衛亭外牆旁）——
+    // 守衛亭：中心 (152,812)、旋轉 20°；東面 E(s)、南面 S(s)
+    var U=[.94,.342],Vv=[-.342,.94];
+    function E(s,o){return [241+s*Vv[0]+o*U[0],844+s*Vv[1]+o*U[1]];}
+    function S(s,o){return [121+s*U[0]+o*Vv[0],897+s*U[1]+o*Vv[1]];}
+    var pL=E(-68,10),pA=E(-44,8),pD1=E(-22,1),pD2=E(20,1),pX=E(32,5),pB=S(-52,2);
+    box(pL[0],pL[1],26,18,58,12,110,['#5E7A55','#566E4E']);leg(pL[0]-4,pL[1]-6,12,0,'#566E4E');leg(pL[0]+4,pL[1]+6,12,0,'#566E4E');  // 漏電檢測機（靠三叉機）
+    box(pA[0],pA[1],20,14,72,0,110,['#F2F2F2','#E3E3E3']);var pA2=E(-44,15.5);box(pA2[0],pA2[1],12,1,26,30,110,['#D63B33']);           // AED
+    plane(pD1[0],pD1[1],pD2[0],pD2[1],0,96,'gd24',null,0);                                                    // 守衛亭門
+    box(pX[0],pX[1],7,7,22,0,0,['#D8322A','#C4261F']);                                                         // 滅火器
+    box(pB[0],pB[1],56,3,36,36,20,['#FFFFFF','#E8ECEC']);                                                      // 出工統計公布欄（南面）
+    [[120,1142],[180,1168],[240,1194],[296,1218]].forEach(function(p){leg(p[0],p[1],42,0,'#B33A2E');});
+    plane(120,1142,296,1218,40,4,'rl24');plane(120,1142,296,1218,20,4,'rl24');
+    [[120,1142],[296,1218]].forEach(function(p){box(p[0],p[1],9,4,9,44,23,['#D8322A','#B32A25']);});        // 大門紅色欄杆＋兩端警示燈
+    // —— 入口處：公告欄、漏電檢測機 ——
+    var BX=250,BY=572,BR=90;box(BX,BY,60,6,62,22,BR,['#F7F7F7','#E2E6E6']);var q1=rot(BX,BY,-24,4,BR),q2=rot(BX,BY,24,4,BR);leg(q1[0],q1[1],84,0,'#9AA7AB');leg(q2[0],q2[1],84,0,'#9AA7AB');   // 安衛公佈欄（垂直原方向擺放）
+    // —— 水冷扇（左上角）、飲料機 ——
+    (function(cx,cy){var W=36,D=28,F=cy-D/2;   // F＝北面（朝休息區、與現場照片同一面）                                      // 水冷扇：分層塑膠機身＋出風百葉＋側面水簾＋腳輪
+      [[-13,-10],[13,-10],[-13,10],[13,10]].forEach(function(o){box(cx+o[0],cy+o[1],5,5,4,0,0,['#3B4246','#2B3135']);});   // 腳輪
+      box(cx,cy,W,D,4,4,0,['#D9D6CC','#CFCBC0']);                                  // 底座
+      box(cx,cy,W-2,D-2,24,8,0,['#F1EFE8','#E1DED4']);                              // 下段水箱
+      box(cx,cy,W+1,D+1,3,32,0,['#E6E3D9','#D4D0C5']);                              // 腰帶
+      box(cx,cy,W-1,D-1,26,35,0,['#F4F2EC','#E4E1D8']);                             // 上段機身
+      box(cx,cy,W-6,D-6,3,61,0,['#EAE8E0','#DAD6CC']);                              // 頂蓋
+      box(cx,F-.5,W-10,1,20,38,0,['#5B6266']);                                       // 出風口
+      for(var k=0;k<6;k++)box(cx,F-.3,W-12,1.4,1.2,39.5+k*3.2,0,['#C9CDCF','#AEB4B7']);  // 百葉片
+      box(cx-5,F,9,1,6,14,0,['#2E3438']);                                           // 加水口
+      box(cx+9,F,6,1,7,15,0,['#F2C230']);box(cx+8,F,9,1,3,24,0,['#2F6DB3']);        // 警示貼紙、品牌標籤
+      [-1,1].forEach(function(sd){box(cx+sd*(W/2-.2),cy,1.2,D-8,20,38,0,['repeating-linear-gradient(45deg,#D9C9A0 0 2px,#BFA978 2px 4px)','repeating-linear-gradient(45deg,#D9C9A0 0 2px,#BFA978 2px 4px)']);});  // 側面水簾（蜂巢紙）
+    })(445,62);
+    (function(){var cx=505,cy=567,W=92,D=34,F=cy-D/2;                                // 飲料機：依平面圖外框（約 2.0 × 0.7 m）
+      box(cx,cy,W,D,88,0,0,['#C9302C','#B32A25']);
+      box(cx,cy,W+2,D+2,4,88,0,['#A9241F','#9A201C']);                               // 頂緣
+      [-23,23].forEach(function(o){box(cx+o,F-.5,38,1,46,32,0,['#F5F1E6']);          // 展示窗
+        for(var r=0;r<4;r++)box(cx+o,F-1,34,1,2,38+r*10,0,['#9AA3A7']);              // 商品層架
+        box(cx+o+12,F-.5,8,1,12,16,0,['#2B3135']);                                    // 投幣／面板
+        box(cx+o-6,F-.5,24,1,5,5,0,['#2B3135']);});                                   // 取物口
+    })();
+    [[520,150],[560,420],[330,520],[340,820]].forEach(function(p){box(p[0],p[1],26,26,4,116,0,['radial-gradient(circle,#C9CFD0 0 36%,#FFFFFF 38%)','#F2F2F2']);});   // 吊扇
+    box(392,312,10,10,30,0,0,['#6B6F72','#B7BCBF']);   // 菸灰桶
+    // —— 軌道燈 ——
+    [[470,60,470,570],[600,60,600,570],[330,300,230,560]].forEach(function(r){var L=Math.hypot(r[2]-r[0],r[3]-r[1]);
+      box((r[0]+r[2])/2,(r[1]+r[3])/2,L,2,2,126,Math.atan2(r[3]-r[1],r[2]-r[0])*180/Math.PI,['rgba(120,128,132,.55)']);
+      for(var t=.08;t<1;t+=.17){var p=[r[0]+(r[2]-r[0])*t,r[1]+(r[3]-r[1])*t];var g=el('i','o24 lt24');g.style.left=p[0]+'px';g.style.top=p[1]+'px';g.style.transform='translateZ(118px)';sc.appendChild(g);}});
+    // —— 標籤 ——
+    anchor(152,812,150,'守衛亭',{});
+    anchor(348,648,92,'人臉辨識三叉機',{1:3});anchor(300,650,58,'管制欄杆',{});anchor(208,1180,56,'大門欄杆',{0:1});
+    anchor(387,860,60,'危害告知簽到區',{1:2});anchor(405,1012,132,'職安衛海報',{1:1});
+    anchor(pA[0],pA[1],82,'AED',{0:3});anchor(pL[0],pL[1],80,'漏電檢測機',{0:4});anchor(pB[0],pB[1],80,'出工統計公布欄',{0:2});
+    anchor(BX,BY,100,'安衛公佈欄',{});
+    anchor(635,300,50,'座位區',{2:1});anchor(690,270,128,'帆布海報',{2:2});
+    var pc=along(100,700,415,28,.65);anchor(pc[0],pc[1],132,'職安海報牆',{2:3});
+    anchor(445,62,72,'水冷扇',{2:4});anchor(505,567,100,'飲料機',{2:5});anchor(392,312,40,'菸灰桶',{2:6});
+    var ps=along(100,700,415,28,.55);anchor(ps[0],ps[1],36,'插座',{2:7});anchor(520,150,124,'吊扇',{2:8});anchor(470,315,132,'軌道燈',{});
+    // —— 相機 ——
+    var C={yaw:0,pitch:0,zz:-655,tx:370,ty:585,tz:0},cur=0,roof=false;
+    var V={flat:{yaw:0,pitch:0,zz:-655,tx:370,ty:585,tz:0},home:{yaw:-32,pitch:56,zz:-440,tx:390,ty:660,tz:0},
+      0:{yaw:-20,pitch:68,zz:300,tx:250,ty:1010,tz:45},1:{yaw:6,pitch:76,zz:490,tx:340,ty:850,tz:40},2:{yaw:160,pitch:70,zz:250,tx:520,ty:360,tz:30}};
+    function draw(){sc.style.transform='translateZ('+C.zz+'px) rotateX('+C.pitch+'deg) rotateZ('+C.yaw+'deg) translate3d('+(-C.tx)+'px,'+(-C.ty)+'px,'+(-C.tz)+'px)';}
+    function go(v,anim){sc.classList.toggle('mv',!!anim);for(var k in v)C[k]=v[k];draw();}
+    // 標籤位置：每一影格把 3D 錨點投影回畫面
+    var raf=0;function loop(){raf=requestAnimationFrame(loop);if(!sec.classList.contains('active'))return;
+      var vr=vw.getBoundingClientRect(),q=vr.width/vw.offsetWidth;if(!q)return;
+      LB.forEach(function(L){var r=L.a.getBoundingClientRect(),x=(r.left-vr.left)/q,y=(r.top-vr.top)/q;L.s.style.left=x+'px';L.s.style.top=y+'px';L.s.style.visibility=(x<10||y<30||x>vw.offsetWidth-10||y>vw.offsetHeight-10)?'hidden':'';});}
+    loop();
+    function labels(s){var k=s-2;LB.forEach(function(L){var n=k>=0?L.g[k]:null;
+      if(s===0){L.s.className='hide';return;}
+      if(k>=0){if(n){L.s.className='n';L.s.textContent=n;}else L.s.className='hide';}
+      else{L.s.className='';L.s.textContent=L.t;}});}
+    var sps=$$('.sp24',sec),chs=$$('.ch24 span',sec),pcs=$$('.pc24',sec);
+    var LT=['CAD 平面圖','立體模型','模型 ⇄ 現場：入口處','模型 ⇄ 現場：危害告知簽到處','模型 ⇄ 現場：座位區・帆布海報'];
+    function apply(s,inst){cur=s;
+      [0,1,2,3,4].forEach(function(k){sec.classList.toggle('s'+k,k===s);});
+      go(s===0?V.flat:s===1?V.home:V[s-2],!inst);
+      var st=s>=2?2:s;sps.forEach(function(e,i){e.classList.toggle('on',i===st);e.classList.toggle('done',i<st);});
+      chs.forEach(function(c){c.classList.toggle('on',+c.dataset.i===s);});
+      pcs.forEach(function(p){p.classList.toggle('on',+p.dataset.k===(s>=2?s-2:-1));});
+      lb.textContent=LT[s];labels(s);}
+    var sp=stepper(sec,4,apply);
+    sps.forEach(function(e,i){e.addEventListener('click',function(ev){if(ev.target.closest('.ch24 span'))return;sp.set(i);});});
+    chs.forEach(function(c){c.addEventListener('click',function(){sp.set(+c.dataset.i);});});
+    // 互動：拖曳旋轉、右鍵／Shift 拖曳平移、滾輪縮放
+    var dg=null;
+    vw.addEventListener('contextmenu',function(e){e.preventDefault();});
+    vw.addEventListener('pointerdown',function(e){if(cur===0||e.target.closest('.tb24'))return;dg={x:e.clientX,y:e.clientY,pan:e.button===2||e.shiftKey,c:Object.assign({},C)};vw.setPointerCapture(e.pointerId);vw.classList.add('drag');sc.classList.remove('mv');});
+    vw.addEventListener('pointermove',function(e){if(!dg)return;var q=vw.getBoundingClientRect().width/vw.offsetWidth,dx=(e.clientX-dg.x)/q,dy=(e.clientY-dg.y)/q;
+      if(dg.pan){var a=-C.yaw*Math.PI/180,k=1.2;C.tx=dg.c.tx-(dx*Math.cos(a)-dy*Math.sin(a))*k;C.ty=dg.c.ty-(dx*Math.sin(a)+dy*Math.cos(a))*k;}
+      else{C.yaw=dg.c.yaw+dx*.35;C.pitch=Math.max(0,Math.min(86,dg.c.pitch-dy*.25));}draw();});
+    function end(){if(!dg)return;dg=null;vw.classList.remove('drag');}
+    vw.addEventListener('pointerup',end);vw.addEventListener('pointercancel',end);
+    vw.addEventListener('wheel',function(e){if(cur===0)return;e.preventDefault();sc.classList.remove('mv');C.zz=Math.max(-1400,Math.min(720,C.zz-e.deltaY*.6));draw();},{passive:false});
+    vw.addEventListener('dblclick',function(){if(cur>0)go(cur===1?V.home:V[cur-2],true);});
+    $$('.tb24 button',sec).forEach(function(b){b.addEventListener('click',function(){var a=b.dataset.a;
+      if(a==='in'||a==='out'){sc.classList.add('mv');C.zz=Math.max(-1400,Math.min(720,C.zz+(a==='in'?120:-120)));draw();}
+      else if(a==='roof'){roof=!roof;vw.classList.toggle('roof',roof);b.classList.toggle('on',roof);}
+      else go(cur===1?V.home:V[cur-2]||V.home,true);});});
+    sec._cam=function(v){go(v,false);};
+    draw();
+  })();
+
+  // P22 剖面動畫：按 → 逐步播放 1→5，再按 → 翻到工法比較表（6）
+  (function(){
+    var sec=$('#p20');if(!sec)return;var els=$$('[data-on]',sec),chips=$$('.sb20 span',sec),tb=$('.tb20',sec),tm=[];
+    function stop(){tm.forEach(clearTimeout);tm=[];}
+    function apply(s,inst){if(inst)sec.classList.add('noanim');
+      var a=Math.min(s,5);
+      els.forEach(function(e){var x=+e.dataset.on,b=e.dataset.off?+e.dataset.off:99;e.classList.toggle('on',a>=x&&a<b);});
+      chips.forEach(function(c){var i=+c.dataset.i;c.classList.toggle('on',i===s);c.classList.toggle('done',i<s);});
+      tb.classList.toggle('on',s===6);
+      if(inst){void sec.offsetWidth;setTimeout(function(){sec.classList.remove('noanim');},30);}}
+    var sp=stepper(sec,6,apply);  // 手動逐步：每按一次 → 播下一格（不自動播放）
+    chips.forEach(function(c){c.addEventListener('click',function(){stop();sp.set(+c.dataset.i);});});
   })();
 
   // P21 開挖動畫：1.5 倍速
   (function(){var v=document.getElementById('exc21');if(!v)return;function r(){v.defaultPlaybackRate=1.5;v.playbackRate=1.5;}r();
     v.addEventListener('loadedmetadata',r);v.addEventListener('play',r);})();
 
-  // P22 歷史建物監測：115.11.04 週會簡報 10/27–11/2 實測值
+  // P30 歷史建物監測：10/27–11/2 實測值
   (function(){
     var sec=$('#p22');if(!sec)return;
     var DAYS=['10/27','10/28','10/29','10/30','10/31','11/1','11/2'];
@@ -1547,6 +2583,17 @@ PVC 地磚：送潔安環保造粒。
     sec._enter=function(b){if(e0)e0(b);vs.forEach(function(v){try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}});};})();
   // 影片：點畫面播放／暫停
   $$('video.vid').forEach(function(v){v.addEventListener('click',function(){if(v.paused){$$('video.vid').forEach(function(o){if(o!==v)o.pause();});v.play();}else v.pause();});});
+
+  // 表單翻動（P34、P35）：點圖或 ‹ › 翻下一張；點最上面那張放大
+  $$('[data-flip]').forEach(function(f){var ims=$$('.fs img',f),n=ims.length,i=0,cp=$('.cp',f),dt=$('.dt',f);
+    dt.innerHTML=ims.map(function(){return '<i></i>';}).join('');var ds=$$('i',dt);
+    function draw(out){ims.forEach(function(im,k){var o=(k-i+n)%n;im.className=(k===out?'out':'p'+Math.min(o,3))+(o===0?' zm':'');});
+      cp.textContent=ims[i].dataset.cap||'';ds.forEach(function(d,k){d.classList.toggle('on',k===i);});}
+    function go(d){var old=i;i=(i+d+n)%n;draw(d>0?old:-1);if(d>0)setTimeout(function(){draw();},600);}
+    $('.nx',f).addEventListener('click',function(e){e.stopPropagation();go(1);});
+    $('.pv',f).addEventListener('click',function(e){e.stopPropagation();go(-1);});
+    $('.fs',f).addEventListener('click',function(e){if(!e.target.classList.contains('zm'))go(1);});
+    draw();});
   // 燈箱：點照片放大，或按「看…」按鈕
   var lbx=el('div');lbx.id='lbx';lbx.innerHTML='<img alt=""><div></div>';document.body.appendChild(lbx);
   function openLb(src,cap){lbx.querySelector('img').src=src;lbx.querySelector('div').textContent=cap||'';lbx.classList.add('show');}
@@ -1554,11 +2601,13 @@ PVC 地磚：送潔安環保造粒。
   document.addEventListener('click',function(e){var b=e.target.closest('.zoom');if(b){e.stopPropagation();openLb(b.dataset.src,b.dataset.cap);return;}
     var im=e.target.closest('img.zm');if(im){e.stopPropagation();openLb(im.currentSrc||im.src,im.alt);}},true);
   // 講者備註（N）：僅 P7–P16 有內容
-  var spk=el('div');spk.id='spk';spk.innerHTML='<b>講者備註</b><span></span>';document.body.appendChild(spk);
+  var spk=el('div');spk.id='spk';spk.innerHTML='<button class="x" aria-label="關閉講者備註">×</button><b>講者備註</b><span></span>';document.body.appendChild(spk);
+  window.__spkSet=function(on){spk.classList.toggle('show',on);document.body.classList.toggle('spkon',on);var b=document.getElementById('b-notes');if(b)b.setAttribute('aria-pressed',on);};
+  spk.querySelector('.x').onclick=function(e){e.stopPropagation();window.__spkSet(false);};
   function updSpk(){var a=slides[cur].querySelector('aside.spk');spk.querySelector('span').textContent=a?a.textContent:'（本頁沒有講者備註）';}
   document.addEventListener('keydown',function(e){
     if(lbx.classList.contains('show')){e.preventDefault();e.stopImmediatePropagation();if(e.key==='Escape'||e.key===' '||e.key==='Enter'||e.key==='ArrowRight'||e.key==='ArrowLeft')lbx.classList.remove('show');return;}
-    if(e.key==='n'||e.key==='N'){e.preventDefault();e.stopImmediatePropagation();updSpk();spk.classList.toggle('show');return;}
+    if(e.key==='n'||e.key==='N'){e.preventDefault();e.stopImmediatePropagation();updSpk();window.__spkSet(!spk.classList.contains('show'));return;}
     setTimeout(updSpk,0);
   },true);
   // ===== 目錄、右下控制列、觸控（手機／平板） =====
@@ -1586,7 +2635,7 @@ PVC 地磚：送潔安環保造粒。
     $('#b-prev').onclick=function(){D.prev();};$('#b-next').onclick=function(){D.next();};
     $('#b-menu').onclick=function(){toggle();};$('#b-fs').onclick=function(){D.fs();};
     $('#b-notes').onclick=function(){var sp=$('#spk');if(!sp)return;var a=slides[D.cur()].querySelector('aside.spk');
-      sp.querySelector('span').textContent=a?a.textContent:'（本頁沒有講者備註）';sp.classList.toggle('show');$('#b-notes').setAttribute('aria-pressed',sp.classList.contains('show'));};
+      sp.querySelector('span').textContent=a?a.textContent:'（本頁沒有講者備註）';window.__spkSet(!sp.classList.contains('show'));};
     document.addEventListener('keydown',function(e){if(e.key==='g'||e.key==='G'){e.preventDefault();toggle();}else if(e.key==='Escape'){toggle(false);}});
     // 大綱卡片點了跳章節
     $$('[data-go]').forEach(function(c){function go(){var t=document.getElementById(c.dataset.go);if(t)D.go(slides.indexOf(t));}
@@ -1597,7 +2646,7 @@ PVC 地磚：送潔安環保造粒。
     // 觸控：左右滑動翻頁（拖曳比較圖、影片控制列除外）
     var sx=null,sy=null,tt=0;
     addEventListener('touchstart',function(e){if(e.touches.length!==1){sx=null;return;}var t=e.target;
-      if(t.closest('#menu,#dock,#spk,.cmp25,#lbx'))return sx=null;sx=e.touches[0].clientX;sy=e.touches[0].clientY;tt=Date.now();},{passive:true});
+      if(t.closest('#menu,#dock,#spk,.cmp25,#lbx,.vw24'))return sx=null;sx=e.touches[0].clientX;sy=e.touches[0].clientY;tt=Date.now();},{passive:true});
     addEventListener('touchend',function(e){if(sx==null)return;var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=null;
       if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3&&Date.now()-tt<900){dx<0?D.next():D.prev();}},{passive:true});
   })();
