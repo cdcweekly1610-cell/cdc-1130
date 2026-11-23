@@ -895,6 +895,40 @@ aside.spk{display:none}
 #ss4 .g37>figure{height:100%;box-sizing:border-box}
 #ss4 .fc .im{position:relative;background:#fff;border:1px solid var(--line)}
 #ss4 .fc .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box}
+/* 1123b：05 BIM 應用改依 PPT（4 頁） */
+.bm .bmv{margin:28px auto 0;width:1150px;height:647px;border-radius:14px;overflow:hidden;background:#111}
+.bm .bmv video{width:100%;height:100%;object-fit:contain;border-radius:0;background:#111}
+.bm .bmc{text-align:center}
+.bm .bcol{display:flex;flex-direction:column;gap:12px;min-height:0;min-width:0}
+.bm .bpill{align-self:flex-start;font-size:24px;font-weight:900;color:#fff;background:var(--teal);border-radius:10px;padding:6px 18px}
+.bm .bim{position:relative;flex:1;min-height:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.bm .bim img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;box-sizing:border-box}
+.bm .card h3{font-size:27px;margin-bottom:6px}
+#bim2 .bg2{display:grid;grid-template-columns:1fr 1fr 1.45fr;gap:24px;margin-top:28px;height:640px}
+#bim2 .bcd{flex:1;min-height:0;display:flex;flex-direction:column;gap:12px;padding:20px 22px}
+#bim2 .bsz{display:flex;flex-direction:column;font-size:19px;color:var(--muted)}
+#bim2 .bsz b{font:800 26px/1.3 var(--num);color:var(--ink)}
+#bim2 .bsh img{object-fit:cover;padding:0}
+#bim2 .btag{position:absolute;right:12px;top:12px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:4px 12px;font-size:22px;font-weight:900;color:var(--ink)}
+#bim2 .brfi{flex-direction:row;gap:16px}
+#bim2 .brt{flex:1.25;display:flex;flex-direction:column}
+#bim2 .brfi .bim{flex:1}
+#bim2 dl{font-size:18px;line-height:1.45;margin-top:4px}
+#bim2 dt{color:var(--muted);font-size:16px;margin-top:8px}
+#bim2 dd{margin:0;color:var(--ink);font-weight:700}
+#bim2 .bsug{margin-top:auto;font-size:21px;font-weight:900;color:#C8102E;background:#FDECEC;border-radius:10px;padding:10px 12px}
+#bim4 .bg4{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px;height:650px}
+#bim4 .bpl{flex:1.35}
+#bim4 .brow{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#bim4 .brow.b2{flex:1.3;grid-template-columns:1.7fr 1fr}
+#bim4 .bfd{flex:1;padding:12px 18px;display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;column-gap:22px;row-gap:2px;align-content:stretch}
+#bim4 .bfd>div{display:flex;align-items:baseline;gap:8px;font-size:18px;font-weight:900;color:var(--ink);white-space:nowrap;overflow:hidden}
+#bim4 .bfd b{font:800 16px var(--num);color:var(--orange)}
+#bim4 .bfd i{font-style:normal;font-weight:400;font-size:14px;color:var(--muted);overflow:hidden;text-overflow:ellipsis}
+/* 1123a：P37 門禁管制改 LINE 打卡截圖（直式），欄寬收窄 */
+#ss4 .g37{grid-template-columns:1fr 1.25fr 1fr 1fr}
+#ss4 .fc .im{background:#fff}
+#ss4 .fc .im img{padding:0;object-fit:contain;object-position:center}
 /* 1120p：P34／P35 表單改右側整欄（與標題同高） */
 #ss1 .rp,#ss2 .rp{position:absolute;right:0;top:0;bottom:0;width:520px;display:flex;flex-direction:column;gap:10px}
 #ss1 .rh,#ss2 .rh{font-size:34px;font-weight:900;color:var(--ink);line-height:1.2}
@@ -1585,22 +1619,109 @@ PVC 地磚：送潔安環保造粒。
   <div class="chin"><div class="chn">05</div><div class="cht">BIM 應用</div><div class="chl"></div><p class="chq">先在模型裡蓋一次，再到現場施工</p><p class="chsp">主講｜林暐勝技師</p></div>
 </section>
 
-<!-- 05-1 BIM -->
-<section class="slide" data-sec="05 BIM 應用">
+<!-- 05-1 BIM：模型建置（1123b 依 PPT 改版） -->
+<section class="slide bm" data-sec="05 BIM 應用" id="bim1">
   <div class="bignum">05</div>
   <div class="pad">
-    <div class="kicker">05 BIM 應用</div>
-    <h1 class="t">BIM 在本案的應用</h1>
-    <div class="grid" style="grid-template-columns:1.35fr 1fr;gap:34px;margin-top:40px">
-      <div><div style="aspect-ratio:16/9"><img src="assets/0ff0e8e77c.jpg" class="img" alt="BIM 模型：開挖順序模擬畫面"></div><p class="cap">開挖順序模擬（排樁、開挖支撐 IFC 模型）</p></div>
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <p class="note">由暐勝技師負責（內容待確認）</p>
-        <div class="card"><h3>施工前風險評估</h3><p style="font-size:21px">用模型確認施工順序、盤點高風險作業，檢討結構細節、施工介面與工區配置。</p></div>
-        <div class="card"><h3>開挖順序模擬</h3><p style="font-size:21px">以排樁、開挖支撐模型比較原設計與替代工法的施工順序。</p></div>
-        <div style="height:160px"><img src="assets/3aee5412de.png" class="img" alt="施工前 BIM 檢討畫面"></div>
+    <div class="kicker">05 BIM 應用｜模型建置</div>
+    <h1 class="t">模型建置</h1>
+    <div class="bmv"><video class="img vid" loop src="assets/bim_model.mp4" poster="assets/bim_model.jpg" preload="metadata" muted playsinline></video></div>
+    <p class="cap bmc">BIM 模型 → 衝突檢討 → 軀體圖產出（行政棟 B2FL・實驗棟 B3FL）｜點畫面播放／暫停</p>
+  </div>
+  <aside class="spk">先在 BIM 裡把模型建起來：行政棟 B2FL、實驗棟 B3FL，流程是 BIM 模型 → 衝突檢討 → 軀體圖產出。</aside>
+</section>
+
+<!-- 05-2 BIM：車道檢討（冰水主機及發電機動線） -->
+<section class="slide bm" data-sec="05 BIM 應用" id="bim2">
+  <div class="bignum">05</div>
+  <div class="pad">
+    <div class="kicker">05 BIM 應用｜事前規劃</div>
+    <h1 class="t">事前規劃－車道檢討</h1>
+    <div class="bg2">
+      <div class="bcol">
+        <div class="bpill">檢討內容</div>
+        <div class="card bcd">
+          <h3>冰水主機及發電機動線</h3>
+          <div class="bsz"><span>模擬量體尺寸</span><b>W290 / L530 / H270</b></div>
+          <div class="bim"><img src="assets/bim_p2_route.jpg" class="zm" alt="冰水主機量體沿車道下行模擬"></div>
+        </div>
+      </div>
+      <div class="bcol">
+        <div class="bpill">3D 模擬</div>
+        <div class="bim bsh"><img src="assets/bim_p2_beam1.jpg" class="zm" alt="3D 模擬：梁下空間 20.6cm"><span class="btag">梁下空間 20.6cm</span></div>
+        <div class="bim bsh"><img src="assets/bim_p2_beam2.jpg" class="zm" alt="3D 模擬：梁下空間 8.1cm"><span class="btag">8.1cm</span></div>
+      </div>
+      <div class="bcol">
+        <div class="bpill">RFI 釋疑單</div>
+        <div class="card bcd brfi">
+          <div class="brt">
+            <h3>問題紀錄－汽車道</h3>
+            <dl><dt>圖說編號名稱</dt><dd>S1-04 實驗棟及行政棟一層結構平面圖</dd>
+            <dt>位置</dt><dd>車道 1FL 往 B2FL，柱線 A-15</dd>
+            <dt>問題紀錄</dt><dd>考量設備所需淨高及誤差，需調整 1FL 大梁（B9f）尺寸。</dd></dl>
+            <p class="bsug">建議：B9F 梁尺寸修正 70×80cm</p>
+          </div>
+          <div class="bim"><img src="assets/bim_p2_rfi.jpg" class="zm" alt="RFI 釋疑單：車道剖面 B9F 梁 70×80"></div>
+        </div>
       </div>
     </div>
   </div>
+  <aside class="spk">事前規劃先做車道檢討：冰水主機和發電機要從車道運進地下室，用 W290／L530／H270 的量體在模型裡沿車道模擬。
+3D 模擬看到梁下空間只剩 20.6cm，最緊的地方只有 8.1cm。
+所以開 RFI 釋疑單：S1-04 圖、車道 1FL 往 B2FL 柱線 A-15，考量設備淨高和誤差，建議 1FL 的 B9F 梁尺寸修正為 70×80cm。</aside>
+</section>
+
+<!-- 05-3 BIM：車道檢討（行車模擬影片） -->
+<section class="slide bm" data-sec="05 BIM 應用" id="bim3">
+  <div class="bignum">05</div>
+  <div class="pad">
+    <div class="kicker">05 BIM 應用｜事前規劃</div>
+    <h1 class="t">事前規劃－車道檢討</h1>
+    <div class="bmv"><video class="img vid" loop src="assets/bim_drive.mp4" poster="assets/bim_drive.jpg" preload="metadata" muted playsinline></video></div>
+    <p class="cap bmc">檢討問題①車道檢討：小客車 L480×W180×H150cm 沿 Option 2 車道由 1FL 入口駛向 B2FL｜點畫面播放／暫停</p>
+  </div>
+  <aside class="spk">接著用小客車 L480×W180×H150cm 在模型裡沿 Option 2 車道，從 1FL 入口一路開到 B2FL，檢查行車淨高和轉彎空間。</aside>
+</section>
+
+<!-- 05-4 BIM：筏基圖說檢討 -->
+<section class="slide bm" data-sec="05 BIM 應用" id="bim4">
+  <div class="bignum">05</div>
+  <div class="pad">
+    <div class="kicker">05 BIM 應用｜事前規劃</div>
+    <h1 class="t">事前規劃－筏基圖說檢討</h1>
+    <div class="bg4">
+      <div class="bcol">
+        <div class="bpill">軀體圖繪製</div>
+        <div class="bim bpl"><img src="assets/bim_p4_plan.jpg" class="zm" alt="筏基軀體圖平面"></div>
+        <div class="brow">
+          <div class="bim"><img src="assets/bim_p4_sec.jpg" class="zm" alt="地梁剖面：FF 版 20cm、地梁 195cm、回填低強度混凝土 105cm"></div>
+          <div class="bim"><img src="assets/bim_p4_pit.jpg" class="zm" alt="筏基及水坑補強（S5-01）"></div>
+        </div>
+      </div>
+      <div class="bcol">
+        <div class="bpill">撿料及歸檔</div>
+        <div class="brow b2">
+          <div class="bim"><img src="assets/bim_p4_bar.jpg" class="zm" alt="筏基梁配筋撿料圖"></div>
+          <div class="bim"><img src="assets/bim_p4_list.jpg" class="zm" alt="鋼筋撿料表"></div>
+        </div>
+        <div class="card bfd">
+          <div><b>A040</b>彙整圖說<i>最新頒布圖說，需蓋事務所章</i></div>
+          <div><b>A041</b>建照圖<i>放置設計單位提供之建照圖</i></div>
+          <div><b>A042</b>發包圖<i>與業主簽約之發包圖說</i></div>
+          <div><b>A043</b>補充圖說<i>由設計單位釋疑回覆之圖說</i></div>
+          <div><b>A044</b>現地收測圖<i>現地收測之測量圖說</i></div>
+          <div><b>A045</b>施工圖<i>現場施工用圖說</i></div>
+          <div><b>A046</b>送審圖<i>設計單位及專管審查之圖說</i></div>
+          <div><b>A047</b>其他作業圖說<i></i></div>
+          <div><b>A048</b>竣工圖<i>完工交付業主之圖說</i></div>
+          <div><b>A049</b>機電審訖圖<i>機電由建築主管機關審訖之圖說</i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="spk">筏基圖說檢討分兩部分：
+左邊是軀體圖繪製，把筏基平面、地梁剖面（FF 版 20cm、地梁 195cm、回填低強度混凝土 105cm）和筏基水坑補強（S5-01）畫清楚。
+右邊是撿料及歸檔：依配筋圖做鋼筋撿料，圖說依 A040 到 A049 分類歸檔，從彙整圖說、建照圖、發包圖，到送審圖、竣工圖和機電審訖圖。</aside>
 </section>
 
 <!-- 章節分隔頁 06 -->
@@ -1974,14 +2095,14 @@ PVC 地磚：送潔安環保造粒。
     <h1 class="t">自動化感應管理：結合 AI 與自動化科技</h1>
     <div class="g37">
       <figure class="card"><div class="im"><img src="assets/p23_sprinkler.jpg" class="zm" alt="圍籬頂自動化灑水降塵"></div><figcaption><b>1</b>自動化灑水降塵</figcaption></figure>
-      <figure class="card fc"><div class="im"><img src="assets/f9cd353114.jpg" class="zm" alt="新進工班停車規範 4 步驟：加入群組、初次登記、掃碼打卡、危害告知"></div><figcaption><b>2</b>門禁管制</figcaption></figure>
+      <figure class="card fc"><div class="im"><img src="assets/p37_gate.jpg" class="zm" alt="LINE 門禁管制群組：車輛進場自主打卡回報（廠商、車牌已核對、司機、時間）"></div><figcaption><b>2</b>門禁管制</figcaption></figure>
       <figure class="card"><div class="im"><img src="assets/ss_excav.jpg" class="zm" alt="挖掘機防撞警報器"></div><figcaption><b>3</b>挖掘機防撞警報器</figcaption></figure>
       <figure class="card"><div class="im"><img src="assets/ss_carwarn.jpg" class="zm" alt="感應式出車警示系統"></div><figcaption><b>4</b>感應式出車警示系統</figcaption></figure>
     </div>
   </div>
   <aside class="spk">目前職安結合 AI 與自動化科技的項目有四個：
 第一，自動化灑水降塵：圍籬頂設自動化灑水系統，拆除階段定時灑水抑制揚塵。
-第二，門禁管制：新進工班分四步驟，先加入現場工安 LINE 群組、到記事本連結完成車輛初次登記；之後進場只要掃 QR Code、登入車牌就完成打卡，每日下車後再親自簽署危害告知，嚴禁代簽。內部登記連結請勿外流。
+第二，門禁管制：新進工班分四步驟，先加入現場工安 LINE 群組、到記事本連結完成車輛初次登記；之後進場只要掃 QR Code、登入車牌就完成打卡，每日下車後再親自簽署危害告知，嚴禁代簽。內部登記連結請勿外流。畫面是實際打卡後 LINE 群組自動回報的紀錄：廠商、車牌（已核對）、司機和進場時間，一目了然。
 第三，挖掘機防撞警報器。
 第四，感應式出車警示系統。</aside>
 </section>
@@ -2581,6 +2702,9 @@ PVC 地磚：送潔安環保造粒。
   // P12 精細拆除六步驟：進頁四段影片自動同步播放
   (function(){var sec=$('#p11');if(!sec)return;var vs=$$('video',sec),e0=sec._enter;
     sec._enter=function(b){if(e0)e0(b);vs.forEach(function(v){try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}});};})();
+  // 1123b：BIM 影片頁進頁自動播放
+  ['#bim1','#bim3'].forEach(function(id){var sec=$(id);if(!sec)return;var v=$('video',sec),e0=sec._enter;
+    sec._enter=function(b){if(e0)e0(b);try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}};});
   // 影片：點畫面播放／暫停
   $$('video.vid').forEach(function(v){v.addEventListener('click',function(){if(v.paused){$$('video.vid').forEach(function(o){if(o!==v)o.pause();});v.play();}else v.pause();});});
 
