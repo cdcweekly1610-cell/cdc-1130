@@ -494,7 +494,7 @@ video.vid{cursor:pointer;object-fit:cover}
 #p28r .vs30 .q{font-size:17px;font-weight:700;letter-spacing:.1em;color:#5E6A70}#p28r .vs30 .new .q{color:var(--teal)}#p28r .vs30 .new{border:2px solid var(--teal)}
 #p28r .vs30 h3{font-size:25px}
 #p28r .vs30 ul{list-style:none;margin:0;padding:0;font-size:19px;color:#B03A2E;display:flex;flex-direction:column;gap:4px}#p28r .vs30 li::before{content:"✗ ";font-weight:900}
-#p28r .sc30{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#p28r .sc30{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 #p28r .sc30 span{position:relative;background:var(--tealSoft);border-radius:10px;padding:10px 4px;text-align:center;font-size:18px;font-weight:900;color:var(--ink);white-space:nowrap;counter-increment:sc}
 #p28r .sc30{counter-reset:sc}#p28r .sc30 span::before{content:counter(sc);display:block;margin:0 auto 4px;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-size:15px;line-height:26px}
 #p28r .ps30{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -926,7 +926,7 @@ aside.spk{display:none}
 #bim4 .bfd b{font:800 16px var(--num);color:var(--orange)}
 #bim4 .bfd i{font-style:normal;font-weight:400;font-size:14px;color:var(--muted);overflow:hidden;text-overflow:ellipsis}
 /* 1123a：P37 門禁管制改 LINE 打卡截圖（直式），欄寬收窄 */
-#ss4 .g37{grid-template-columns:1fr 1.25fr 1fr 1fr}
+#ss4 .g37{grid-template-columns:repeat(4,1fr)}
 #ss4 .fc .im{background:#fff}
 #ss4 .fc .im img{padding:0;object-fit:contain;object-position:center}
 /* 1120p：P34／P35 表單改右側整欄（與標題同高） */
@@ -1877,7 +1877,7 @@ PVC 地磚：送潔安環保造粒。
         <div class="vs30">
           <div class="card old"><p class="q">傳統</p><h3>手寫標籤＋紙本</h3><ul><li>標籤脫落、字跡模糊</li><li>送樣途中難追</li></ul></div>
           <i>→</i>
-          <div class="card new"><p class="q">本案</p><h3>埋晶片，掃描 4 次</h3><div class="sc30"><span>建檔</span><span>埋晶片</span><span>實驗室收件</span><span>28 天會驗</span></div></div>
+          <div class="card new"><p class="q">本案</p><h3>埋晶片，掃描 3 次</h3><div class="sc30"><span>建檔</span><span>埋晶片</span><span>實驗室收件</span></div></div>
         </div>
         <div class="ps30">
           <figure><img src="assets/rfid_embed.jpg" class="zm" alt="混凝土試體埋入 RFID 晶片"><figcaption>埋入晶片</figcaption></figure>
@@ -1904,7 +1904,7 @@ PVC 地磚：送潔安環保造粒。
   <aside class="spk">（進頁：左邊的預壘樁示意彈回來，壓梁亮起，並亮起「水泥砂漿為什麼不用晶片？」和照片，右側其他地方變暗）
 各位可能會問：既然有晶片可以管理試體，前面樁身的水泥砂漿為什麼不用？照片是我們實際把晶片放上水泥砂漿方塊試體：RFID 晶片大約 5×6 公分，比 5×5×5 公分的方塊試體還大，埋不進去。所以晶片只用在壓梁的混凝土圓柱試體，這裡剛好也是兩種材料的分界。
 （按 →）照片和橘色說明框收起。壓梁澆的是混凝土。
-傳統做法靠手寫標籤和紙本，標籤可能脫落、字跡模糊，送樣途中也很難追。本案每顆試體埋入晶片，建檔、埋晶片、實驗室收件、28 天會驗各掃一次，確認最後驗的就是當初取的那一顆。
+傳統做法靠手寫標籤和紙本，標籤可能脫落、字跡模糊，送樣途中也很難追。本案每顆試體埋入晶片，建檔、埋晶片、實驗室收件各掃一次，確認最後驗的就是當初取的那一顆。
 下面三張照片是埋入晶片、確認讀取、實驗室掃描。
 （按 →）未來會往自動化走：左邊是我們自己做的晶片編號管理網頁，每張表單綁定每顆試體的 RFID 編號和試壓日；右邊三個方向：報告自動回傳、異常即時提醒，形成完整的品質履歷。</aside>
 </section>
