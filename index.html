@@ -932,6 +932,19 @@ aside.spk{display:none}
 #visit .vls li{display:flex;align-items:center;gap:12px;margin:0}
 #visit .vls i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font:800 21px/36px var(--num);font-style:normal;text-align:center}
 #visit .vls b{font-size:22px;font-weight:900;color:var(--ink);white-space:nowrap}
+/* 1125c：參訪動線 ①→②→③ 逐步動畫（按 → 播放） */
+#visit .vsv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#visit .vrm{fill:none;stroke:#fff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}
+#visit .vrw{fill:none;stroke:#fff;stroke-width:9;stroke-dasharray:13 8}
+#visit .vro{fill:none;stroke:#EE6A1F;stroke-width:5;stroke-dasharray:13 8}
+#visit .vrh{fill:#EE6A1F;stroke:#fff;stroke-width:3;stroke-linejoin:round;paint-order:stroke}
+#visit .vn circle{fill:#EE6A1F}#visit .vn circle.vnw{fill:#fff}
+#visit .vn text{fill:#fff;font:800 24px var(--num);text-anchor:middle;dominant-baseline:middle}
+#visit .vn{transform-box:fill-box;transform-origin:center;opacity:0;transform:scale(.2);transition:opacity .25s,transform .45s cubic-bezier(.3,1.6,.5,1)}
+#visit .vn.on{opacity:1;transform:scale(1)}
+#visit .vls li{opacity:.25;transition:opacity .35s}
+#visit .vls li.on{opacity:1}
+#visit.noanim .vn,#visit.noanim .vls li,#visit.noanim .vrm{transition:none!important}
 /* 1123a：P37 門禁管制改 LINE 打卡截圖（直式），欄寬收窄 */
 #ss4 .g37{grid-template-columns:repeat(4,1fr)}
 #ss4 .fc .im{background:#fff}
@@ -2122,6 +2135,23 @@ PVC 地磚：送潔安環保造粒。
     <h1 class="t">參訪動線</h1>
     <figure class="card vpl">
       <img src="assets/visit_plan.jpg" class="zm" alt="參訪動線平面圖：①歷史建築保護、圍籬灑水降塵 ②洗車台土車清洗、安全走道 ③員工休息區">
+      <svg class="vsv" viewBox="0 0 1539 682" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <mask id="vm1" maskUnits="userSpaceOnUse"><path class="vrm" d="M366 456 L356 564 L250 533"/></mask>
+          <mask id="vm2" maskUnits="userSpaceOnUse"><path class="vrm" d="M250 533 L166 475 L231 383"/></mask>
+        </defs>
+        <g class="vr" id="vr1" mask="url(#vm1)">
+          <path class="vrw" d="M363.4 483.9 L356.0 564.0 L291.3 545.1"/><path class="vro" d="M363.4 483.9 L356.0 564.0 L291.3 545.1"/>
+          <polygon class="vrh" points="276.9,540.9 293.8,536.4 288.7,553.7"/>
+        </g>
+        <g class="vr" id="vr2" mask="url(#vm2)">
+          <path class="vrw" d="M227.0 517.1 L166.0 475.0 L206.2 418.1"/><path class="vro" d="M227.0 517.1 L166.0 475.0 L206.2 418.1"/>
+          <polygon class="vrh" points="214.8,405.9 213.5,423.3 198.8,412.9"/>
+        </g>
+        <g class="vn" id="vn1"><circle r="24" cx="366" cy="456" class="vnw"/><circle r="20" cx="366" cy="456"/><text x="366" y="457">1</text></g>
+        <g class="vn" id="vn2"><circle r="24" cx="250" cy="533" class="vnw"/><circle r="20" cx="250" cy="533"/><text x="250" y="534">2</text></g>
+        <g class="vn" id="vn3"><circle r="24" cx="231" cy="383" class="vnw"/><circle r="20" cx="231" cy="383"/><text x="231" y="384">3</text></g>
+      </svg>
       <ol class="vls">
         <li><i>1</i><b>歷史建築保護、圍籬灑水降塵</b></li>
         <li><i>2</i><b>洗車台土車清洗、安全走道</b></li>
@@ -2129,7 +2159,7 @@ PVC 地磚：送潔安環保造粒。
       </ol>
     </figure>
   </div>
-  <aside class="spk">接下來帶大家到現場，照平面圖上的編號走：
+  <aside class="spk">接下來帶大家到現場，照平面圖上的編號走（按 → 依序出現 ①②③ 和路線）：
 第一站，歷史建築保護和圍籬灑水降塵。
 第二站，洗車台和安全走道，看土方車出場前怎麼清洗，以及人員通行的安全走道。
 第三站，員工休息區。</aside>
@@ -2729,6 +2759,20 @@ PVC 地磚：送潔安環保造粒。
   // P12 精細拆除六步驟：進頁四段影片自動同步播放
   (function(){var sec=$('#p11');if(!sec)return;var vs=$$('video',sec),e0=sec._enter;
     sec._enter=function(b){if(e0)e0(b);vs.forEach(function(v){try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}});};})();
+  // 1125c：參訪動線 ①→②→③ 逐步動畫
+  (function(){var sec=$('#visit');if(!sec)return;
+    var ns=[1,2,3].map(function(i){return $('#vn'+i,sec);}),li=$$('.vls li',sec),
+        ms=$$('.vrm',sec).map(function(p){var L=p.getTotalLength?p.getTotalLength():400;p.style.strokeDasharray=L;p.style.strokeDashoffset=L;return {p:p,L:L};}),tm=[];
+    function clr(){tm.forEach(clearTimeout);tm=[];}
+    function route(i,on,inst){var m=ms[i];m.p.style.transition=inst?'none':'stroke-dashoffset .9s ease-in-out';m.p.style.strokeDashoffset=on?0:m.L;}
+    stepper(sec,3,function(st,inst){clr();sec.classList.toggle('noanim',!!inst);
+      ns[0].classList.toggle('on',st>=1);li[0].classList.toggle('on',st>=1);
+      [1,2].forEach(function(k){var on=st>k;route(k-1,on,inst);
+        if(!on){ns[k].classList.remove('on');li[k].classList.remove('on');}
+        else if(inst||ns[k].classList.contains('on')){ns[k].classList.add('on');li[k].classList.add('on');}
+        else tm.push(setTimeout(function(){ns[k].classList.add('on');li[k].classList.add('on');},850));});
+    });
+  })();
   // 1123b：BIM 影片頁進頁自動播放
   ['#bim1','#bim3'].forEach(function(id){var sec=$(id);if(!sec)return;var v=$('video',sec),e0=sec._enter;
     sec._enter=function(b){if(e0)e0(b);try{v.currentTime=0;var p=v.play();if(p&&p.catch)p.catch(function(){});}catch(e){}};});
