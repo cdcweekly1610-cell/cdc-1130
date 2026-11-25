@@ -925,6 +925,13 @@ aside.spk{display:none}
 #bim4 .bfd>div{display:flex;align-items:baseline;gap:8px;font-size:18px;font-weight:900;color:var(--ink);white-space:nowrap;overflow:hidden}
 #bim4 .bfd b{font:800 16px var(--num);color:var(--orange)}
 #bim4 .bfd i{font-style:normal;font-weight:400;font-size:14px;color:var(--muted);overflow:hidden;text-overflow:ellipsis}
+/* 1125b：參訪動線頁（平面圖放大，說明放右上角） */
+#visit .vpl{position:relative;margin:22px 0 0;padding:0;height:745px;overflow:hidden;background:#C9CED6}
+#visit .vpl>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+#visit .vls{position:absolute;right:22px;top:20px;list-style:none;margin:0;padding:14px 20px;display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.93);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+#visit .vls li{display:flex;align-items:center;gap:12px;margin:0}
+#visit .vls i{flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;font:800 21px/36px var(--num);font-style:normal;text-align:center}
+#visit .vls b{font-size:22px;font-weight:900;color:var(--ink);white-space:nowrap}
 /* 1123a：P37 門禁管制改 LINE 打卡截圖（直式），欄寬收窄 */
 #ss4 .g37{grid-template-columns:repeat(4,1fr)}
 #ss4 .fc .im{background:#fff}
@@ -958,7 +965,7 @@ aside.spk{display:none}
     <div style="width:180px;height:10px;background:var(--orange);margin:48px 0 40px"></div>
     <p style="font-size:38px;color:#CFDCDD;line-height:1.5">從歷史建物保護、精細拆除<br>到智慧工地的現場經驗</p>
   </div>
-  <div class="abs" style="left:120px;bottom:90px;font-size:24px;color:#8FA4AA;line-height:1.7">豐譽營造股份有限公司 ／ 正龍工程股份有限公司　共同承攬<br>報告人：林博弘所長、魏志全所長、林暐勝技師、施工組、品管組、職安組</div>
+  <div class="abs" style="left:120px;bottom:90px;font-size:24px;color:#8FA4AA;line-height:1.7">豐譽營造股份有限公司 ／ 正龍工程股份有限公司　共同承攬<br>報告人：林博弘所長、魏志全工地主任、林暐勝技師、施工組、品管組、職安組</div>
 </section>
 
 <!-- 2 AGENDA -->
@@ -969,8 +976,8 @@ aside.spk{display:none}
     <h1 class="t">簡報大綱</h1>
     <div class="grid" style="grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;margin-top:64px;gap:22px">
       <div class="card" data-go="ch1" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">01</div><h3 style="margin-top:18px">工程概要</h3><p class="agsp">主講｜林博弘所長</p></div>
-      <div class="card" data-go="ch2" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">02</div><h3 style="margin-top:18px">歷史建物保護</h3><p class="agsp">主講｜魏志全所長</p></div>
-      <div class="card" data-go="ch3" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">03</div><h3 style="margin-top:18px">營建廢棄物資源化與循環經濟</h3><p class="agsp">主講｜魏志全所長</p></div>
+      <div class="card" data-go="ch2" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">02</div><h3 style="margin-top:18px">歷史建物保護</h3><p class="agsp">主講｜魏志全 工地主任</p></div>
+      <div class="card" data-go="ch3" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">03</div><h3 style="margin-top:18px">營建廢棄物資源化與循環經濟</h3><p class="agsp">主講｜魏志全 工地主任</p></div>
       <div class="card" data-go="ch4" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">04</div><h3 style="margin-top:18px">設計規劃</h3><p class="agsp">主講｜林暐勝技師</p></div>
       <div class="card ink" data-go="ch5" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">05</div><h3 style="margin-top:18px">BIM 應用</h3><p class="agsp">主講｜林暐勝技師</p></div>
       <div class="card ink" data-go="ch6" role="button" tabindex="0"><div class="num" style="font-size:64px;color:var(--orange)">06</div><h3 style="margin-top:18px">智慧施工與品質管理</h3><p class="agsp">主講｜施工組、品管組</p></div>
@@ -1053,7 +1060,7 @@ aside.spk{display:none}
 <section class="slide dark chap" data-sec="02 歷史建物保護" id="ch2" data-title="02 歷史建物保護">
   <img class="chbg" src="assets/cbc1ec2127.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">02</div><div class="cht">歷史建物保護</div><div class="chl"></div><p class="chq">先保護、再拆除：延續一甲子的防疫記憶</p><p class="chsp">主講｜魏志全所長</p></div>
+  <div class="chin"><div class="chn">02</div><div class="cht">歷史建物保護</div><div class="chl"></div><p class="chq">先保護、再拆除：延續一甲子的防疫記憶</p><p class="chsp">主講｜魏志全 工地主任</p></div>
 </section>
 
 <!-- 7 HISTORY｜起源與保護理由 -->
@@ -1157,7 +1164,7 @@ aside.spk{display:none}
 <section class="slide dark chap" data-sec="03 營建廢棄物資源化與循環經濟" id="ch3" data-title="03 營建廢棄物資源化與循環經濟">
   <img class="chbg" src="assets/p7-16/sorting_area.jpg" alt="">
   <div class="chveil"></div>
-  <div class="chin"><div class="chn">03</div><div class="cht">營建廢棄物資源化與循環經濟</div><div class="chl"></div><p class="chq">先確定材料要去哪裡，再決定怎麼拆</p><p class="chsp">主講｜魏志全所長</p></div>
+  <div class="chin"><div class="chn">03</div><div class="cht">營建廢棄物資源化與循環經濟</div><div class="chl"></div><p class="chq">先確定材料要去哪裡，再決定怎麼拆</p><p class="chsp">主講｜魏志全 工地主任</p></div>
 </section>
 
 <!-- 10 START WITH END｜接續精細拆除 -->
@@ -2107,6 +2114,26 @@ PVC 地磚：送潔安環保造粒。
 第四，感應式出車警示系統。</aside>
 </section>
 
+
+<!-- 41 參訪動線（1125b：平面圖放大、說明縮小放右上角） -->
+<section class="slide" data-sec="參訪動線" id="visit">
+  <div class="pad">
+    <div class="kicker">參訪動線｜現場導覽</div>
+    <h1 class="t">參訪動線</h1>
+    <figure class="card vpl">
+      <img src="assets/visit_plan.jpg" class="zm" alt="參訪動線平面圖：①歷史建築保護、圍籬灑水降塵 ②洗車台土車清洗、安全走道 ③員工休息區">
+      <ol class="vls">
+        <li><i>1</i><b>歷史建築保護、圍籬灑水降塵</b></li>
+        <li><i>2</i><b>洗車台土車清洗、安全走道</b></li>
+        <li><i>3</i><b>員工休息區</b></li>
+      </ol>
+    </figure>
+  </div>
+  <aside class="spk">接下來帶大家到現場，照平面圖上的編號走：
+第一站，歷史建築保護和圍籬灑水降塵。
+第二站，洗車台和安全走道，看土方車出場前怎麼清洗，以及人員通行的安全走道。
+第三站，員工休息區。</aside>
+</section>
 
 <!-- 31 THANKS -->
 <section class="slide dark" data-sec="謝謝聆聽">
